@@ -1,13 +1,19 @@
 {
   "vars": {
     "@gray-base": "#000",
+    "@gray-darker": "lighten(@gray-base, 13.5%)",
+    "@gray-dark": "lighten(@gray-base, 20%)",
     "@gray": "#959595",
     "@gray-light": "#333",
+    "@gray-lighter": "lighten(@gray-base, 93.5%)",
     "@brand-primary": "#1a2791",
-    "@brand-info": "#e7ecf4",
+    "@brand-success": "#5cb85c",
+    "@brand-info": "#afb5e8",
+    "@brand-warning": "#f0ad4e",
+    "@brand-danger": "#d9534f",
     "@body-bg": "#fff",
     "@text-color": "@gray-base",
-    "@link-color": "#1a2791",
+    "@link-color": "@brand-primary",
     "@link-hover-color": "darken(@link-color, 15%)",
     "@link-hover-decoration": "underline",
     "@font-family-sans-serif": "\"Open Sans\", Helvetica, Arial, sans-serif",
@@ -76,9 +82,9 @@
     "@btn-danger-bg": "@brand-danger",
     "@btn-danger-border": "darken(@btn-danger-bg, 5%)",
     "@btn-link-disabled-color": "@gray-light",
-    "@btn-border-radius-base": "@border-radius-base",
-    "@btn-border-radius-large": "@border-radius-large",
-    "@btn-border-radius-small": "@border-radius-small",
+    "@btn-border-radius-base": "0",
+    "@btn-border-radius-large": "0",
+    "@btn-border-radius-small": "0",
     "@input-bg": "#fff",
     "@input-bg-disabled": "@gray-lighter",
     "@input-color": "@gray-base",
@@ -423,5 +429,5 @@
     "scrollspy.js",
     "transition.js"
   ],
-  "customizerUrl": "http://getbootstrap.com/customize/?id=494b7525554210b2e3b750994c041e78"
+  "customizerUrl": "http://getbootstrap.com/customize/?id=17973f313f33f6ea2cf2ccc1262308d9"
 }
