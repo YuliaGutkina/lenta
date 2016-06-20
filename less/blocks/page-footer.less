@@ -1,0 +1,50 @@
+.pg-footer {
+  padding-top: 2 * @pad;
+  padding-bottom: 2 * @pad;
+  background: @color-gray-lighter;
+  font-size: @fs-small;
+
+  &__title {
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-size: @fs-small;
+    font-weight: normal;
+  }
+
+  &__list {
+    margin-bottom: 40px;
+  }
+
+  &__item {
+    margin-bottom: 10px;
+
+    a {
+      .link-underline();
+      line-height: @fs-small;
+      color: @color-text;
+    }
+  }
+
+  &__contacts {
+
+    margin-left: 65px;
+
+    .pg-footer__title {
+      margin-bottom: 25px;
+      text-transform: none;
+    }
+
+    .pg-footer__item {
+      margin-bottom: @pad;
+    }
+  }
+
+  &__copyright {
+    display: block;
+    margin-top: 20px;
+  }
+
+  &__social {
+    margin-left: 65px;
+  }
+}
