@@ -4,7 +4,7 @@
   &__user {
     padding-top: 12px;
     padding-bottom: 12px;
-    font-size: @fs * 0.857143;
+    font-size: @fs-small;
 
     a {
       .link-underline();
@@ -49,8 +49,9 @@
 
   &__nav-list {
     .ul-inline();
-    margin: @pad auto;
-    text-align: center;
+    padding-top: @pad;
+    padding-bottom: @pad;
+    text-align: right;
   }
 
   &__nav-item {

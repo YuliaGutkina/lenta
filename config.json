@@ -15,7 +15,7 @@
     "@text-color": "@gray-base",
     "@link-color": "@brand-primary",
     "@link-hover-color": "darken(@link-color, 15%)",
-    "@link-hover-decoration": "underline",
+    "@link-hover-decoration": "none",
     "@font-family-sans-serif": "\"Open Sans\", Helvetica, Arial, sans-serif",
     "@font-family-serif": "Georgia, \"Times New Roman\", Times, serif",
     "@font-family-monospace": "Menlo, Monaco, Consolas, \"Courier New\", monospace",
@@ -344,12 +344,12 @@
     "@badge-font-weight": "bold",
     "@badge-line-height": "1",
     "@badge-border-radius": "10px",
-    "@breadcrumb-padding-vertical": "8px",
+    "@breadcrumb-padding-vertical": "15px",
     "@breadcrumb-padding-horizontal": "15px",
-    "@breadcrumb-bg": "#f5f5f5",
-    "@breadcrumb-color": "#ccc",
-    "@breadcrumb-active-color": "@gray-light",
-    "@breadcrumb-separator": "\"/\"",
+    "@breadcrumb-bg": "#fff",
+    "@breadcrumb-color": "@gray-base",
+    "@breadcrumb-active-color": "@gray-base",
+    "@breadcrumb-separator": "\"»\"",
     "@carousel-text-shadow": "0 1px 2px rgba(0,0,0,.6)",
     "@carousel-control-color": "#fff",
     "@carousel-control-width": "15%",
@@ -429,5 +429,5 @@
     "scrollspy.js",
     "transition.js"
   ],
-  "customizerUrl": "http://getbootstrap.com/customize/?id=0a28f5d9f1399d4ca6a43c14f3822eed"
+  "customizerUrl": "http://getbootstrap.com/customize/?id=240df15f7aca8614f5dd4bb3bb1bdcf9"
 }
