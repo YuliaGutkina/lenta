@@ -1,0 +1,43 @@
+// main: ../style.less
+
+.filter {
+  padding-top: 20px;
+  padding-bottom: @pad *2;
+  background: @color-gray-lighter;
+
+  label {
+    font-weight: 400;
+  }
+
+  &__fieldset {
+    padding-left: @pad *2;
+    padding-right: @pad *2;
+  }
+
+  &__fieldset-inner {
+    margin-bottom: @pad *2;
+  }
+
+  &__legend {
+    margin-bottom: 5px;
+    font-size: @fs;
+    font-weight: 700;
+    border: none;
+
+    &::after {
+      font-family: @ff-icon;
+      content: "\f077";
+      color: @color-primary;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    &--open::after {
+      content: "\f078";
+    }
+  }
+
+  &__checkbox-label {
+    display: block;
+  }
+}
