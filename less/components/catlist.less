@@ -1,0 +1,98 @@
+// main: ../style.less
+
+.catlist{
+  width: 30%;
+  padding-left: @pad;
+  padding-right: @pad;
+  float: left;
+  &__inner{
+    background: #e7ecf4;
+    color: @color-primary;
+  }
+
+  &__title {
+    position: relative;
+    & > a {
+      display: block;
+      font-size: @fs * 1.714286;
+      line-height: 40px;
+      font-family: @ff-extra;
+      text-transform: uppercase;
+      &:hover{
+        color: @color-info;
+      }
+    }
+    &.open > a{
+      color: @color-info;
+    }
+
+    &::after{
+      display: block;
+      font-family: @ff-icon;
+      content: "\f103";
+      font-size: @fs * 1.714286;
+      cursor: pointer;
+
+      position: absolute;
+      top: 50%;
+      right: 20px;
+      transform: translateY(-50%);
+      -webkit-transform: translateY(-50%);
+    }
+    &.open{
+      &::after{
+        transform: translateY(-50%) rotate(180deg);
+        -webkit-transform: translateY(-50%) rotate(180deg);
+      }
+    }
+
+    & .dropdown-toggle {
+      display: block;
+      text-decoration: none;
+      padding-left: 20px;
+      padding-right: 40px;
+    }
+    & .dropdown-menu{
+      border: 0;
+      border-radius: 0;
+      box-shadow: none;
+      background-color: #e7ecf4;
+      width: 100%;
+      padding-bottom: @pad;
+      & > li > a{
+        color: @color-primary;
+        padding-left: @pad*2;
+        padding-right: @pad*2;
+        text-decoration: none;
+      }
+      & > li:hover > a{
+        background-color: #f9f9f9;
+      }
+      & > .active > a{
+        background-color: transparent;;
+        color: @color-primary;
+        font-weight: 700;
+      }
+      &::after{
+        display: block;
+        content: "";
+        width: 0;
+        height: 0;
+        border-left: 160px solid transparent;
+        border-right: 160px solid transparent;
+        border-top: 55px solid #e7ecf4;
+
+        position: absolute;
+        left: 0;
+        bottom: -55px;
+      }
+    }
+  }
+
+
+  &__subtitle{
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 20px @pad*2 0;
+  }
+}

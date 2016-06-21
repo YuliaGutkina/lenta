@@ -1,0 +1,33 @@
+// main: ../style.less
+
+.user{
+  padding-top: 12px;
+  padding-bottom: 12px;
+  font-size: @fs-small;
+
+  a {
+    line-height: @fs * 0.8;
+    color: @color-text;
+  }
+
+  .fa {
+    color: @color-primary;
+  }
+
+  .fa-user,
+  .fa-map-marker {
+    font-size: @fs-large;
+  }
+  &__location-link {
+    text-transform: uppercase;
+  }
+
+  &__block-list {
+    .ul-inline();
+    text-align: right;
+  }
+
+  &__block-item {
+    margin-left: 40px;
+  }
+}

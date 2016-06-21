@@ -4,11 +4,11 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Lenta Catalog</title>
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/non-responsive.min.css" rel="stylesheet">
 		<link href="css/font-awesome.min.css" rel="stylesheet">
-		<link href="css/style.min.css" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&subset=latin,cyrillic" rel="stylesheet" type="text/css">
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -17,25 +17,25 @@
   <body>
     <header class="pg-header">
       <div class="container">
-        <div class="row pg-header__user">
-          <div class="col-xs-4 pg-header__user-location">
+        <div class="row user">
+          <div class="col-xs-4 user__location">
             <i class="fa fa-map-marker" aria-hidden="true"></i>
             <span>Ваш регион:</span>
-            <a href="#" class="pg-header__user-location-link">Санкт-Петербург</a>
+            <a href="#" class="user__location-link">Санкт-Петербург</a>
           </div>
-          <div class="col-xs-6 col-xs-offset-2 pg-header__user-block">
-            <ul class="pg-header__user-block-list">
-              <li class="pg-header__user-block-item  pg-header__user-block-item--user-name">
+          <div class="col-xs-6 user__block pull-right text-right">
+            <ul class="user__block-list">
+              <li class="user__block-item  user__block-item--name">
                 <i class="fa fa-user" aria-hidden="true"></i>
-                <a href="">Абдурахмангаджи </a>
+                <a href="#">Абдурахмангаджи </a>
               </li>
-              <li class="pg-header__user-block-item  pg-header__user-block-item--user-orders">
+              <li class="user__block-item  user__block-item--orders">
                 <i class="fa fa-th-list" aria-hidden="true"></i>
-                <a href="">Мои заказы</a>
+                <a href="#">Мои заказы</a>
               </li>
-              <li class="pg-header__user-block-item  pg-header__user-block-item--user-login">
+              <li class="user__block-item  user__block-item--login">
                 <i class="fa fa-power-off" aria-hidden="true"></i>
-                <a href="">Выход</a>
+                <a href="#">Выход</a>
               </li>
             </ul>
           </div>
@@ -51,27 +51,27 @@
             </div>
             <div class="col-xs-7">
               <ul class="pg-header__nav-list">
-                <li class="pg-header__nav-item">
-                  <a href="">О lenta trade</a>
+                <li class="pg-header__nav-item active">
+                  <a href="#">О lenta trade</a>
                 </li>
                 <li class="pg-header__nav-item">
-                  <a href="">Карта лента оптимум</a>
+                  <a href="#">Карта лента оптимум</a>
                 </li>
                 <li class="pg-header__nav-item">
-                  <a href="">Как Купить</a>
+                  <a href="#">Как Купить</a>
                 </li>
                 <li class="pg-header__nav-item">
-                  <a href="">пункты самовывоза</a>
+                  <a href="#">пункты самовывоза</a>
                 </li>
               </ul>
             </div>
             <div class="col-xs-2">
-              <div class="pg-header__cart">
-                <a href="#" class="pg-header__cart-img"><img src="img/cart.png" alt="cart" width="45" height="37"></a>
-                <div class="pg-header__cart-info">
-                  <a href=""><small>555 товаров</small></a>
-                  <span>9 999 999,01 ₽</span>
-                  <span><small>8 888,02 кг</small></span>
+              <div class="pg-header__cart cart">
+                <a href="#" class="cart__img"><img src="img/cart.png" alt="cart" width="45" height="37"></a>
+                <div class="cart__info">
+                  <a href="#" class="cart__amount">555 товаров</a>
+                  <span class="cart__price cart__price--rub">9 999 999,01</span>
+                  <span class="cart__weight">8 888,02 кг</span>
                 </div>
               </div>
             </div>
@@ -81,18 +81,29 @@
     </header>
     <div class="container">
       <div class="row">
-        <div class="col-xs-4">
-          <div class="sidebar">
-            <div class="sidebar__title">
-              <a href="">
-                полный Каталог товаров
-                <i class="fa fa-angle-double-down" aria-hidden="true"></i>
-              </a>
+        <div class="catlist">
+          <div class="catlist__inner">
+            <div class="catlist__title dropdown">
+              <a href="#" class="dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Полный каталог товаров</a>
+              <ul class="dropdown-menu">
+                <li class="catalog__item-name--promo active"><a href="#">Промо-предложения</a></li>
+                <li><a href="#">Вина</a></li>
+                <li><a href="#">Пиво и слабоалкогольные напитки</a></li>
+                <li><a href="#">Безалкогольные напитки</a></li>
+                <li><a href="#">Кондитерские изделия</a></li>
+                <li><a href="#">Кофе, какао, чай</a></li>
+                <li><a href="#">Детское питание и гигиена</a></li>
+                <li><a href="#">Косметика, парфюмерия, гигиена</a></li>
+                <li><a href="#">Бытовая химия, хозяйственные товары</a></li>
+                <li><a href="#">Табачные изделия</a></li>
+                <li><a href="#">Товары для животных</a></li>
+                <li><a href="#">Закуски к аперитивам</a></li>
+              </ul>
             </div>
           </div>
         </div>
-        <div class="col-xs-8">
-          <div class="main-search input-group">
+        <div class="main-search col-xs-8 pull-right">
+          <div class="input-group">
             <input type="search" class="form-control" placeholder="Поиск по товарам">
             <span class="input-group-btn">
               <button class="btn" type="button">
@@ -192,7 +203,7 @@
         <div class="col-xs-3">
           <div class="catalog__item">
             <a href="#" class="catalog__item-img">
-              <img src="img/cat1.png" alt="">
+              <img src="img/cat9.png" alt="">
             </a>
             <a href="#" class="catalog__item-name">Табачные изделия</a>
           </div>
@@ -200,7 +211,7 @@
         <div class="col-xs-3">
           <div class="catalog__item">
             <a href="#" class="catalog__item-img">
-              <img src="img/cat2.png" alt="">
+              <img src="img/cat10.png" alt="">
             </a>
             <a href="#" class="catalog__item-name">Товары для животных</a>
           </div>
@@ -208,7 +219,7 @@
         <div class="col-xs-3">
           <div class="catalog__item">
             <a href="#" class="catalog__item-img">
-              <img src="img/cat3.png" alt="">
+              <img src="img/cat11.png" alt="">
             </a>
             <a href="#" class="catalog__item-name">Закуски к аперитивам</a>
           </div>
@@ -309,6 +320,6 @@
 
     <script src="js/jquery-2.2.3.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-		<script src="js/scripts.min.js"></script>
+		<script src="js/scripts.js"></script>
   </body>
 </html>

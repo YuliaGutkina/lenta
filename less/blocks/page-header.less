@@ -1,43 +1,13 @@
+// main: ../style.less
+
 .pg-header {
   padding: 0;
+  background-color: @color-gray-lighter;
 
-  &__user {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    font-size: @fs-small;
-
-    a {
-      .link-underline();
-      line-height: @fs * 0.8;
-      color: @color-text;
-    }
-
-    .fa {
-      color: @color-primary;
-    }
-
-    .fa-user,
-    .fa-map-marker {
-      font-size: @fs-large;
-    }
-  }
-
-  &__user-location-link {
-    text-transform: uppercase;
-  }
-
-  &__user-block-list {
-    .ul-inline();
-    text-align: right;
-  }
-
-  &__user-block-item {
-    margin-left: 40px;
-  }
+  @pgnav-height: 68px;
 
   &__nav {
-    padding-top: 8px;
-    padding-bottom: 8px;
+    height: @pgnav-height;
     margin-bottom: 25px;
     background: @color-primary;
     color: @color-inverse;
@@ -46,48 +16,47 @@
       color: @color-inverse;
     }
   }
-
   &__nav-list {
     .ul-inline();
-    padding-top: @pad;
-    padding-bottom: @pad;
     text-align: right;
+    font-size: 0;
   }
 
   &__nav-item {
     font-family: @ff-extra;
     font-size: @fs-large;
 
-    &::after {
-      content: "|";
-      color: @color-decor;
-      font-size: @fs-large;
-    }
-
     &:last-child::after {
       content: "";
     }
+    &.active > a{
+      background-color: @color-decor;
+    }
 
     a {
-      padding-left: 12px;
-      padding-right: 12px;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: @pgnav-height;
+      padding-left: 14px;
       text-transform: uppercase;
+      text-decoration: none;
+      &:hover{
+        background-color: @color-decor;
+      }
+
+      &::after {
+        display: inline-block;
+        padding-left: 14px;;
+        content: "|";
+        color: @color-decor;
+        font-size: @fs-large;
+      }
     }
+
   }
 
-  &__cart-img {
-    display: inline-block;
-    vertical-align: middle;
-    margin-right: @pad;
-  }
-
-  &__cart-info {
-    display: inline-block;
-    vertical-align: middle;
-
-    a,span {
-      display: block;
-      line-height: @fs-large;
-    }
+  &__logo{
+    display: block;
+    padding-top: @pad/1.5;
   }
 }
