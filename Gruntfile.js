@@ -38,7 +38,8 @@ module.exports = function(grunt) {
           report: "gzip"
         },
         files: {
-          "build/css/style.min.css": ["build/css/style.css"]
+          //"build/css/style.min.css": ["build/css/style.css"]
+          "build/css/style.css": ["build/css/style.css"]
         }
       }
     },
@@ -118,7 +119,8 @@ module.exports = function(grunt) {
     uglify: {
       js: {
         files: {
-          "build/js/scripts.min.js": ["js/scripts.js"]
+          //"build/js/scripts.min.js": ["js/scripts.js"]
+          "build/js/scripts.js": ["js/scripts.js"]
         }
       }
     }

@@ -1,0 +1,36 @@
+// main: ../style.less
+
+.cart{
+  padding-top: @pad/1.5;
+
+  &__img {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: @pad;
+  }
+
+  &__info {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 12px;
+    font-weight: 600;
+
+    & > *{
+      display: block;
+      line-height: @fs-large;
+    }
+  }
+
+  &__amount{
+    text-decoration: underline;
+  }
+  &__price{
+    &--rub::after{
+      display: inline-block;
+      padding-left: @pad/3;
+      font-family: @ff-icon;
+      font-weight: 400;
+      content: "\f158";
+    }
+  }
+}
