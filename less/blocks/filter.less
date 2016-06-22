@@ -40,4 +40,36 @@
   &__checkbox-label {
     display: block;
   }
+
+  &__checkbox-input {
+    display: none;
+  }
+
+  &__checkbox-custom {
+    display: inline-block;
+    position: relative;
+    width: 13px;
+    height: 13px;
+
+    border: 1px solid #707070;
+  }
+
+  &__checkbox-input:checked ~ &__checkbox-custom {
+    background: url(../img/checked.png) no-repeat 50% 50%;
+  }
+
+  &__counter {
+    color: #ccc;
+  }
+
+  &__range-input {
+    width: 63px;
+    height: 28px;
+    border: 1px solid @color-primary;
+    padding-left: 5px;
+
+    &--first {
+      margin-right: @pad;
+    }
+  }
 }

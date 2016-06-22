@@ -1,0 +1,30 @@
+// main: ../style.less
+
+.cat-toggle {
+  line-height: @fs;
+
+  &__view {
+    display: inline-block;
+    vertical-align: middle;
+    width: 28px;
+    height: 14px;
+    margin-left: 5px;
+
+    &--card {
+      background: url(../img/toggle-card.png) no-repeat 0 0;
+    }
+
+    &--list {
+      background: url(../img/toggle-list.png) no-repeat 0 0;
+    }
+
+    &--card.active {
+      background: url(../img/toggle-card-active.png) no-repeat 0 0;
+    }
+
+    &--list.active {
+      background: url(../img/toggle-list-active.png) no-repeat 0 0;
+    }
+  }
+
+}

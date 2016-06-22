@@ -1,1 +1,40 @@
 // main: ../style.less
+
+.btn-custom {
+  position: relative;
+  background: @color-primary;
+  color: @color-inverse;
+  text-transform: uppercase;
+  font-family: @ff-extra;
+  font-size: 20px;
+  height: 32px;
+  line-height: 32px;
+  text-align: right;
+  padding: 0 20px;
+
+  &--wide {
+    width: 175px;
+  }
+
+  &--gray {
+    background: #cccccc;
+  }
+
+  &::after{
+    display: block;
+    content: "";
+    width: 0;
+    height: 0;
+    border-top: 16px solid transparent;
+    border-bottom: 16px solid transparent;
+    border-left: 7px solid @color-primary;
+    position: absolute;
+    right: -7px;
+    top: 0;
+    z-index: 50;
+  }
+
+  &--gray::after {
+    border-left-color: #cccccc;
+  }
+}
