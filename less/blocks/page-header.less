@@ -20,39 +20,55 @@
     .ul-inline();
     text-align: right;
     font-size: 0;
-  }
-
-  &__nav-item {
-    font-family: @ff-extra;
-    font-size: @fs-large;
-
-    &:last-child::after {
-      content: "";
-    }
-    &.active > a{
-      background-color: @color-decor;
-    }
-
-    a {
-      display: inline-block;
-      vertical-align: middle;
-      line-height: @pgnav-height;
-      padding-left: 14px;
-      text-transform: uppercase;
-      text-decoration: none;
-      &:hover{
-        background-color: @color-decor;
-      }
-
-      &::after {
+    & > li {
+      font-family: @ff-extra;
+      font-size: @fs-large;
+      & > a {
         display: inline-block;
-        padding-left: 14px;;
-        content: "|";
-        color: @color-decor;
-        font-size: @fs-large;
+        vertical-align: middle;
+        line-height: @pgnav-height;
+        padding-left: 16px;
+        padding-right: 16px;
+        text-transform: uppercase;
+        text-decoration: none;
+        position: relative;
+
+        &:hover{
+          background-color: @color-decor;
+          margin-left: -2px;
+          padding-left: 17px;
+          padding-right: 17px;
+        }
+
+        &::after {
+          display: block;
+          content: "";
+          width: 2px;
+          height: @fs;
+          background-color: @color-decor;
+          position: absolute;
+          top: 50%;
+          right: 0;
+          transform: translateY(-50%);
+          -webkit-transform: translateY(-50%)
+        }
+      }
+      &.active > a{
+        background-color: @color-decor;
+        margin-left: -2px;
+        padding-left: 17px;
+        padding-right: 17px;
+      }
+      &:first-child > a:hover
+      &:first-child.active > a:hover{
+        margin-left: 0;
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+      &:last-child > a:after{
+        display: none;
       }
     }
-
   }
 
   &__logo{
