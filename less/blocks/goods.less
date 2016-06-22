@@ -1,0 +1,110 @@
+// main: ../style.less
+
+.goods-list {
+  margin-bottom: @pad;
+
+  &__item {
+    margin: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-top: 1px solid #cccccc;
+  }
+
+  &__name {
+    padding-left: 0;
+
+    a {
+      display: inline-block;
+      vertical-align: top;
+      padding-left: 5px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+  }
+
+  &__sale {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 5px;
+    width: 28px;
+    height: 28px;
+    background: transparent url(../img/sale.png) no-repeat 0 0;
+    color: @color-primary;
+    font-size: @fs * 0.714286;
+    text-align: center;
+    padding-top: 5px;
+  }
+
+  &__price {
+    margin-bottom: 10px;
+  }
+
+  &__old-price {
+    margin-right: 5px;
+    text-decoration: line-through;
+  }
+
+  &__new-price {
+    font-size: @fs-large;
+    font-weight: 700;
+    color: @color-primary;
+
+    .fa {
+      color: @color-text;
+    }
+  }
+
+  &__summ {
+    margin-bottom: 5px;
+    margin-right: -15px;
+    font-weight: 700;
+  }
+
+  &__buy {
+    line-height: 32px;
+    margin-right: -15px;
+
+    .btn-default {
+      padding-top: 4px;
+      padding-bottom: 4px;
+      padding-left: 8px;
+      padding-right: 8px;
+    }
+  }
+
+  &__box {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 4px;
+    width: 19px;
+    height: 20px;
+    background: url(../img/box.png) no-repeat 0 0;
+    cursor: pointer;
+  }
+
+  &__scales {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 4px;
+    width: 17px;
+    height: 17px;
+    background: url(../img/scales.png) no-repeat 0 0;
+    cursor: pointer;
+  }
+
+  &--mini {
+
+    .goods-list {
+
+      &__count,
+      &__buy {
+        display: none;
+      }
+
+      &__price,
+      &__summ {
+        margin-top: 10px;
+      }
+    }
+  }
+}
