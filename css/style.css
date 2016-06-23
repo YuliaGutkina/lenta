@@ -867,7 +867,8 @@ input::-webkit-inner-spin-button {
   margin-top: 20px;
   margin-bottom: 20px;
 }
-.modal-custom__close {
+.modal-custom__close,
+.modal-custom btn.close {
   position: absolute;
   top: 0;
   right: 0;
@@ -877,6 +878,9 @@ input::-webkit-inner-spin-button {
   width: 30px;
   height: 30px;
   text-align: center;
+  background-color: #1a2791 !important;
+  opacity: 1;
+  color: #ffffff;
 }
 .modal-custom__btn-group .btn-custom:first-child {
   padding-left: 40px;
