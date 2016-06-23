@@ -2,4 +2,24 @@
 
 .main-content {
   padding-left: 0;
+
+  &--product-page {
+    margin-bottom: @pad *2;
+    padding-right: 120px;
+
+    .table {
+      width: 65%;
+
+      td,
+      th {
+        border-top: 0;
+        padding-top: 2px;
+        padding-bottom: 2px;
+      }
+
+      tbody {
+        border-top: 0;
+      }
+    }
+  }
 }

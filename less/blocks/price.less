@@ -1,0 +1,29 @@
+// main: ../style.less
+
+.price {
+
+  &__sale {
+    display: block;
+    font-weight: 700;
+  }
+
+  &__default {
+    display: block;
+    color: #999999;
+  }
+
+  &__old {
+    margin-right: 5px;
+    text-decoration: line-through;
+  }
+
+  &__new {
+    font-size: @fs-large;
+    font-weight: 700;
+    color: @color-primary;
+
+    .fa {
+      color: @color-text;
+    }
+  }
+}
