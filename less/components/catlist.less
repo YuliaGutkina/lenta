@@ -18,11 +18,13 @@
       line-height: 40px;
       font-family: @ff-extra;
       text-transform: uppercase;
-      &:hover{
-        color: @color-info;
+      &:hover,
+      &:visited {
+        color: @color-primary;
       }
     }
-    &.open > a{
+    &.open > a,
+    &:visited {
       color: @color-info;
     }
 

@@ -1,84 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Lenta Catalog</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/non-responsive.min.css" rel="stylesheet">
-		<link href="css/font-awesome.min.css" rel="stylesheet">
-		<link href="css/style.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&subset=latin,cyrillic" rel="stylesheet" type="text/css">
-    <!--[if lt IE 9]>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Lenta Catalog</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/non-responsive.min.css" rel="stylesheet">
+  <link href="css/font-awesome.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&subset=latin,cyrillic" rel="stylesheet" type="text/css">
+  <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-  </head>
-  <body>
-    <header class="pg-header">
+</head>
+
+<body>
+  <header class="pg-header">
+    <div class="container">
+      <div class="row user">
+        <div class="col-xs-4 user__location">
+          <i class="fa fa-map-marker" aria-hidden="true"></i>
+          <span>Ваш регион:</span>
+          <a href="#" class="user__location-link">Санкт-Петербург</a>
+        </div>
+        <div class="col-xs-6 user__block pull-right text-right">
+          <ul class="user__block-list">
+            <li class="user__block-item  user__block-item--name">
+              <i class="fa fa-user" aria-hidden="true"></i>
+              <a href="#">Абдурахмангаджи </a>
+            </li>
+            <li class="user__block-item  user__block-item--orders">
+              <i class="fa fa-th-list" aria-hidden="true"></i>
+              <a href="#">Мои заказы</a>
+            </li>
+            <li class="user__block-item  user__block-item--login">
+              <i class="fa fa-power-off" aria-hidden="true"></i>
+              <a href="#">Выход</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="pg-header__nav">
       <div class="container">
-        <div class="row user">
-          <div class="col-xs-4 user__location">
-            <i class="fa fa-map-marker" aria-hidden="true"></i>
-            <span>Ваш регион:</span>
-            <a href="#" class="user__location-link">Санкт-Петербург</a>
+        <div class="row">
+          <div class="col-xs-3">
+            <a href="#" class="pg-header__logo">
+              <img src="img/logo.png" alt="">
+            </a>
           </div>
-          <div class="col-xs-6 user__block pull-right text-right">
-            <ul class="user__block-list">
-              <li class="user__block-item  user__block-item--name">
-                <i class="fa fa-user" aria-hidden="true"></i>
-                <a href="#">Абдурахмангаджи </a>
+          <div class="col-xs-7">
+            <ul class="pg-header__nav-list">
+              <li class="active">
+                <a href="#">О lenta trade</a>
               </li>
-              <li class="user__block-item  user__block-item--orders">
-                <i class="fa fa-th-list" aria-hidden="true"></i>
-                <a href="#">Мои заказы</a>
+              <li>
+                <a href="#">Карта лента оптимум</a>
               </li>
-              <li class="user__block-item  user__block-item--login">
-                <i class="fa fa-power-off" aria-hidden="true"></i>
-                <a href="#">Выход</a>
+              <li>
+                <a href="#">Как Купить</a>
+              </li>
+              <li>
+                <a href="#">пункты самовывоза</a>
               </li>
             </ul>
           </div>
-        </div>
-      </div>
-      <div class="pg-header__nav">
-        <div class="container">
-          <div class="row">
-            <div class="col-xs-3">
-              <a href="#" class="pg-header__logo">
-                <img src="img/logo.png" alt="">
-              </a>
-            </div>
-            <div class="col-xs-7">
-              <ul class="pg-header__nav-list">
-                <li class="active">
-                  <a href="#">О lenta trade</a>
-                </li>
-                <li>
-                  <a href="#">Карта лента оптимум</a>
-                </li>
-                <li>
-                  <a href="#">Как Купить</a>
-                </li>
-                <li>
-                  <a href="#">пункты самовывоза</a>
-                </li>
-              </ul>
-            </div>
-            <div class="col-xs-2">
-              <div class="pg-header__cart cart">
-                <a href="#" class="cart__img"><img src="img/cart.png" alt="cart" width="45" height="37"></a>
-                <div class="cart__info">
-                  <a href="#" class="cart__amount">555 товаров</a>
-                  <span class="cart__price cart__price--rub">9 999 999,01</span>
-                  <span class="cart__weight">8 888,02 кг</span>
-                </div>
+          <div class="col-xs-2">
+            <div class="pg-header__cart cart">
+              <a href="#" class="cart__img"><img src="img/cart.png" alt="cart" width="45" height="37"></a>
+              <div class="cart__info">
+                <a href="#" class="cart__amount">555 товаров</a>
+                <span class="cart__price cart__price--rub">9 999 999,01</span>
+                <span class="cart__weight">8 888,02 кг</span>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </header>
+    </div>
+  </header>
+  <div class="main-search-block">
     <div class="container">
       <div class="row">
         <div class="catlist">
@@ -122,204 +125,206 @@
         </div>
       </div>
     </div>
-    <main class="catalog container">
+  </div>
+  <main class="catalog container">
+    <div class="row">
+      <div class="col-xs-3">
+        <div class="catalog__item">
+          <a href="#" class="catalog__item-img">
+            <img src="img/cat-promo.png" alt="">
+          </a>
+          <a href="#" class="catalog__item-name  catalog__item-name--promo">Промо-предложения</a>
+        </div>
+      </div>
+      <div class="col-xs-3">
+        <div class="catalog__item">
+          <a href="#" class="catalog__item-img">
+            <img src="img/cat1.png" alt="">
+          </a>
+          <a href="#" class="catalog__item-name">Вина</a>
+        </div>
+      </div>
+      <div class="col-xs-3">
+        <div class="catalog__item">
+          <a href="#" class="catalog__item-img">
+            <img src="img/cat2.png" alt="">
+          </a>
+          <a href="#" class="catalog__item-name">Пиво и слабоалкогольные напитки</a>
+        </div>
+      </div>
+      <div class="col-xs-3">
+        <div class="catalog__item">
+          <a href="#" class="catalog__item-img">
+            <img src="img/cat3.png" alt="">
+          </a>
+          <a href="#" class="catalog__item-name">Безалкогольные напитки</a>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-3">
+        <div class="catalog__item">
+          <a href="#" class="catalog__item-img">
+            <img src="img/cat4.png" alt="">
+          </a>
+          <a href="#" class="catalog__item-name">Кондитерские изделия</a>
+        </div>
+      </div>
+      <div class="col-xs-3">
+        <div class="catalog__item">
+          <a href="#" class="catalog__item-img">
+            <img src="img/cat5.png" alt="">
+          </a>
+          <a href="#" class="catalog__item-name">Кофе, какао, чай</a>
+        </div>
+      </div>
+      <div class="col-xs-3">
+        <div class="catalog__item">
+          <a href="#" class="catalog__item-img">
+            <img src="img/cat6.png" alt="">
+          </a>
+          <a href="#" class="catalog__item-name">Детское питание и гигиена</a>
+        </div>
+      </div>
+      <div class="col-xs-3">
+        <div class="catalog__item">
+          <a href="#" class="catalog__item-img">
+            <img src="img/cat7.png" alt="">
+          </a>
+          <a href="#" class="catalog__item-name">Косметика, парфюмерия, гигиена</a>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-3">
+        <div class="catalog__item">
+          <a href="#" class="catalog__item-img">
+            <img src="img/cat8.png" alt="">
+          </a>
+          <a href="#" class="catalog__item-name">Бытовая химия, хозяйственные товары</a>
+        </div>
+      </div>
+      <div class="col-xs-3">
+        <div class="catalog__item">
+          <a href="#" class="catalog__item-img">
+            <img src="img/cat9.png" alt="">
+          </a>
+          <a href="#" class="catalog__item-name">Табачные изделия</a>
+        </div>
+      </div>
+      <div class="col-xs-3">
+        <div class="catalog__item">
+          <a href="#" class="catalog__item-img">
+            <img src="img/cat10.png" alt="">
+          </a>
+          <a href="#" class="catalog__item-name">Товары для животных</a>
+        </div>
+      </div>
+      <div class="col-xs-3">
+        <div class="catalog__item">
+          <a href="#" class="catalog__item-img">
+            <img src="img/cat11.png" alt="">
+          </a>
+          <a href="#" class="catalog__item-name">Закуски к аперитивам</a>
+        </div>
+      </div>
+    </div>
+  </main>
+  <div class="pg-footer">
+    <div class="container">
       <div class="row">
         <div class="col-xs-3">
-          <div class="catalog__item">
-            <a href="#" class="catalog__item-img">
-              <img src="img/cat-promo.png" alt="">
-            </a>
-            <a href="#" class="catalog__item-name  catalog__item-name--promo">Промо-предложения</a>
-          </div>
+          <h4 class="pg-footer__title">Компания</h4>
+          <ul class="pg-footer__list list-unstyled">
+            <li class="pg-footer__item">
+              <a href="#">О Lenta Trade</a>
+            </li>
+            <li class="pg-footer__item">
+              <a href="#">Сайт lenta.com</a>
+            </li>
+            <li class="pg-footer__item">
+              <a href="#">Контакты</a>
+            </li>
+          </ul>
         </div>
         <div class="col-xs-3">
-          <div class="catalog__item">
-            <a href="#" class="catalog__item-img">
-              <img src="img/cat1.png" alt="">
-            </a>
-            <a href="#" class="catalog__item-name">Вина</a>
-          </div>
+          <h4 class="pg-footer__title">Покупателям</h4>
+          <ul class="pg-footer__list list-unstyled">
+            <li class="pg-footer__item">
+              <a href="#">Карта Лента ОПТИМУМ</a>
+            </li>
+            <li class="pg-footer__item">
+              <a href="#">Адреса пунктов самовывоза</a>
+            </li>
+            <li class="pg-footer__item">
+              <a href="#">Как сделать заказ</a>
+            </li>
+            <li class="pg-footer__item">
+              <a href="#">Правила покупки</a>
+            </li>
+          </ul>
         </div>
         <div class="col-xs-3">
-          <div class="catalog__item">
-            <a href="#" class="catalog__item-img">
-              <img src="img/cat2.png" alt="">
-            </a>
-            <a href="#" class="catalog__item-name">Пиво и слабоалкогольные напитки</a>
-          </div>
+          <h4 class="pg-footer__title">Информация</h4>
+          <ul class="pg-footer__list list-unstyled">
+            <li class="pg-footer__item">
+              <a href="#">Политика конфиденциальности</a>
+            </li>
+            <li class="pg-footer__item">
+              <a href="#">Часто задаваемые вопросы</a>
+            </li>
+            <li class="pg-footer__item">
+              <a href="#">Форма обратной связи</a>
+            </li>
+          </ul>
         </div>
         <div class="col-xs-3">
-          <div class="catalog__item">
-            <a href="#" class="catalog__item-img">
-              <img src="img/cat3.png" alt="">
-            </a>
-            <a href="#" class="catalog__item-name">Безалкогольные напитки</a>
+          <div class="pg-footer__contacts">
+            <h4 class="pg-footer__title">Информационный центр</h4>
+            <ul class="pg-footer__list list-unstyled">
+              <li class="pg-footer__item">
+                <b>+7 (800) 700-41-11</b>
+              </li>
+              <li class="pg-footer__item">
+                <a href="mailto:support@lenta-trade.com">support@lenta-trade.com</a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
       <div class="row">
-        <div class="col-xs-3">
-          <div class="catalog__item">
-            <a href="#" class="catalog__item-img">
-              <img src="img/cat4.png" alt="">
-            </a>
-            <a href="#" class="catalog__item-name">Кондитерские изделия</a>
-          </div>
-        </div>
-        <div class="col-xs-3">
-          <div class="catalog__item">
-            <a href="#" class="catalog__item-img">
-              <img src="img/cat5.png" alt="">
-            </a>
-            <a href="#" class="catalog__item-name">Кофе, какао, чай</a>
-          </div>
-        </div>
-        <div class="col-xs-3">
-          <div class="catalog__item">
-            <a href="#" class="catalog__item-img">
-              <img src="img/cat6.png" alt="">
-            </a>
-            <a href="#" class="catalog__item-name">Детское питание и гигиена</a>
-          </div>
-        </div>
-        <div class="col-xs-3">
-          <div class="catalog__item">
-            <a href="#" class="catalog__item-img">
-              <img src="img/cat7.png" alt="">
-            </a>
-            <a href="#" class="catalog__item-name">Косметика, парфюмерия, гигиена</a>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-xs-3">
-          <div class="catalog__item">
-            <a href="#" class="catalog__item-img">
-              <img src="img/cat8.png" alt="">
-            </a>
-            <a href="#" class="catalog__item-name">Бытовая химия, хозяйственные товары</a>
-          </div>
-        </div>
-        <div class="col-xs-3">
-          <div class="catalog__item">
-            <a href="#" class="catalog__item-img">
-              <img src="img/cat9.png" alt="">
-            </a>
-            <a href="#" class="catalog__item-name">Табачные изделия</a>
-          </div>
-        </div>
-        <div class="col-xs-3">
-          <div class="catalog__item">
-            <a href="#" class="catalog__item-img">
-              <img src="img/cat10.png" alt="">
-            </a>
-            <a href="#" class="catalog__item-name">Товары для животных</a>
-          </div>
-        </div>
-        <div class="col-xs-3">
-          <div class="catalog__item">
-            <a href="#" class="catalog__item-img">
-              <img src="img/cat11.png" alt="">
-            </a>
-            <a href="#" class="catalog__item-name">Закуски к аперитивам</a>
-          </div>
-        </div>
-      </div>
-    </main>
-    <div class="pg-footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-3">
-            <h4 class="pg-footer__title">Компания</h4>
-            <ul class="pg-footer__list list-unstyled">
-              <li class="pg-footer__item">
-                <a href="#">О Lenta Trade</a>
-              </li>
-              <li class="pg-footer__item">
-                <a href="#">Сайт lenta.com</a>
-              </li>
-              <li class="pg-footer__item">
-                <a href="#">Контакты</a>
-              </li>
-            </ul>
-          </div>
-          <div class="col-xs-3">
-            <h4 class="pg-footer__title">Покупателям</h4>
-            <ul class="pg-footer__list list-unstyled">
-              <li class="pg-footer__item">
-                <a href="#">Карта Лента ОПТИМУМ</a>
-              </li>
-              <li class="pg-footer__item">
-                <a href="#">Адреса пунктов самовывоза</a>
-              </li>
-              <li class="pg-footer__item">
-                <a href="#">Как сделать заказ</a>
-              </li>
-              <li class="pg-footer__item">
-                <a href="#">Правила покупки</a>
-              </li>
-            </ul>
-          </div>
-          <div class="col-xs-3">
-            <h4 class="pg-footer__title">Информация</h4>
-            <ul class="pg-footer__list list-unstyled">
-              <li class="pg-footer__item">
-                <a href="#">Политика конфиденциальности</a>
-              </li>
-              <li class="pg-footer__item">
-                <a href="#">Часто задаваемые вопросы</a>
-              </li>
-              <li class="pg-footer__item">
-                <a href="#">Форма обратной связи</a>
-              </li>
-            </ul>
-          </div>
-          <div class="col-xs-3">
-            <div class="pg-footer__contacts">
-              <h4 class="pg-footer__title">Информационный центр</h4>
-              <ul class="pg-footer__list list-unstyled">
-                <li class="pg-footer__item">
-                    <b>+7 (800) 700-41-11</b>
-                </li>
-                <li class="pg-footer__item">
-                    <a href="mailto:support@lenta-trade.com">support@lenta-trade.com</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-xs-9">
-            <span class="pg-footer__copyright">
+        <div class="col-xs-9">
+          <span class="pg-footer__copyright">
               © 2016 Lenta. Все права защищены
             </span>
-          </div>
-          <div class="col-xs-3">
-            <div class="pg-footer__social  social">
-              <a href="" class="social__link">
-                <i class="fa fa-vk" aria-hidden="true"></i>
-              </a>
-              <a href="" class="social__link">
-                <i class="fa fa-odnoklassniki" aria-hidden="true"></i>
-              </a>
-              <a href="" class="social__link">
-                <i class="fa fa-facebook" aria-hidden="true"></i>
-              </a>
-              <a href="" class="social__link">
-                <i class="fa fa-twitter" aria-hidden="true"></i>
-              </a>
-              <a href="" class="social__link">
-                <i class="fa fa-instagram" aria-hidden="true"></i>
-              </a>
-            </div>
+        </div>
+        <div class="col-xs-3">
+          <div class="pg-footer__social  social">
+            <a href="" class="social__link">
+              <i class="fa fa-vk" aria-hidden="true"></i>
+            </a>
+            <a href="" class="social__link">
+              <i class="fa fa-odnoklassniki" aria-hidden="true"></i>
+            </a>
+            <a href="" class="social__link">
+              <i class="fa fa-facebook" aria-hidden="true"></i>
+            </a>
+            <a href="" class="social__link">
+              <i class="fa fa-twitter" aria-hidden="true"></i>
+            </a>
+            <a href="" class="social__link">
+              <i class="fa fa-instagram" aria-hidden="true"></i>
+            </a>
           </div>
         </div>
       </div>
     </div>
+  </div>
 
 
-    <script src="js/jquery-2.2.3.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-		<script src="js/scripts.js"></script>
-  </body>
+  <script src="js/jquery-2.2.3.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/scripts.js"></script>
+</body>
+
 </html>
