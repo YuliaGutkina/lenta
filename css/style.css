@@ -519,6 +519,10 @@
 .price__new .fa {
   color: #000000;
 }
+.price--no {
+  color: #cccccc;
+  font-weight: 700;
+}
 .buy__summ {
   font-weight: 600px;
   font-size: 24.000004px;
@@ -531,8 +535,6 @@
   font-size: 19.999994px;
   padding-top: 4px;
   padding-bottom: 4px;
-  padding-left: 8px;
-  padding-right: 8px;
 }
 .buy--product-page {
   margin-bottom: 15px;
