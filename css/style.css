@@ -372,8 +372,14 @@
   position: relative;
   border: 1px solid #cccccc;
   padding: 15px;
+  margin-bottom: -1px;
+}
+.goods__item:nth-child(2),
+.goods__item:nth-child(3) {
+  margin-left: -1px;
 }
 .goods__item:hover {
+  z-index: 2;
   border: 1px solid #afb5e8;
 }
 .goods__name {
@@ -474,6 +480,7 @@
 .breadcrumb a {
   display: inline-block;
   border-bottom: 2px solid #bbbbbb;
+  text-decoration: none;
   color: #000000;
   line-height: 12.000002px;
 }
