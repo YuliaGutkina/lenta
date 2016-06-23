@@ -8,13 +8,18 @@
 
   &__nav {
     height: @pgnav-height;
-    margin-bottom: 25px;
     background: @color-primary;
     color: @color-inverse;
 
     a {
       color: @color-inverse;
     }
+  }
+  &.affix{
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 5;
   }
   &__nav-list {
     .ul-inline();

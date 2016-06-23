@@ -1,0 +1,26 @@
+// main: ../style.less
+.arrowUp {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  overflow: hidden;
+  & a {
+    display: block;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    font-size: @fs*4;
+    text-align: center;
+    background-color: @color-primary;
+    color: @color-inverse;
+    &:hover {
+      background: @color-info;
+    }
+  }
+  & .fa {
+    vertical-align: middle;
+    margin-top: -@pad;
+  }
+}

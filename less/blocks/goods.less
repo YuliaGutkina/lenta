@@ -124,8 +124,14 @@
     position: relative;
     border: 1px solid #cccccc;
     padding: 15px;
+    margin-bottom: -1px;
+    &:nth-child(2),
+    &:nth-child(3){
+      margin-left: -1px;
+    }
 
     &:hover {
+      z-index: 2;
       border: 1px solid @color-info;
     }
   }
