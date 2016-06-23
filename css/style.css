@@ -1,3 +1,7 @@
+.extra-text {
+  font-size: 17.999996px;
+  font-weight: 600;
+}
 @font-face {
   font-family: 'DINCondensed';
   src: url('../fonts/DINCondensed.eot?#iefix') format('embedded-opentype'), url('../fonts/DINCondensed.otf') format('opentype'), url('../fonts/DINCondensed.woff') format('woff'), url('../fonts/DINCondensed.woff2') format('woff2'), url('../fonts/DINCondensed.ttf') format('truetype'), url('../fonts/DINCondensed.svg#DINCondensed') format('svg');
@@ -846,4 +850,34 @@ input::-webkit-inner-spin-button {
 .arrowUp .fa {
   vertical-align: middle;
   margin-top: -15px;
+}
+.modal-custom {
+  margin-top: 200px;
+}
+.modal-custom .modal-content {
+  border-radius: 0;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 15px;
+  padding-bottom: 25px;
+  width: 330px;
+  line-height: 26.000002px;
+}
+.modal-custom .modal-content p {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.modal-custom__close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 20px;
+  line-height: 30px;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+}
+.modal-custom__btn-group .btn-custom:first-child {
+  padding-left: 40px;
 }

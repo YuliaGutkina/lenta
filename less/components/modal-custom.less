@@ -1,0 +1,38 @@
+// main: ../style.less
+
+.modal-custom {
+  margin-top: 200px;
+
+  .modal-content {
+    border-radius: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: @pad;
+    padding-bottom: 25px;
+    width: 330px;
+    line-height: @fs * 1.857143;
+
+    p {
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 20px;
+    line-height: 30px;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+  }
+
+  &__btn-group {
+    .btn-custom:first-child {
+      padding-left: 40px;
+    }
+  }
+}
