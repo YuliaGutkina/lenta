@@ -219,6 +219,9 @@ a:active,
 .main-content--product-page .table tbody {
   border-top: 0;
 }
+.main-content .input-group {
+  margin-bottom: 30px;
+}
 .banner--sidebar {
   padding: 30px;
   text-align: center;
@@ -567,6 +570,57 @@ a:active,
 .buy--product-page {
   margin-bottom: 15px;
 }
+.promo-block {
+  margin: 0;
+  margin-bottom: 30px;
+}
+.promo-block__item {
+  border: 1px solid #cfcfcf;
+  font-family: "DINCondensed", "Arial Narrow", Arial, sans-serif;
+  font-size: 19.999994px;
+  line-height: 23.9999928px;
+  text-transform: uppercase;
+  padding: 15px;
+  padding-bottom: 60px;
+  min-height: 200px;
+  position: relative;
+  color: #1a2791;
+}
+.promo-block__item .btn-custom {
+  position: absolute;
+  bottom: 15px;
+  left: 0;
+  padding-left: 40px;
+  padding-right: 35px;
+  text-decoration: none;
+  border: none;
+}
+.promo-block__item:nth-child(2),
+.promo-block__item:nth-child(3) {
+  margin-left: -1px;
+}
+.promo-block__item:first-child .btn-custom {
+  left: 1px;
+}
+.promo-block__item--privileges {
+  background: url(../img/card.jpg) no-repeat 0 0;
+  text-shadow: 0 0 2px #ffffff;
+}
+.promo-block__item--join {
+  color: #ffdd00;
+  background: #1a2791;
+}
+.promo-block__item--join .btn-custom {
+  background: #afb5e8;
+}
+.promo-block__item--join .btn-custom::after {
+  border-left-color: #afb5e8;
+}
+.promo-block__item--img {
+  padding: 0;
+  font-size: 0;
+  background: #ffdd00 url(../img/perfect.jpg) no-repeat 0 0;
+}
 .breadcrumb {
   margin-bottom: 0;
   padding-left: 0;
@@ -597,7 +651,7 @@ a:active,
   border: 2px solid #afb5e8;
   border-radius: 0;
 }
-.main-search .btn {
+.main-search .input-group .btn {
   height: 40px;
   padding-left: 15px;
   padding-right: 15px;
@@ -945,4 +999,47 @@ input::-webkit-inner-spin-button {
 }
 .reglist__num {
   color: #cccccc;
+}
+.carousel-slide {
+  margin-bottom: 30px;
+}
+.carousel-slide .carousel-indicators {
+  bottom: 5px;
+  margin-bottom: 0;
+}
+.carousel-slide .carousel-indicators li {
+  width: 15px;
+  height: 15px;
+  border: none;
+  background: #1a2791;
+}
+.carousel-slide .carousel-indicators li:hover {
+  background: #afb5e8;
+}
+.carousel-slide .carousel-indicators li.active {
+  background: #ffdd00;
+}
+.carousel-slide .carousel-control {
+  background: none;
+}
+.carousel-slide__control {
+  display: block;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #1a2791;
+  opacity: 1;
+  position: absolute;
+  top: 50%;
+  margin-top: -12.5px;
+  line-height: 25;
+  text-align: center;
+  font-size: 16px;
+  color: #ffffff;
+}
+.carousel-slide__control--prev {
+  left: 10px;
+}
+.carousel-slide__control--next {
+  right: 10px;
 }

@@ -1,0 +1,65 @@
+// main: ../style.less
+
+.promo-block   {
+  margin: 0;
+  margin-bottom: @pad * 2;
+
+  &__item {
+    border: 1px solid #cfcfcf;
+    font-family: @ff-extra;
+    font-size: @fs-title;
+    line-height: @fs-title * 1.2;
+    text-transform: uppercase;
+    padding: 15px;
+    padding-bottom: @pad *4;
+    min-height: 200px;
+    position: relative;
+    color: @color-primary;
+
+    .btn-custom {
+      position: absolute;
+      bottom: 15px;
+      left: 0;
+      padding-left: 40px;
+      padding-right: 35px;
+      text-decoration: none;
+      border: none;
+    }
+
+    &:nth-child(2),
+    &:nth-child(3){
+      margin-left: -1px;
+    }
+
+    &:first-child {
+
+      .btn-custom {
+        left: 1px;
+      }
+    }
+
+    &--privileges {
+      background: url(../img/card.jpg) no-repeat 0 0;
+      text-shadow: 0 0 2px @color-inverse;
+    }
+
+    &--join {
+      color: @color-decor;
+      background: @color-primary;
+
+      .btn-custom {
+        background: @color-info;
+
+        &::after {
+          border-left-color: @color-info;
+        }
+      }
+    }
+
+    &--img {
+      padding: 0;
+      font-size: 0;
+      background: @color-decor url(../img/perfect.jpg) no-repeat 0 0;
+    }
+  }
+}
