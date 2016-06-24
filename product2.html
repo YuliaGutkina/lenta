@@ -21,7 +21,7 @@
           <div class="col-xs-4 user__location">
             <i class="fa fa-map-marker" aria-hidden="true"></i>
             <span>Ваш регион:</span>
-            <a href="#" class="user__location-link">Санкт-Петербург</a>
+            <a href="#modal-town" class="user__location-link" data-toggle="modal" data-target="#modal-town">Санкт-Петербург</a>
           </div>
           <div class="col-xs-6 user__block pull-right text-right">
             <ul class="user__block-list">
@@ -308,6 +308,44 @@
               </a>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal modal-custom" id="guess-town-modal" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          <button type="button" class="btn btn-default modal-custom__close close" data-dismiss="modal" aria-label="Close">
+            <i class="fa fa-times" aria-hidden="true"></i>
+          </button>
+          <h1 class="pg-title">Выбор региона</h1>
+          <p class="extra-text">
+            Ваш регион - <span id="guess-town">Санкт-Петербург</span>?
+          </p>
+          <p>От выбранного региона зависит ассортимент товаров, цены и пункты самовывоза</p>
+          <div class="btn-group modal-custom__btn-group" role="group" aria-label="...">
+            <button type="button" class="btn btn-custom" data-guess="yes">Да</button>
+            <button type="button" class="btn btn-custom  btn-custom--gray" data-guess="no">Нет</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal modal-custom" id="modal-town" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          <button type="button" class="btn btn-default modal-custom__close close" data-dismiss="modal" aria-label="Close">
+            <i class="fa fa-times" aria-hidden="true"></i>
+          </button>
+          <h1 class="pg-title">Выбор региона</h1>
+          <p>От выбранного региона зависит ассортимент товаров, цены и пункты самовывоза</p>
+          <ul class="list-unstyled modal-custom__list" id="town-list">
+            <li><a href="">Санкт-Петербург</a></li>
+            <li><a href="">Москва</a></li>
+            <li><a href="">Новосибирск</a></li>
+            <li class="active"><a href="">Петрозаводск</a></li>
+            <li><a href="">Ростов-на-Дону</a></li>
+          </ul>
         </div>
       </div>
     </div>

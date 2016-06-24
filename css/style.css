@@ -2,6 +2,21 @@
   font-size: 17.999996px;
   font-weight: 600;
 }
+a,
+button,
+input[type="submit"],
+img {
+  outline: none;
+}
+a:hover,
+a:focus,
+a:active,
+.btn:hover,
+.btn:focus,
+.btn:active {
+  outline: none;
+  box-shadow: none;
+}
 @font-face {
   font-family: 'DINCondensed';
   src: url('../fonts/DINCondensed.eot?#iefix') format('embedded-opentype'), url('../fonts/DINCondensed.otf') format('opentype'), url('../fonts/DINCondensed.woff') format('woff'), url('../fonts/DINCondensed.woff2') format('woff2'), url('../fonts/DINCondensed.ttf') format('truetype'), url('../fonts/DINCondensed.svg#DINCondensed') format('svg');
@@ -682,7 +697,7 @@
   color: #1a2791;
 }
 .catlist__title.open > a,
-.catlist__title:visited {
+.catlist__title.open > a:visited {
   color: #afb5e8;
 }
 .catlist__title::after {
@@ -783,7 +798,7 @@
   position: absolute;
   right: -7px;
   top: 0;
-  z-index: 50;
+  z-index: 4;
 }
 .btn-custom--gray::after {
   border-left-color: #cccccc;
@@ -888,6 +903,12 @@ input::-webkit-inner-spin-button {
 .modal-custom .modal-content p {
   margin-top: 20px;
   margin-bottom: 20px;
+}
+.modal-custom__list .active > a {
+  font-weight: 700;
+  color: #333333;
+  text-decoration: none;
+  cursor: default;
 }
 .modal-custom__close,
 .modal-custom btn.close {
