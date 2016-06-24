@@ -934,6 +934,25 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
+.checkbox-label {
+  display: block;
+  padding-left: 0;
+  font-weight: normal !important;
+}
+.checkbox-input {
+  display: none;
+}
+.checkbox-custom {
+  display: inline-block;
+  position: relative;
+  width: 13px;
+  height: 13px;
+  margin-right: 5px;
+  border: 1px solid #707070;
+}
+.checkbox-input:checked ~ .checkbox-custom {
+  background: url(../img/checked.png) no-repeat 50% 50%;
+}
 .arrowUp {
   display: none;
   position: fixed;
@@ -1038,4 +1057,17 @@ input::-webkit-inner-spin-button {
 }
 .carousel-slide .carousel-control {
   background: none;
+}
+.form-main .control-label {
+  padding-right: 0;
+}
+.form-main .form-control {
+  border-radius: 0;
+  border: 1px solid #cccccc;
+  box-shadow: none;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+.form-main .form-group {
+  line-height: 32px;
 }

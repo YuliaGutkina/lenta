@@ -35,3 +35,27 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
 -webkit-appearance: none;
 }
+
+.checkbox-label {
+  display: block;
+  padding-left: 0;
+  font-weight: normal !important;
+}
+
+.checkbox-input {
+  display: none;
+}
+
+.checkbox-custom {
+  display: inline-block;
+  position: relative;
+  width: 13px;
+  height: 13px;
+  margin-right: 5px;
+
+  border: 1px solid #707070;
+}
+
+.checkbox-input:checked ~ .checkbox-custom {
+  background: url(../img/checked.png) no-repeat 50% 50%;
+}
