@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Lenta Catalog</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/non-responsive.min.css" rel="stylesheet">
+  <link href="css/font-awesome.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&subset=latin,cyrillic" rel="stylesheet" type="text/css">
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+  <header class="pg-header">
+    <div class="container">
+      <div class="row user">
+        <div class="col-xs-4 user__location">
+          <i class="fa fa-map-marker" aria-hidden="true"></i>
+          <span>Ваш регион:</span>
+          <a href="#modal-town" class="user__location-link" data-toggle="modal" data-target="#modal-town">Санкт-Петербург</a>
+        </div>
+        <div class="col-xs-6 user__block pull-right text-right">
+          <ul class="user__block-list">
+            <li class="user__block-item  user__block-item--name">
+              <i class="fa fa-user" aria-hidden="true"></i>
+              <a href="#">Абдурахмангаджи </a>
+            </li>
+            <li class="user__block-item  user__block-item--orders">
+              <i class="fa fa-th-list" aria-hidden="true"></i>
+              <a href="#">Мои заказы</a>
+            </li>
+            <li class="user__block-item  user__block-item--login">
+              <i class="fa fa-power-off" aria-hidden="true"></i>
+              <a href="#">Выход</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="pg-header__nav">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-3">
+            <a href="#" class="pg-header__logo">
+              <img src="img/logo.png" alt="">
+            </a>
+          </div>
+          <div class="col-xs-7">
+            <ul class="pg-header__nav-list">
+              <li class="active">
+                <a href="#">О lenta trade</a>
+              </li>
+              <li>
+                <a href="#">Карта лента оптимум</a>
+              </li>
+              <li>
+                <a href="#">Как Купить</a>
+              </li>
+              <li>
+                <a href="#">пункты самовывоза</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-xs-2">
+            <div class="pg-header__cart cart">
+              <a href="#" class="cart__img"><img src="img/cart.png" alt="cart" width="45" height="37"></a>
+              <div class="cart__info">
+                <a href="#" class="cart__amount">555 товаров</a>
+                <span class="cart__price cart__price--rub">9 999 999,01</span>
+                <span class="cart__weight">8 888,02 кг</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="main-search-block">
+    <div class="container">
+      <div class="row">
+        <div class="catlist">
+          <div class="catlist__inner">
+            <div class="catlist__title dropdown">
+              <a href="#" class="dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Полный каталог товаров</a>
+              <ul class="dropdown-menu">
+                <li class="catalog__item-name--promo active"><a href="#">Промо-предложения</a></li>
+                <li><a href="#">Вина</a></li>
+                <li><a href="#">Пиво и слабоалкогольные напитки</a></li>
+                <li><a href="#">Безалкогольные напитки</a></li>
+                <li><a href="#">Кондитерские изделия</a></li>
+                <li><a href="#">Кофе, какао, чай</a></li>
+                <li><a href="#">Детское питание и гигиена</a></li>
+                <li><a href="#">Косметика, парфюмерия, гигиена</a></li>
+                <li><a href="#">Бытовая химия, хозяйственные товары</a></li>
+                <li><a href="#">Табачные изделия</a></li>
+                <li><a href="#">Товары для животных</a></li>
+                <li><a href="#">Закуски к аперитивам</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="main-search col-xs-8 pull-right">
+          <div class="input-group">
+            <input type="search" class="form-control" placeholder="Поиск по товарам">
+            <span class="input-group-btn">
+              <button class="btn" type="button">
+                <i class="fa fa-search" aria-hidden="true"></i>
+              </button>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+            <li class="active">Корзина</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+  <main class="container">
+    <h1 class="pg-title">
+      Корзина
+    </h1>
+    <form action="" class="form-main form-main--table" method="get">
+      <table class="form-main__table">
+        <thead>
+          <tr class="form-main__legend">
+            <th>Товары</th>
+            <th></th>
+            <th>Цена за шт.	</th>
+            <th>Количество, уп.</th>
+            <th>Сумма</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <img src="img/item-small.jpg" alt="">
+            </td>
+            <td  class="form-main__item-name">
+              <a href="">
+                Шоколад молочный фигурный на палочке 24 гр.
+              </a>
+              <span>В упаковке: 99 шт.</span>
+            </td>
+            <td class="form-main__item-price">
+              <span>
+                99 999,01
+              </span>
+                <i class="fa fa-rub" aria-hidden="true"></i>
+            </td>
+            <td>
+              <input type="number" class="input-number-custom"value="9999">
+            </td>
+            <td class="form-main__item-summ">
+              <span>
+              </span>
+                 999 999,01
+                 <i class="fa fa-rub" aria-hidden="true"></i>
+            </td>
+            <td class="form-main__item-del">
+              <button type="button" class="form-main__delete"></button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <img src="img/item-small.jpg" alt="">
+            </td>
+            <td  class="form-main__item-name">
+              <a href="">
+                Шоколад молочный фигурный на палочке 24 гр.
+              </a>
+              <span>В упаковке: 99 шт.</span>
+            </td>
+            <td colspan="3" class="form-main__alliance3">
+              Товар недоступен в регионе
+            </td>
+            <td class="form-main__item-del">
+              <button type="button" class="form-main__delete"></button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <img src="img/item-small.jpg" alt="">
+            </td>
+            <td  class="form-main__item-name">
+              <a href="">
+                Шоколад молочный фигурный на палочке 24 гр.
+              </a>
+              <span>В упаковке: 99 шт.</span>
+            </td>
+            <td class="form-main__item-price">
+              <span>
+                99 999,01
+              </span>
+                <i class="fa fa-rub" aria-hidden="true"></i>
+            </td>
+            <td>
+              <input type="number" class="input-number-custom"value="9999">
+            </td>
+            <td class="form-main__item-summ">
+              <span>
+              </span>
+                 999 999,01
+                 <i class="fa fa-rub" aria-hidden="true"></i>
+            </td>
+            <td class="form-main__item-del">
+              <button type="button" class="form-main__delete"></button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="form-main__buy  clearfix">
+        <div  class="form-main__total">
+          <p>
+            Сумма заказа: <span class="form-main__price">9 999 999,03</span>
+            <i class="fa fa-rub" aria-hidden="true"></i>
+          </p>
+          <p>
+            Вес заказа брутто: <span class="form-main__weight">10,34</span> кг.
+          </p>
+        </div>
+        <div class="form-main__submit">
+          <button class="btn btn-custom" type="submit">
+            Оформить заказ
+          </button>
+        </div>
+      </div>
+    </form>
+  </main>
+  <div class="pg-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-3">
+          <h4 class="pg-footer__title">Компания</h4>
+          <ul class="pg-footer__list list-unstyled">
+            <li class="pg-footer__item">
+              <a href="#">О Lenta Trade</a>
+            </li>
+            <li class="pg-footer__item">
+              <a href="#">Сайт lenta.com</a>
+            </li>
+            <li class="pg-footer__item">
+              <a href="#">Контакты</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-xs-3">
+          <h4 class="pg-footer__title">Покупателям</h4>
+          <ul class="pg-footer__list list-unstyled">
+            <li class="pg-footer__item">
+              <a href="#">Карта Лента ОПТИМУМ</a>
+            </li>
+            <li class="pg-footer__item">
+              <a href="#">Адреса пунктов самовывоза</a>
+            </li>
+            <li class="pg-footer__item">
+              <a href="#">Как сделать заказ</a>
+            </li>
+            <li class="pg-footer__item">
+              <a href="#">Правила покупки</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-xs-3">
+          <h4 class="pg-footer__title">Информация</h4>
+          <ul class="pg-footer__list list-unstyled">
+            <li class="pg-footer__item">
+              <a href="#">Политика конфиденциальности</a>
+            </li>
+            <li class="pg-footer__item">
+              <a href="#">Часто задаваемые вопросы</a>
+            </li>
+            <li class="pg-footer__item">
+              <a href="#">Форма обратной связи</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-xs-3">
+          <div class="pg-footer__contacts">
+            <h4 class="pg-footer__title">Информационный центр</h4>
+            <ul class="pg-footer__list list-unstyled">
+              <li class="pg-footer__item">
+                <b>+7 (800) 700-41-11</b>
+              </li>
+              <li class="pg-footer__item">
+                <a href="mailto:support@lenta-trade.com">support@lenta-trade.com</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-9">
+          <span class="pg-footer__copyright">
+              © 2016 Lenta. Все права защищены
+            </span>
+        </div>
+        <div class="col-xs-3">
+          <div class="pg-footer__social  social">
+            <a href="" class="social__link">
+              <i class="fa fa-vk" aria-hidden="true"></i>
+            </a>
+            <a href="" class="social__link">
+              <i class="fa fa-odnoklassniki" aria-hidden="true"></i>
+            </a>
+            <a href="" class="social__link">
+              <i class="fa fa-facebook" aria-hidden="true"></i>
+            </a>
+            <a href="" class="social__link">
+              <i class="fa fa-twitter" aria-hidden="true"></i>
+            </a>
+            <a href="" class="social__link">
+              <i class="fa fa-instagram" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal modal-custom" id="guess-town-modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <button type="button" class="btn btn-default modal-custom__close close" data-dismiss="modal" aria-label="Close">
+          <i class="fa fa-times" aria-hidden="true"></i>
+        </button>
+        <h1 class="pg-title">Выбор региона</h1>
+        <p class="extra-text">
+          Ваш регион - <span id="guess-town">Санкт-Петербург</span>?
+        </p>
+        <p>От выбранного региона зависит ассортимент товаров, цены и пункты самовывоза</p>
+        <div class="btn-group modal-custom__btn-group" role="group" aria-label="...">
+          <button type="button" class="btn btn-custom" data-guess="yes">Да</button>
+          <button type="button" class="btn btn-custom  btn-custom--gray" data-guess="no">Нет</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal modal-custom" id="modal-town" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <button type="button" class="btn btn-default modal-custom__close close" data-dismiss="modal" aria-label="Close">
+          <i class="fa fa-times" aria-hidden="true"></i>
+        </button>
+        <h1 class="pg-title">Выбор региона</h1>
+        <p>От выбранного региона зависит ассортимент товаров, цены и пункты самовывоза</p>
+        <ul class="list-unstyled modal-custom__list" id="town-list">
+          <li><a href="">Санкт-Петербург</a></li>
+          <li><a href="">Москва</a></li>
+          <li><a href="">Новосибирск</a></li>
+          <li class="active"><a href="">Петрозаводск</a></li>
+          <li><a href="">Ростов-на-Дону</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="js/jquery-2.2.3.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/scripts.js"></script>
+</body>
+
+</html>

@@ -2,6 +2,130 @@
 
 .form-main {
 
+  &__legend {
+    background: @color-gray-lighter;
+    border: 1px solid #cccccc;
+    border-right: 1px solid #cccccc;
+    // padding-top: 10px;
+    // padding-bottom: 10px;
+  }
+
+  &__table {
+    width: 100%;
+    margin-bottom: @pad * 2;
+
+    tr {
+      border: 1px solid #cccccc;
+    }
+
+    th {
+      padding: 10px;
+      font-weight: 400;
+    }
+
+    th,
+    td {
+      text-align: center;
+    }
+
+    td {
+      padding: 5px;
+      padding-left: @pad;
+      padding-right: @pad;
+      font-weight: 600;
+    }
+
+    .input-number-custom {
+      height: 25px;
+      width: 112px;
+      font-size: @fs-title;
+    }
+
+  }
+
+  &__item-price,
+  &__item-summ {
+    font-size: @fs-title;
+  }
+
+  &__item-name {
+
+    a,
+    span {
+      text-align: left;
+      display: block;
+    }
+  }
+
+  &__item-del {
+    width: 72px;
+    text-align: center;
+  }
+
+  &__delete {
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    width: 30px;
+    height: 30px;
+    background: @color-decor;
+    border: none;
+
+    &::after {
+      display: block;
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      font-family: @ff-icon;
+      content: "\f00d";
+      font-size: @fs * 1.714286;
+      cursor: pointer;
+      color: @color-primary;
+      top: 0;
+      left: 0;
+      text-align: center;
+      line-height: 30px;
+    }
+  }
+
+  &__alliance3 {
+    font-weight: 700;
+    font-size: @fs * 1.714286;
+    border: 1px solid #cccccc;
+  }
+
+  &__buy {
+    padding-left: @pad *2;
+    padding-right: @pad *2;
+  }
+
+  &__total {
+    float: left;
+    font-size: @fs * 1.714286;
+    font-weight: 600;
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  &__submit {
+    float: right;
+    margin-top: @pad * 2;
+
+    .btn-custom {
+      border: none;
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+  }
+
+  &__price,
+  &__weight {
+    color: @color-primary;
+    font-weight: bold;
+  }
+
   .control-label {
     padding-right: 0;
   }
@@ -17,4 +141,10 @@
   .form-group {
     line-height: 32px;
   }
+
+  .checkbox-label {
+
+  }
+
+
 }
