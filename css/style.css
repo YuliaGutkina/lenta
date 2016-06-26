@@ -2,6 +2,21 @@
   font-size: 17.999996px;
   font-weight: 600;
 }
+.extra-text--small {
+  font-size: 15.999998px;
+}
+.extra-text--nobold {
+  font-weight: 400;
+}
+.link-custom {
+  display: inline-block;
+  border-bottom: 2px solid #bbbbbb;
+  line-height: 12.000002px;
+  text-decoration: none;
+}
+.link-custom:hover {
+  border-bottom-color: transparent;
+}
 a,
 button,
 input[type="submit"],

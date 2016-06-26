@@ -1,4 +1,18 @@
 .extra-text {
   font-size: @fs-large;
   font-weight: 600;
+
+  &--small {
+    font-size: @fs * 1.142857;
+  }
+
+  &--nobold {
+    font-weight: 400;
+  }
+}
+
+.link-custom {
+  .link-underline();
+  line-height: @fs-small;
+  text-decoration: none;
 }
