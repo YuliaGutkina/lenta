@@ -849,6 +849,9 @@ a:active,
   text-transform: uppercase;
   padding: 20px 30px 0;
 }
+.btn {
+  text-decoration: none;
+}
 .btn-default {
   text-transform: uppercase;
   font-family: "DINCondensed", "Arial Narrow", Arial, sans-serif;
@@ -1161,7 +1164,6 @@ input::-webkit-inner-spin-button {
   padding-right: 30px;
 }
 .form-main__total {
-  float: left;
   font-size: 24.000004px;
   font-weight: 600;
 }
@@ -1170,7 +1172,9 @@ input::-webkit-inner-spin-button {
 }
 .form-main__total--normal {
   font-size: 14px;
-  padding-left: 15px;
+}
+.form-main__status {
+  font-weight: 400;
 }
 .form-main__submit {
   float: right;
@@ -1220,6 +1224,37 @@ input::-webkit-inner-spin-button {
   content: "\f05a";
   color: #1a2791;
   font-size: 17.999996px;
+}
+.form-main__btn-group {
+  margin-bottom: 30px;
+}
+.form-main__btn-group .btn-custom {
+  border: none;
+  outline: none;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+.form-main__btn-group .btn-custom--light {
+  background: #e7ecf4;
+  color: #1a2791;
+}
+.form-main__btn-group .btn-custom--light::after {
+  border-left-color: #e7ecf4;
+  right: -6px;
+}
+.form-main__orderitem {
+  margin-top: -1px;
+}
+.form-main__orderitem .btn-custom {
+  margin-top: 20px;
+  margin-left: -15px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.form-main__orderinner {
+  padding: 15px;
+  margin-top: -1px;
+  border: 1px solid #cccccc;
 }
 .form-main .control-label {
   padding-right: 0;

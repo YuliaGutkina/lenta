@@ -113,7 +113,6 @@
   }
 
   &__total {
-    float: left;
     font-size: @fs * 1.714286;
     font-weight: 600;
 
@@ -123,8 +122,11 @@
 
     &--normal {
       font-size: @fs;
-      padding-left: @pad;
     }
+  }
+
+  &__status {
+    font-weight: 400;
   }
 
   &__submit {
@@ -183,6 +185,44 @@
       color: @color-primary;
       font-size: @fs-large;
     }
+  }
+
+  &__btn-group {
+    margin-bottom: @pad * 2;
+
+    .btn-custom {
+      border: none;
+      outline: none;
+      padding-left: 25px;
+      padding-right: 25px;
+
+      &--light {
+        background: #e7ecf4;
+        color: @color-primary;
+
+        &::after {
+          border-left-color: #e7ecf4;
+          right: -6px;
+        }
+      }
+    }
+  }
+
+  &__orderitem {
+    margin-top: -1px;
+
+    .btn-custom {
+      margin-top: 20px;
+      margin-left: -@pad;
+      padding-left: @pad * 2;
+      padding-right: @pad * 2;;
+    }
+  }
+
+  &__orderinner {
+    padding: @pad;
+    margin-top: -1px;
+    border: 1px solid #cccccc;
   }
 
   .control-label {
