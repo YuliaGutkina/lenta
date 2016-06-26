@@ -1058,10 +1058,20 @@ input::-webkit-inner-spin-button {
 .carousel-slide .carousel-control {
   background: none;
 }
+.form-main__fieldset {
+  border: 1px solid #cccccc;
+  padding: 15px;
+  margin-bottom: 30px;
+}
+.form-main__fieldset--comment .form-group {
+  margin-bottom: 0;
+}
 .form-main__legend {
   background: #f9f9f9;
   border: 1px solid #cccccc;
-  border-right: 1px solid #cccccc;
+  font-size: 15.999998px;
+  padding: 10px 15px;
+  margin: 0;
 }
 .form-main__table {
   width: 100%;
@@ -1143,6 +1153,10 @@ input::-webkit-inner-spin-button {
 .form-main__total p {
   margin-bottom: 0;
 }
+.form-main__total--normal {
+  font-size: 14px;
+  padding-left: 15px;
+}
 .form-main__submit {
   float: right;
   margin-top: 30px;
@@ -1157,6 +1171,41 @@ input::-webkit-inner-spin-button {
   color: #1a2791;
   font-weight: bold;
 }
+.form-main__address p {
+  margin-bottom: 20px;
+}
+.form-main__label {
+  font-weight: 600;
+  padding-right: 5px;
+}
+.form-main__consist-list {
+  padding-left: 20px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.form-main__consist-item {
+  font-size: 12.000002px;
+  line-height: 21.999992px;
+}
+.form-main__link {
+  display: inline-block;
+  border-bottom: 2px solid #bbbbbb;
+  line-height: 12.000002px;
+  text-decoration: none;
+}
+.form-main__link:hover {
+  border-bottom-color: transparent;
+}
+.form-main__info {
+  line-height: 26.000002px;
+}
+.form-main__info::before {
+  display: inline-block;
+  font-family: "FontAwesome";
+  content: "\f05a";
+  color: #1a2791;
+  font-size: 17.999996px;
+}
 .form-main .control-label {
   padding-right: 0;
 }
@@ -1169,4 +1218,10 @@ input::-webkit-inner-spin-button {
 }
 .form-main .form-group {
   line-height: 32px;
+}
+.form-main .btn-custom {
+  border: none;
+}
+.form-main textarea {
+  height: 110px;
 }

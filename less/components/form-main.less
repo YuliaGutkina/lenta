@@ -2,12 +2,25 @@
 
 .form-main {
 
+  &__fieldset {
+    border: 1px solid #cccccc;
+    padding: 15px;
+    margin-bottom: @pad * 2;
+
+    &--comment {
+
+      .form-group {
+        margin-bottom: 0;
+      }
+    }
+  }
+
   &__legend {
     background: @color-gray-lighter;
     border: 1px solid #cccccc;
-    border-right: 1px solid #cccccc;
-    // padding-top: 10px;
-    // padding-bottom: 10px;
+    font-size: @fs * 1.142857;
+    padding: 10px 15px;
+    margin: 0;
   }
 
   &__table {
@@ -107,6 +120,11 @@
     p {
       margin-bottom: 0;
     }
+
+    &--normal {
+      font-size: @fs;
+      padding-left: @pad;
+    }
   }
 
   &__submit {
@@ -124,6 +142,47 @@
   &__weight {
     color: @color-primary;
     font-weight: bold;
+  }
+
+  &__address {
+
+    p {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__label {
+    font-weight: 600;
+    padding-right: 5px;
+  }
+
+  &__consist-list {
+    padding-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+
+  &__consist-item {
+    font-size: @fs-small;
+    line-height: @fs * 1.571428;
+  }
+
+  &__link {
+    .link-underline();
+    line-height: @fs-small;
+    text-decoration: none;
+  }
+
+  &__info {
+    line-height: @fs * 1.857143;
+
+    &::before {
+      display: inline-block;
+      font-family: @ff-icon;
+      content: "\f05a";
+      color: @color-primary;
+      font-size: @fs-large;
+    }
   }
 
   .control-label {
@@ -144,6 +203,14 @@
 
   .checkbox-label {
 
+  }
+
+  .btn-custom {
+    border: none;
+  }
+
+  textarea {
+    height: 110px;
   }
 
 
