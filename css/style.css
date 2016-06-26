@@ -1007,6 +1007,8 @@ input::-webkit-inner-spin-button {
   padding-bottom: 25px;
   width: 330px;
   line-height: 26.000002px;
+  background: #f9f9f9;
+  border: none;
 }
 .modal-custom .modal-content p {
   margin-top: 20px;
@@ -1084,13 +1086,6 @@ input::-webkit-inner-spin-button {
 .form-main__fieldset--comment .form-group {
   margin-bottom: 0;
 }
-.form-main__legend {
-  background: #f9f9f9;
-  border: 1px solid #cccccc;
-  font-size: 15.999998px;
-  padding: 10px 15px;
-  margin: 0;
-}
 .form-main__table {
   width: 100%;
   margin-bottom: 30px;
@@ -1102,10 +1097,6 @@ input::-webkit-inner-spin-button {
   padding: 10px;
   font-weight: 400;
 }
-.form-main__table th,
-.form-main__table td {
-  text-align: center;
-}
 .form-main__table td {
   padding: 5px;
   padding-left: 15px;
@@ -1116,6 +1107,14 @@ input::-webkit-inner-spin-button {
   height: 25px;
   width: 112px;
   font-size: 19.999994px;
+}
+.form-main__legend {
+  background: #f9f9f9;
+  border: 1px solid #cccccc;
+  font-size: 15.999998px;
+  padding: 10px 15px;
+  margin: 0;
+  text-align: left;
 }
 .form-main__item-price,
 .form-main__item-summ {
@@ -1164,6 +1163,7 @@ input::-webkit-inner-spin-button {
   padding-right: 30px;
 }
 .form-main__total {
+  float: left;
   font-size: 24.000004px;
   font-weight: 600;
 }
@@ -1172,6 +1172,7 @@ input::-webkit-inner-spin-button {
 }
 .form-main__total--normal {
   font-size: 14px;
+  float: none;
 }
 .form-main__status {
   font-weight: 400;
@@ -1189,6 +1190,11 @@ input::-webkit-inner-spin-button {
 .form-main__weight {
   color: #1a2791;
   font-weight: bold;
+}
+.form-main__price--normal,
+.form-main__weight--normal {
+  color: #000000;
+  font-weight: 400;
 }
 .form-main__address p {
   margin-bottom: 20px;
@@ -1251,6 +1257,12 @@ input::-webkit-inner-spin-button {
   padding-left: 30px;
   padding-right: 30px;
 }
+.form-main__orderitem--left {
+  padding-right: 0;
+}
+.form-main__orderitem--right {
+  padding-left: 0;
+}
 .form-main__orderinner {
   padding: 15px;
   margin-top: -1px;
@@ -1273,5 +1285,6 @@ input::-webkit-inner-spin-button {
   border: none;
 }
 .form-main textarea {
-  height: 110px;
+  min-height: 110px;
+  max-width: 100%;
 }
