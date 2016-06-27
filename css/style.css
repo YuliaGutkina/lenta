@@ -1240,6 +1240,10 @@ input::-webkit-inner-spin-button {
 .form-main__item-summ {
   font-size: 19.999994px;
 }
+.form-main__item-price--bold,
+.form-main__item-summ--bold {
+  font-weight: 700 !important;
+}
 .form-main__item-name a,
 .form-main__item-name span {
   text-align: left;
