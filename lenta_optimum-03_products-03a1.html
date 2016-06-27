@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Lenta Products</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/non-responsive.min.css" rel="stylesheet">
+		<link href="css/font-awesome.min.css" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&subset=latin,cyrillic" rel="stylesheet" type="text/css">
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <header class="pg-header">
+      <div class="container">
+        <div class="row user">
+          <div class="col-xs-4 user__location">
+            <i class="fa fa-map-marker" aria-hidden="true"></i>
+            <span>Ваш регион:</span>
+            <a href="#modal-town" class="user__location-link" data-toggle="modal" data-target="#modal-town">Санкт-Петербург</a>
+          </div>
+          <div class="col-xs-6 user__block pull-right text-right">
+            <ul class="user__block-list">
+              <li class="user__block-item  user__block-item--name">
+                <i class="fa fa-user" aria-hidden="true"></i>
+                <a href="#">Абдурахмангаджи </a>
+              </li>
+              <li class="user__block-item  user__block-item--orders">
+                <i class="fa fa-th-list" aria-hidden="true"></i>
+                <a href="#">Мои заказы</a>
+              </li>
+              <li class="user__block-item  user__block-item--login">
+                <i class="fa fa-power-off" aria-hidden="true"></i>
+                <a href="#">Выход</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="pg-header__nav">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-3">
+              <a href="#" class="pg-header__logo">
+                <img src="img/logo.png" alt="">
+              </a>
+            </div>
+            <div class="col-xs-7">
+              <ul class="pg-header__nav-list">
+                <li>
+                  <a href="#">О lenta trade</a>
+                </li>
+                <li>
+                  <a href="#">Карта лента оптимум</a>
+                </li>
+                <li>
+                  <a href="#">Как Купить</a>
+                </li>
+                <li>
+                  <a href="#">пункты самовывоза</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-xs-2">
+              <div class="pg-header__cart cart">
+                <a href="#" class="cart__img"><img src="img/cart.png" alt="cart" width="45" height="37"></a>
+                <div class="cart__info">
+                  <a href="#" class="cart__amount">555 товаров</a>
+                  <span class="cart__price cart__price--rub">9 999 999,01</span>
+                  <span class="cart__weight">8 888,02 кг</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="main-search-block">
+      <div class="container">
+        <div class="row">
+          <div class="catlist">
+            <div class="catlist__inner">
+              <div class="catlist__title dropdown">
+                <a href="#" class="dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Полный каталог товаров</a>
+                <ul class="dropdown-menu">
+                  <li class="catalog__item-name--promo active"><a href="#">Промо-предложения</a></li>
+                  <li><a href="#">Вина</a></li>
+                  <li><a href="#">Пиво и слабоалкогольные напитки</a></li>
+                  <li><a href="#">Безалкогольные напитки</a></li>
+                  <li><a href="#">Кондитерские изделия</a></li>
+                  <li><a href="#">Кофе, какао, чай</a></li>
+                  <li><a href="#">Детское питание и гигиена</a></li>
+                  <li><a href="#">Косметика, парфюмерия, гигиена</a></li>
+                  <li><a href="#">Бытовая химия, хозяйственные товары</a></li>
+                  <li><a href="#">Табачные изделия</a></li>
+                  <li><a href="#">Товары для животных</a></li>
+                  <li><a href="#">Закуски к аперитивам</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="main-search col-xs-8 pull-right">
+            <div class="input-group">
+              <input type="search" class="form-control" placeholder="Поиск по товарам">
+              <span class="input-group-btn">
+                <button class="btn" type="button">
+                  <i class="fa fa-search" aria-hidden="true"></i>
+                </button>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <ol class="breadcrumb">
+              <li><a href="#"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+              <li><a href="catalog.html">Каталог товаров</a></li>
+              <li class="active">Бытовая химия, хозяйственные товары</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="sidebar">
+          <form class="filter" action="" method="get">
+            <fieldset class="filter__fieldset">
+              <legend class="filter__legend   filter__legend--open">
+                <a href="#">Бренд</a>
+              </legend>
+              <div class="filter__fieldset-inner">
+                <label class="filter__checkbox-label">
+                  <input type="checkbox" class="filter__checkbox-input" name="moscow-coffee">
+                  <span class="filter__checkbox-custom"></span>
+                  Московская кофейня на паяхъ
+                  <span class="filter__counter">(10)</span>
+                </label>
+                <label class="filter__checkbox-label">
+                  <input type="checkbox" class="filter__checkbox-input" name="jokey" checked>
+                  <span class="filter__checkbox-custom"></span>
+                  Жокей
+                  <span class="filter__counter">(4)</span>
+                </label>
+                <label class="filter__checkbox-label">
+                  <input type="checkbox" class="filter__checkbox-input" name="petr-sloboda">
+                  <span class="filter__checkbox-custom"></span>
+                  Петровская слобода
+                  <span class="filter__counter">(7)</span>
+                </label>
+              </div>
+            </fieldset>
+            <fieldset class="filter__fieldset">
+              <legend class="filter__legend">
+                <a href="#">Вес (кг)</a>
+              </legend>
+
+            </fieldset>
+            <fieldset class="filter__fieldset">
+              <legend class="filter__legend   filter__legend--open">
+                <a href="#">Цена</a>
+              </legend>
+              <div class="filter__fieldset-inner">
+                <div class="filter__range range">
+                  <div class="range__controls">
+                    <div class="range__scale">
+                    </div>
+                    <div class="range__toggle range__toggle--min">
+                    </div>
+                    <div class="range__toggle  range__toggle--max">
+                    </div>
+                  </div>
+                  <div class="range__price-controls">
+                    <label>
+                      От:
+                      <input class="range__input  range__input--first" type="text" value="2499" name="min-price">
+                    </label>
+                    <label>
+                      До:
+                      <input class="range__input" type="text" value="2874" name="max-price">
+                    </label>
+                    <span>₽</span>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+            <div class="btn-group" role="group" aria-label="...">
+              <button type="submit" class="btn btn-custom  btn-custom--wide">Применить</button>
+              <button type="reset" class="btn btn-custom  btn-custom--gray">Сбросить</button>
+            </div>
+          </form>
+        </div>
+        <main class="main-content col-xs-8 pull-right">
+          <div class="row">
+            <div class="col-xs-8">
+              <h1 class="pg-title">Бытовая химия, хозяйственные товары </h1>
+            </div>
+            <div class="col-xs-4 pull-right text-right">
+              <div class="cat-toggle">
+                <span><small>Вид каталога:</small></span>
+                <a href="" class="cat-toggle__view cat-toggle__view--card"></a>
+                <a href="" class="cat-toggle__view cat-toggle__view--list  active"></a>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-6">
+              <ul class="paginator  paginator--top list-inline">
+                <li class="paginator__item">
+                  <a href="">Предыдущая</a>
+                </li>
+                <li class="paginator__item"><a href="">1</a></li>
+                <li class="paginator__item  paginator__item--active">2</li>
+                <li class="paginator__item"><a href="">3</a></li>
+                <li class="paginator__item">...</li>
+                <li class="paginator__item"><a href="">24</a></li>
+                <li class="paginator__item">
+                  <a href="">Следующая</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-xs-6 pull-right text-right sorter">
+              <select name="sort-price" id="sort-price" class="select-custom">
+								<option value="value1">Дешевле <i class="fa fa-long-arrow-right" aria-hidden="true"></i> дороже</option>
+								<option value="value2"></option>
+								<option value="value3"></option>
+								<option value="value4"></option>
+							</select>
+              <label for="">Показывать  по:  </label>
+              <select name="sort-num" id="sort-num" class="select-custom">
+								<option value="value1">12</option>
+								<option value="value2"></option>
+								<option value="value3"></option>
+								<option value="value4"></option>
+							</select>
+            </div>
+          </div>
+          <section class="goods">
+            <div class="row">
+              <div class="col-xs-4 goods__item  goods__item--sale">
+                <a href="" class="goods__name">Средство для мытья посуды FAIRY, нежные руки ромашка...</a>
+                <div class="goods__img">
+                  <img src="img/item1.jpg" alt="">
+                </div>
+                <div class="goods__price text-right">
+                  <span class="goods__old-price">99 999,01</span>
+                  <span class="goods__new-price">
+                    88 888,01 <i class="fa fa-rub" aria-hidden="true"></i>
+                  </span>
+                  <span>
+                    <small>/шт</small>
+                  </span>
+                </div>
+                <div class="goods__buy clearfix">
+                  <div class="goods__box">
+                    <span class="goods__box-img"></span>
+                    <span>777 шт.</span>
+                  </div>
+                  <div class="goods__scales">
+                    <span class="goods__scales-img"></span>
+                    <span>6666,02 кг</span>
+                  </div>
+                </div>
+                <div class="goods__footer clearfix">
+                  <div class="goods__count clearfix">
+                    <div class="goods__count-input">
+                      <input type="number" class="input-number-custom" value="5555">
+                      <span>уп.</span>
+                    </div>
+                    <span>
+                      444шт.
+                    </span>
+                  </div>
+                  <div class="goods__summ">
+                    9 999 999.03 <i class="fa fa-rub" aria-hidden="true"></i>
+                  </div>
+                  <a href="" class="goods__btn btn btn-default">
+                    В корзину
+                  </a>
+                </div>
+              </div>
+              <div class="col-xs-4 goods__item">
+                <a href="" class="goods__name">Средство для мытья посуды FAIRY, нежные руки ромашка...</a>
+                <div class="goods__img">
+                  <img src="img/item1.jpg" alt="">
+                </div>
+                <div class="goods__price text-right">
+                  <span class="goods__old-price">99 999,01</span>
+                  <span class="goods__new-price">
+                    88 888,01 <i class="fa fa-rub" aria-hidden="true"></i>
+                  </span>
+                  <span>
+                    <small>/шт</small>
+                  </span>
+                </div>
+                <div class="goods__buy clearfix">
+                  <div class="goods__box">
+                    <span class="goods__box-img"></span>
+                    <span>777 шт.</span>
+                  </div>
+                  <div class="goods__scales">
+                    <span class="goods__scales-img"></span>
+                    <span>6666,02 кг</span>
+                  </div>
+                </div>
+                <div class="goods__footer clearfix">
+                  <div class="goods__count clearfix">
+                    <div class="goods__count-input">
+                      <input type="number" class="input-number-custom" value="5555">
+                      <span>уп.</span>
+                    </div>
+                    <span>
+                      444шт.
+                    </span>
+                  </div>
+                  <div class="goods__summ">
+                    9 999 999.03 <i class="fa fa-rub" aria-hidden="true"></i>
+                  </div>
+                  <a href="" class="goods__btn btn btn-default">
+                    В корзину
+                  </a>
+                </div>
+              </div>
+              <div class="col-xs-4 goods__item  goods__item--sale">
+                <a href="" class="goods__name">Средство для мытья посуды FAIRY, нежные руки ромашка...</a>
+                <div class="goods__img">
+                  <img src="img/item1.jpg" alt="">
+                </div>
+                <div class="goods__price text-right">
+                  <span class="goods__old-price">99 999,01</span>
+                  <span class="goods__new-price">
+                    88 888,01 <i class="fa fa-rub" aria-hidden="true"></i>
+                  </span>
+                  <span>
+                    <small>/шт</small>
+                  </span>
+                </div>
+                <div class="goods__buy clearfix">
+                  <div class="goods__box">
+                    <span class="goods__box-img"></span>
+                    <span>777 шт.</span>
+                  </div>
+                  <div class="goods__scales">
+                    <span class="goods__scales-img"></span>
+                    <span>6666,02 кг</span>
+                  </div>
+                </div>
+                <div class="goods__footer clearfix">
+                  <div class="goods__count clearfix">
+                    <div class="goods__count-input">
+                      <input type="number" class="input-number-custom" value="5555">
+                      <span>уп.</span>
+                    </div>
+                    <span>
+                      444шт.
+                    </span>
+                  </div>
+                  <div class="goods__summ">
+                    9 999 999.03 <i class="fa fa-rub" aria-hidden="true"></i>
+                  </div>
+                  <a href="" class="goods__btn btn btn-default">
+                    В корзину
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-4 goods__item  goods__item--sale">
+                <a href="" class="goods__name">Средство для мытья посуды FAIRY, нежные руки ромашка...</a>
+                <div class="goods__img">
+                  <img src="img/item1.jpg" alt="">
+                </div>
+                <div class="goods__price text-right">
+                  <span class="goods__old-price">99 999,01</span>
+                  <span class="goods__new-price">
+                    88 888,01 <i class="fa fa-rub" aria-hidden="true"></i>
+                  </span>
+                  <span>
+                    <small>/шт</small>
+                  </span>
+                </div>
+                <div class="goods__buy clearfix">
+                  <div class="goods__box">
+                    <span class="goods__box-img"></span>
+                    <span>777 шт.</span>
+                  </div>
+                  <div class="goods__scales">
+                    <span class="goods__scales-img"></span>
+                    <span>6666,02 кг</span>
+                  </div>
+                </div>
+                <div class="goods__footer clearfix">
+                  <div class="goods__count clearfix">
+                    <div class="goods__count-input">
+                      <input type="number" class="input-number-custom" value="5555">
+                      <span>уп.</span>
+                    </div>
+                    <span>
+                      444шт.
+                    </span>
+                  </div>
+                  <div class="goods__summ">
+                    9 999 999.03 <i class="fa fa-rub" aria-hidden="true"></i>
+                  </div>
+                  <a href="" class="goods__btn btn btn-default">
+                    В корзину
+                  </a>
+                </div>
+              </div>
+              <div class="col-xs-4 goods__item  goods__item--sale  goods__item--icon">
+                <a href="" class="goods__name">Средство для мытья посуды FAIRY, нежные руки ромашка...</a>
+                <div class="goods__img">
+                  <img src="img/item1.jpg" alt="">
+                </div>
+                <div class="goods__price text-right">
+                  <span class="goods__old-price">99 999,01</span>
+                  <span class="goods__new-price">
+                    88 888,01 <i class="fa fa-rub" aria-hidden="true"></i>
+                  </span>
+                  <span>
+                    <small>/шт</small>
+                  </span>
+                </div>
+                <div class="goods__buy clearfix">
+                  <div class="goods__box">
+                    <span class="goods__box-img"></span>
+                    <span>777 шт.</span>
+                  </div>
+                  <div class="goods__scales">
+                    <span class="goods__scales-img"></span>
+                    <span>6666,02 кг</span>
+                  </div>
+                </div>
+                <div class="goods__footer clearfix">
+                  <div class="goods__count clearfix">
+                    <div class="goods__count-input">
+                      <input type="number" class="input-number-custom" value="5555">
+                      <span>уп.</span>
+                    </div>
+                    <span>
+                      444шт.
+                    </span>
+                  </div>
+                  <div class="goods__summ">
+                    9 999 999.03 <i class="fa fa-rub" aria-hidden="true"></i>
+                  </div>
+                  <a href="" class="goods__btn btn btn-default">
+                    В корзину
+                  </a>
+                </div>
+              </div>
+              <div class="col-xs-4 goods__item  goods__item--sale">
+                <a href="" class="goods__name">Средство для мытья посуды FAIRY, нежные руки ромашка...</a>
+                <div class="goods__img">
+                  <img src="img/item1.jpg" alt="">
+                </div>
+                <div class="goods__price text-right">
+                  <span class="goods__old-price">99 999,01</span>
+                  <span class="goods__new-price">
+                    88 888,01 <i class="fa fa-rub" aria-hidden="true"></i>
+                  </span>
+                  <span>
+                    <small>/шт</small>
+                  </span>
+                </div>
+                <div class="goods__buy clearfix">
+                  <div class="goods__box">
+                    <span class="goods__box-img"></span>
+                    <span>777 шт.</span>
+                  </div>
+                  <div class="goods__scales">
+                    <span class="goods__scales-img"></span>
+                    <span>6666,02 кг</span>
+                  </div>
+                </div>
+                <div class="goods__footer clearfix">
+                  <div class="goods__count clearfix">
+                    <div class="goods__count-input">
+                      <input type="number" class="input-number-custom" value="5555">
+                      <span>уп.</span>
+                    </div>
+                    <span>
+                      444шт.
+                    </span>
+                  </div>
+                  <div class="goods__summ">
+                    9 999 999.03 <i class="fa fa-rub" aria-hidden="true"></i>
+                  </div>
+                  <a href="" class="goods__btn btn btn-default">
+                    В корзину
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-4 goods__item">
+                <a href="" class="goods__name">Средство для мытья посуды FAIRY, нежные руки ромашка...</a>
+                <div class="goods__img">
+                  <img src="img/item1.jpg" alt="">
+                </div>
+                <div class="goods__price text-right">
+                  <span class="goods__old-price">99 999,01</span>
+                  <span class="goods__new-price">
+                    88 888,01 <i class="fa fa-rub" aria-hidden="true"></i>
+                  </span>
+                  <span>
+                    <small>/шт</small>
+                  </span>
+                </div>
+                <div class="goods__buy clearfix">
+                  <div class="goods__box">
+                    <span class="goods__box-img"></span>
+                    <span>777 шт.</span>
+                  </div>
+                  <div class="goods__scales">
+                    <span class="goods__scales-img"></span>
+                    <span>6666,02 кг</span>
+                  </div>
+                </div>
+                <div class="goods__footer clearfix">
+                  <div class="goods__count clearfix">
+                    <div class="goods__count-input">
+                      <input type="number" class="input-number-custom" value="5555">
+                      <span>уп.</span>
+                    </div>
+                    <span>
+                      444шт.
+                    </span>
+                  </div>
+                  <div class="goods__summ">
+                    9 999 999.03 <i class="fa fa-rub" aria-hidden="true"></i>
+                  </div>
+                  <a href="" class="goods__btn btn btn-default">
+                    В корзину
+                  </a>
+                </div>
+              </div>
+              <div class="col-xs-4 goods__item">
+                <a href="" class="goods__name">Средство для мытья посуды FAIRY, нежные руки ромашка...</a>
+                <div class="goods__img">
+                  <img src="img/item1.jpg" alt="">
+                </div>
+                <div class="goods__price text-right">
+                  <span class="goods__old-price">99 999,01</span>
+                  <span class="goods__new-price">
+                    88 888,01 <i class="fa fa-rub" aria-hidden="true"></i>
+                  </span>
+                  <span>
+                    <small>/шт</small>
+                  </span>
+                </div>
+                <div class="goods__buy clearfix">
+                  <div class="goods__box">
+                    <span class="goods__box-img"></span>
+                    <span>777 шт.</span>
+                  </div>
+                  <div class="goods__scales">
+                    <span class="goods__scales-img"></span>
+                    <span>6666,02 кг</span>
+                  </div>
+                </div>
+                <div class="goods__footer clearfix">
+                  <div class="goods__count clearfix">
+                    <div class="goods__count-input">
+                      <input type="number" class="input-number-custom" value="5555">
+                      <span>уп.</span>
+                    </div>
+                    <span>
+                      444шт.
+                    </span>
+                  </div>
+                  <div class="goods__summ">
+                    9 999 999.03 <i class="fa fa-rub" aria-hidden="true"></i>
+                  </div>
+                  <a href="" class="goods__btn btn btn-default">
+                    В корзину
+                  </a>
+                </div>
+              </div>
+              <div class="col-xs-4 goods__item">
+                <a href="" class="goods__name">Средство для мытья посуды FAIRY, нежные руки ромашка...</a>
+                <div class="goods__img">
+                  <img src="img/item1.jpg" alt="">
+                </div>
+                <div class="goods__price text-right">
+                  <span class="goods__old-price">99 999,01</span>
+                  <span class="goods__new-price">
+                    88 888,01 <i class="fa fa-rub" aria-hidden="true"></i>
+                  </span>
+                  <span>
+                    <small>/шт</small>
+                  </span>
+                </div>
+                <div class="goods__buy clearfix">
+                  <div class="goods__box">
+                    <span class="goods__box-img"></span>
+                    <span>777 шт.</span>
+                  </div>
+                  <div class="goods__scales">
+                    <span class="goods__scales-img"></span>
+                    <span>6666,02 кг</span>
+                  </div>
+                </div>
+                <div class="goods__footer clearfix">
+                  <div class="goods__count clearfix">
+                    <div class="goods__count-input">
+                      <input type="number" class="input-number-custom" value="5555">
+                      <span>уп.</span>
+                    </div>
+                    <span>
+                      444шт.
+                    </span>
+                  </div>
+                  <div class="goods__summ">
+                    9 999 999.03 <i class="fa fa-rub" aria-hidden="true"></i>
+                  </div>
+                  <a href="" class="goods__btn btn btn-default">
+                    В корзину
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-4 goods__item">
+                <a href="" class="goods__name">Средство для мытья посуды FAIRY, нежные руки ромашка...</a>
+                <div class="goods__img">
+                  <img src="img/item1.jpg" alt="">
+                </div>
+                <div class="goods__price text-right">
+                  <span class="goods__old-price">99 999,01</span>
+                  <span class="goods__new-price">
+                    88 888,01 <i class="fa fa-rub" aria-hidden="true"></i>
+                  </span>
+                  <span>
+                    <small>/шт</small>
+                  </span>
+                </div>
+                <div class="goods__buy clearfix">
+                  <div class="goods__box">
+                    <span class="goods__box-img"></span>
+                    <span>777 шт.</span>
+                  </div>
+                  <div class="goods__scales">
+                    <span class="goods__scales-img"></span>
+                    <span>6666,02 кг</span>
+                  </div>
+                </div>
+                <div class="goods__footer clearfix">
+                  <div class="goods__count clearfix">
+                    <div class="goods__count-input">
+                      <input type="number" class="input-number-custom" value="5555">
+                      <span>уп.</span>
+                    </div>
+                    <span>
+                      444шт.
+                    </span>
+                  </div>
+                  <div class="goods__summ">
+                    9 999 999.03 <i class="fa fa-rub" aria-hidden="true"></i>
+                  </div>
+                  <a href="" class="goods__btn btn btn-default">
+                    В корзину
+                  </a>
+                </div>
+              </div>
+              <div class="col-xs-4 goods__item">
+                <a href="" class="goods__name">Средство для мытья посуды FAIRY, нежные руки ромашка...</a>
+                <div class="goods__img">
+                  <img src="img/item1.jpg" alt="">
+                </div>
+                <div class="goods__price text-right">
+                  <span class="goods__old-price">99 999,01</span>
+                  <span class="goods__new-price">
+                    88 888,01 <i class="fa fa-rub" aria-hidden="true"></i>
+                  </span>
+                  <span>
+                    <small>/шт</small>
+                  </span>
+                </div>
+                <div class="goods__buy clearfix">
+                  <div class="goods__box">
+                    <span class="goods__box-img"></span>
+                    <span>777 шт.</span>
+                  </div>
+                  <div class="goods__scales">
+                    <span class="goods__scales-img"></span>
+                    <span>6666,02 кг</span>
+                  </div>
+                </div>
+                <div class="goods__footer clearfix">
+                  <div class="goods__count clearfix">
+                    <div class="goods__count-input">
+                      <input type="number" class="input-number-custom" value="5555">
+                      <span>уп.</span>
+                    </div>
+                    <span>
+                      444шт.
+                    </span>
+                  </div>
+                  <div class="goods__summ">
+                    9 999 999.03 <i class="fa fa-rub" aria-hidden="true"></i>
+                  </div>
+                  <a href="" class="goods__btn btn btn-default">
+                    В корзину
+                  </a>
+                </div>
+              </div>
+              <div class="col-xs-4 goods__item">
+                <a href="" class="goods__name">Средство для мытья посуды FAIRY, нежные руки ромашка...</a>
+                <div class="goods__img">
+                  <img src="img/item1.jpg" alt="">
+                </div>
+                <div class="goods__price text-right">
+                  <span class="goods__old-price">99 999,01</span>
+                  <span class="goods__new-price">
+                    88 888,01 <i class="fa fa-rub" aria-hidden="true"></i>
+                  </span>
+                  <span>
+                    <small>/шт</small>
+                  </span>
+                </div>
+                <div class="goods__buy clearfix">
+                  <div class="goods__box">
+                    <span class="goods__box-img"></span>
+                    <span>777 шт.</span>
+                  </div>
+                  <div class="goods__scales">
+                    <span class="goods__scales-img"></span>
+                    <span>6666,02 кг</span>
+                  </div>
+                </div>
+                <div class="goods__footer clearfix">
+                  <div class="goods__count clearfix">
+                    <div class="goods__count-input">
+                      <input type="number" class="input-number-custom" value="5555">
+                      <span>уп.</span>
+                    </div>
+                    <span>
+                      444шт.
+                    </span>
+                  </div>
+                  <div class="goods__summ">
+                    9 999 999.03 <i class="fa fa-rub" aria-hidden="true"></i>
+                  </div>
+                  <a href="" class="goods__btn btn btn-default">
+                    В корзину
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-4 goods__item">
+                <a href="" class="goods__name">Средство для мытья посуды FAIRY, нежные руки ромашка...</a>
+                <div class="goods__img">
+                  <img src="img/item1.jpg" alt="">
+                </div>
+                <div class="goods__price text-right">
+                  <span class="goods__old-price">99 999,01</span>
+                  <span class="goods__new-price">
+                    88 888,01 <i class="fa fa-rub" aria-hidden="true"></i>
+                  </span>
+                  <span>
+                    <small>/шт</small>
+                  </span>
+                </div>
+                <div class="goods__buy clearfix">
+                  <div class="goods__box">
+                    <span class="goods__box-img"></span>
+                    <span>777 шт.</span>
+                  </div>
+                  <div class="goods__scales">
+                    <span class="goods__scales-img"></span>
+                    <span>6666,02 кг</span>
+                  </div>
+                </div>
+                <div class="goods__footer clearfix">
+                  <div class="goods__count clearfix">
+                    <div class="goods__count-input">
+                      <input type="number" class="input-number-custom" value="5555">
+                      <span>уп.</span>
+                    </div>
+                    <span>
+                      444шт.
+                    </span>
+                  </div>
+                  <div class="goods__summ">
+                    9 999 999.03 <i class="fa fa-rub" aria-hidden="true"></i>
+                  </div>
+                  <a href="" class="goods__btn btn btn-default">
+                    В корзину
+                  </a>
+                </div>
+              </div>
+              <div class="col-xs-4 goods__item">
+                <a href="" class="goods__name">Средство для мытья посуды FAIRY, нежные руки ромашка...</a>
+                <div class="goods__img">
+                  <img src="img/item1.jpg" alt="">
+                </div>
+                <div class="goods__price text-right">
+                  <span class="goods__old-price">99 999,01</span>
+                  <span class="goods__new-price">
+                    88 888,01 <i class="fa fa-rub" aria-hidden="true"></i>
+                  </span>
+                  <span>
+                    <small>/шт</small>
+                  </span>
+                </div>
+                <div class="goods__buy clearfix">
+                  <div class="goods__box">
+                    <span class="goods__box-img"></span>
+                    <span>777 шт.</span>
+                  </div>
+                  <div class="goods__scales">
+                    <span class="goods__scales-img"></span>
+                    <span>6666,02 кг</span>
+                  </div>
+                </div>
+                <div class="goods__footer clearfix">
+                  <div class="goods__count clearfix">
+                    <div class="goods__count-input">
+                      <input type="number" class="input-number-custom" value="5555">
+                      <span>уп.</span>
+                    </div>
+                    <span>
+                      444шт.
+                    </span>
+                  </div>
+                  <div class="goods__summ">
+                    9 999 999.03 <i class="fa fa-rub" aria-hidden="true"></i>
+                  </div>
+                  <a href="" class="goods__btn btn btn-default">
+                    В корзину
+                  </a>
+                </div>
+              </div>
+              <div class="col-xs-4 goods__item">
+                <a href="" class="goods__name">Средство для мытья посуды FAIRY, нежные руки ромашка...</a>
+                <div class="goods__img">
+                  <img src="img/item1.jpg" alt="">
+                </div>
+                <div class="goods__price text-right">
+                  <span class="goods__old-price">99 999,01</span>
+                  <span class="goods__new-price">
+                    88 888,01 <i class="fa fa-rub" aria-hidden="true"></i>
+                  </span>
+                  <span>
+                    <small>/шт</small>
+                  </span>
+                </div>
+                <div class="goods__buy clearfix">
+                  <div class="goods__box">
+                    <span class="goods__box-img"></span>
+                    <span>777 шт.</span>
+                  </div>
+                  <div class="goods__scales">
+                    <span class="goods__scales-img"></span>
+                    <span>6666,02 кг</span>
+                  </div>
+                </div>
+                <div class="goods__footer clearfix">
+                  <div class="goods__count clearfix">
+                    <div class="goods__count-input">
+                      <input type="number" class="input-number-custom" value="5555">
+                      <span>уп.</span>
+                    </div>
+                    <span>
+                      444шт.
+                    </span>
+                  </div>
+                  <div class="goods__summ">
+                    9 999 999.03 <i class="fa fa-rub" aria-hidden="true"></i>
+                  </div>
+                  <a href="" class="goods__btn btn btn-default">
+                    В корзину
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
+          <div class="row">
+            <div class="col-xs-6">
+              <ul class="paginator  paginator--bottom list-inline">
+                <li class="paginator__item">
+                  <a href="">Предыдущая</a>
+                </li>
+                <li class="paginator__item"><a href="">1</a></li>
+                <li class="paginator__item  paginator__item--active">2</li>
+                <li class="paginator__item"><a href="">3</a></li>
+                <li class="paginator__item">...</li>
+                <li class="paginator__item"><a href="">24</a></li>
+                <li class="paginator__item">
+                  <a href="">Следующая</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+    <div class="pg-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-3">
+            <h4 class="pg-footer__title">Компания</h4>
+            <ul class="pg-footer__list list-unstyled">
+              <li class="pg-footer__item">
+                <a href="#">О Lenta Trade</a>
+              </li>
+              <li class="pg-footer__item">
+                <a href="#">Сайт lenta.com</a>
+              </li>
+              <li class="pg-footer__item">
+                <a href="#">Контакты</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-xs-3">
+            <h4 class="pg-footer__title">Покупателям</h4>
+            <ul class="pg-footer__list list-unstyled">
+              <li class="pg-footer__item">
+                <a href="#">Карта Лента ОПТИМУМ</a>
+              </li>
+              <li class="pg-footer__item">
+                <a href="#">Адреса пунктов самовывоза</a>
+              </li>
+              <li class="pg-footer__item">
+                <a href="#">Как сделать заказ</a>
+              </li>
+              <li class="pg-footer__item">
+                <a href="#">Правила покупки</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-xs-3">
+            <h4 class="pg-footer__title">Информация</h4>
+            <ul class="pg-footer__list list-unstyled">
+              <li class="pg-footer__item">
+                <a href="#">Политика конфиденциальности</a>
+              </li>
+              <li class="pg-footer__item">
+                <a href="#">Часто задаваемые вопросы</a>
+              </li>
+              <li class="pg-footer__item">
+                <a href="#">Форма обратной связи</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-xs-3">
+            <div class="pg-footer__contacts">
+              <h4 class="pg-footer__title">Информационный центр</h4>
+              <ul class="pg-footer__list list-unstyled">
+                <li class="pg-footer__item">
+                    <b>+7 (800) 700-41-11</b>
+                </li>
+                <li class="pg-footer__item">
+                    <a href="mailto:support@lenta-trade.com">support@lenta-trade.com</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-9">
+            <span class="pg-footer__copyright">
+              © 2016 Lenta. Все права защищены
+            </span>
+          </div>
+          <div class="col-xs-3">
+            <div class="pg-footer__social  social">
+              <a href="" class="social__link">
+                <i class="fa fa-vk" aria-hidden="true"></i>
+              </a>
+              <a href="" class="social__link">
+                <i class="fa fa-odnoklassniki" aria-hidden="true"></i>
+              </a>
+              <a href="" class="social__link">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+              </a>
+              <a href="" class="social__link">
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+              </a>
+              <a href="" class="social__link">
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/jquery-2.2.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+		<script src="js/scripts.js"></script>
+  </body>
+</html>
