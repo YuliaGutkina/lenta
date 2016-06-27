@@ -257,5 +257,105 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 		<script src="js/scripts.js"></script>
+    <script>
+      $(function(){
+        // I advise to add initiate stores object to a separate js-file
+        var stores = [{
+          name: "Фэйковый элемент для двухколоночности",
+          items: [{}]
+        }, {
+          name: "Гипермаркеты",
+          items: [{
+            center: [59.85166575830763, 30.093589000000005],
+            name: "Лента на Петергофском",
+            description: "Петергофское ш., д. 98<br>+7 (812) 336-39-63<br>Время выдачи заказа: 09:00-21:00"
+          }, {
+            center: [59.98454825761945, 30.22672849999993],
+            name: "Лента на Савушкина",
+            description: "ул. Савушкина, д. 112<br>+7 (812) 336-39-63<br>Время выдачи заказа: 09:00-21:00"
+          }, {
+            center: [60.02243575744825, 30.293311499999977],
+            name: "Лента на Вербной",
+            description: "ул. Вербная, д. 21а<br>+7 (812) 336-39-63<br>Время выдачи заказа: 09:00-21:00"
+          }, {
+            center: [60.02209286950443, 30.606006389557912],
+            name: "Лента во Всеволожске",
+            description: "ЛО, г. Всеволожск, 7-й км Дороги Жизни<br>+7 (812) 336-39-63<br>Время выдачи заказа: 09:00-21:00"
+          }]
+        }];
+
+        ymaps.ready(init);
+
+        function init() {
+
+          var myMap = new ymaps.Map('store-map', {
+              center: [59.91815363876071, 30.30557799999997], // Санкт-Петербург
+              controls: ['zoomControl'],
+              zoom: 10
+            }, {
+              searchControlProvider: 'yandex#search'
+            }),
+            // Контейнер для меню.
+            menu = $('#store-map__list');
+
+          for (var i = 0, l = stores.length; i < l; i++) {
+            createMenuGroup(stores[i]);
+          }
+
+          function createMenuGroup(group) {
+            // Пункт меню.
+            var menuItem = $('<li class="col-xs-6"/>'),
+              collection = new ymaps.GeoObjectCollection(null, {
+                preset: group.style
+              }),
+              submenu = $('<ul class="store-map__ul row"/>');
+
+            myMap.geoObjects.add(collection);
+
+            menuItem.append(submenu);
+            menuItem.appendTo(menu);
+
+            for (var j = 0, m = group.items.length; j < m; j++) {
+              createSubMenu(j, group.items[j], collection);
+            }
+          }
+
+          function createSubMenu(step, item, collection) {
+            if (item.name != undefined) {
+              var submenuItem = $('<li class="store-map__li"><a href="#">' + item.name + '</a><p class="store-map__info">' + item.description + '</p></li>'),
+
+                placemark = new ymaps.Placemark(item.center, {
+                  balloonContent: '<strong>' + item.name + '</strong><br><br>' + item.description
+                }, {
+                  iconLayout: 'default#image',
+                  iconImageHref: 'img/map_marker.png',
+                  iconImageSize: [55, 67],
+                  iconImageOffset: [-27, -67]
+                });
+
+              // Добавляем метку в коллекцию.
+              collection.add(placemark);
+
+              if (step % 2 == 1) {
+                $('#store-map__list li:first-child > ul').append(submenuItem);
+              } else {
+                $('#store-map__list li:last-child > ul').append(submenuItem);
+              }
+
+              submenuItem
+                .find('a')
+                .click(function(e) {
+                  e.preventDefault();
+                  $('.store-map__li').removeClass('active');
+                  $(this).parent().addClass('active');
+                  placemark.balloon.open();
+                });
+            }
+          }
+
+          myMap.setBounds(myMap.geoObjects.getBounds());
+        }
+      });
+    </script>
   </body>
 </html>
