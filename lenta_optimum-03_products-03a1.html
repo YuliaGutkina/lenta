@@ -7,6 +7,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/non-responsive.min.css" rel="stylesheet">
 		<link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/jquery-ui.theme.min.css" rel="stylesheet">
 		<link href="css/style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&subset=latin,cyrillic" rel="stylesheet" type="text/css">
     <!--[if lt IE 9]>
@@ -129,42 +130,35 @@
       <div class="row">
         <div class="sidebar">
           <form class="filter" action="" method="get">
-            <fieldset class="filter__fieldset">
-              <legend class="filter__legend   filter__legend--open">
-                <a href="#">Бренд</a>
-              </legend>
-              <div class="filter__fieldset-inner">
-                <label class="filter__checkbox-label">
-                  <input type="checkbox" class="filter__checkbox-input" name="moscow-coffee">
-                  <span class="filter__checkbox-custom"></span>
-                  Московская кофейня на паяхъ
+            <div class="filter__block">
+              <a href="#" class="filter__dropdown-toggle">Бренд</a>
+              <div class="filter__dropdown-block">
+                <label class="filter__checkbox">
+                  <input type="checkbox" class="filter__checkbox-input" name="moscow-coffee" id="moscow-coffee">
+                  <span class="filter__checkbox-title">Московская кофейня на паяхъ</span>
                   <span class="filter__counter">(10)</span>
                 </label>
-                <label class="filter__checkbox-label">
-                  <input type="checkbox" class="filter__checkbox-input" name="jokey" checked>
-                  <span class="filter__checkbox-custom"></span>
-                  Жокей
+                <label class="filter__checkbox">
+                  <input type="checkbox" class="filter__checkbox-input" name="jokey" id="jokey" checked>
+                  <span class="filter__checkbox-title">Жокей</span>
                   <span class="filter__counter">(4)</span>
                 </label>
-                <label class="filter__checkbox-label">
-                  <input type="checkbox" class="filter__checkbox-input" name="petr-sloboda">
-                  <span class="filter__checkbox-custom"></span>
-                  Петровская слобода
+                <label class="filter__checkbox">
+                  <input type="checkbox" class="filter__checkbox-input" name="petr-sloboda" id="petr-sloboda">
+                  <span class="filter__checkbox-title">Петровская слобода</span>
                   <span class="filter__counter">(7)</span>
                 </label>
               </div>
-            </fieldset>
-            <fieldset class="filter__fieldset">
-              <legend class="filter__legend">
-                <a href="#">Вес (кг)</a>
-              </legend>
-
-            </fieldset>
-            <fieldset class="filter__fieldset">
-              <legend class="filter__legend   filter__legend--open">
-                <a href="#">Цена</a>
-              </legend>
-              <div class="filter__fieldset-inner">
+            </div>
+            <div class="filter__block">
+              <a href="#" class="filter__dropdown-toggle">Вес (кг)</a>
+              <div class="filter__dropdown-block">
+                что-то тут
+              </div>
+            </div>
+            <div class="filter__block">
+              <a class="filter__dropdown-toggle" href="#">Цена</a>
+              <div class="filter__dropdown-block">
                 <div class="filter__range range">
                   <div class="range__controls">
                     <div class="range__scale">
@@ -187,7 +181,7 @@
                   </div>
                 </div>
               </div>
-            </fieldset>
+            </div>
             <div class="btn-group" role="group" aria-label="...">
               <button type="submit" class="btn btn-custom  btn-custom--wide">Применить</button>
               <button type="reset" class="btn btn-custom  btn-custom--gray">Сбросить</button>
@@ -994,6 +988,7 @@
 
     <script src="js/jquery-2.2.3.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
 		<script src="js/scripts.js"></script>
   </body>
 </html>
