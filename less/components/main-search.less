@@ -2,6 +2,8 @@
 
 .main-search {
   padding-left: 0;
+  position: relative;
+
   &-block{
     padding-top: 25px;
   }
@@ -23,14 +25,41 @@
     font-size: @fs * 1.571429;
   }
 
+  &__inline {
+    position: absolute;
+    top: 41px;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+  }
+
+  &__inline-list {
+    margin-right: 54px;
+    border: 1px solid #cccccc;
+    padding: 0 15px;
+    padding-bottom: 10px;
+    background: @color-inverse;
+  }
+
+  &__inline-item {
+    line-height: 48px;
+  }
+
+  &__hover {
+    color: #49a942;
+  }
+
   &--green {
 
     .form-control {
       border: 2px solid #49a942;
     }
 
-    .btn {
+    .input-group {
+
+      .btn {
       background: #49a942;
+      }
     }
   }
 }

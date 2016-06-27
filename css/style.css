@@ -740,6 +740,7 @@ a:hover {
 }
 .main-search {
   padding-left: 0;
+  position: relative;
 }
 .main-search-block {
   padding-top: 25px;
@@ -759,10 +760,30 @@ a:hover {
   color: #ffffff;
   font-size: 22.000006px;
 }
+.main-search__inline {
+  position: absolute;
+  top: 41px;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+.main-search__inline-list {
+  margin-right: 54px;
+  border: 1px solid #cccccc;
+  padding: 0 15px;
+  padding-bottom: 10px;
+  background: #ffffff;
+}
+.main-search__inline-item {
+  line-height: 48px;
+}
+.main-search__hover {
+  color: #49a942;
+}
 .main-search--green .form-control {
   border: 2px solid #49a942;
 }
-.main-search--green .btn {
+.main-search--green .input-group .btn {
   background: #49a942;
 }
 .user {
