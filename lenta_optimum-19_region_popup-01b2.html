@@ -8,6 +8,8 @@
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/non-responsive.min.css" rel="stylesheet">
   <link href="css/font-awesome.min.css" rel="stylesheet">
+  <link href="css/jquery-ui.structure.min.css" rel="stylesheet">
+  <link href="css/jquery-ui.theme.min.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&subset=latin,cyrillic" rel="stylesheet" type="text/css">
   <!--[if lt IE 9]>
@@ -131,72 +133,79 @@
     <div class="row">
       <div class="sidebar">
         <form class="filter" action="" method="get">
-          <fieldset class="filter__fieldset">
-            <legend class="filter__legend   filter__legend--open">
-              <a href="#">Бренд</a>
-            </legend>
-            <div class="filter__fieldset-inner">
-              <label class="filter__checkbox-label">
-                <input type="checkbox" class="filter__checkbox-input" name="moscow-coffee">
-                <span class="filter__checkbox-custom"></span> Московская кофейня на паяхъ
+          <div class="filter__block">
+            <a href="#" class="filter__dropdown-toggle">Бренд</a>
+            <div class="filter__dropdown-block">
+              <label class="filter__checkbox">
+                <input type="checkbox" class="filter__checkbox-input" name="moscow-coffee" id="moscow-coffee" value="">
+                <span class="filter__checkbox-title">Московская кофейня на паяхъ</span>
                 <span class="filter__counter">(10)</span>
               </label>
-              <label class="filter__checkbox-label">
-                <input type="checkbox" class="filter__checkbox-input" name="jokey" checked>
-                <span class="filter__checkbox-custom"></span> Жокей
+              <label class="filter__checkbox">
+                <input type="checkbox" class="filter__checkbox-input" name="jokey" id="jokey" checked value="">
+                <span class="filter__checkbox-title">Жокей</span>
                 <span class="filter__counter">(4)</span>
               </label>
-              <label class="filter__checkbox-label">
-                <input type="checkbox" class="filter__checkbox-input" name="petr-sloboda">
-                <span class="filter__checkbox-custom"></span> Петровская слобода
+              <label class="filter__checkbox">
+                <input type="checkbox" class="filter__checkbox-input" name="petr-sloboda" id="petr-sloboda" value="">
+                <span class="filter__checkbox-title">Петровская слобода</span>
                 <span class="filter__counter">(7)</span>
               </label>
             </div>
-          </fieldset>
-          <fieldset class="filter__fieldset">
-            <legend class="filter__legend">
-              <a href="#">Вес (кг)</a>
-            </legend>
-
-          </fieldset>
-          <fieldset class="filter__fieldset">
-            <legend class="filter__legend   filter__legend--open">
-              <a href="#">Цена</a>
-            </legend>
-            <div class="filter__fieldset-inner">
+          </div>
+          <div class="filter__block">
+            <a href="#" class="filter__dropdown-toggle">Вес (кг)</a>
+            <div class="filter__dropdown-block">
+              <label class="filter__checkbox">
+                <input type="checkbox" class="filter__checkbox-input" name="kg1" id="kg1" value="">
+                <span class="filter__checkbox-title">1 кг</span>
+                <span class="filter__counter">(10)</span>
+              </label>
+              <label class="filter__checkbox">
+                <input type="checkbox" class="filter__checkbox-input" name="kg5" id="kg5" checked value="">
+                <span class="filter__checkbox-title">5 кг</span>
+                <span class="filter__counter">(4)</span>
+              </label>
+              <label class="filter__checkbox">
+                <input type="checkbox" class="filter__checkbox-input" name="kg10" id="kg10" value="">
+                <span class="filter__checkbox-title">10 кг</span>
+                <span class="filter__counter">(7)</span>
+              </label>
+            </div>
+          </div>
+          <div class="filter__block active">
+            <a class="filter__dropdown-toggle" href="#">Цена</a>
+            <div class="filter__dropdown-block">
               <div class="filter__range range">
+
                 <div class="range__controls">
-                  <div class="range__scale">
-                  </div>
-                  <div class="range__toggle range__toggle--min">
-                  </div>
-                  <div class="range__toggle  range__toggle--max">
+                  <div id="price-range" class="range__slider">
+                      <span class="range__step range__step--0">0</span>
+                      <span class="range__step range__step--1">750</span>
+                      <span class="range__step range__step--2">1500</span>
+                      <span class="range__step range__step--3">2250</span>
+                      <span class="range__step range__step--4">2999</span>
                   </div>
                 </div>
-                <div class="range__price-controls">
-                  <label>
+
+                <div class="range__price-inputs">
+                  <label class="range__label">
                     От:
-                    <input class="range__input  range__input--first" type="text" value="2499" name="min-price">
+                    <input class="range__input" type="text" value="2499" name="price-from">
                   </label>
-                  <label>
+                  <label class="range__label">
                     До:
-                    <input class="range__input" type="text" value="2874" name="max-price">
+                    <input class="range__input" type="text" value="2874" name="price-to">
                   </label>
-                  <span>₽</span>
                 </div>
               </div>
             </div>
-          </fieldset>
-          <div class="btn-group" role="group" aria-label="...">
+          </div>
+          <div class="filter__btn-group btn-group">
             <button type="submit" class="btn btn-custom  btn-custom--wide">Применить</button>
             <button type="reset" class="btn btn-custom  btn-custom--gray">Сбросить</button>
           </div>
         </form>
-        <div class="banner banner--sidebar">
-          <a href="#">
-            <img src="img/banner.jpg" alt="">
-          </a>
-        </div>
       </div>
       <main class="main-content col-xs-8 pull-right">
         <div class="row">
@@ -997,25 +1006,6 @@
     </div>
   </div>
 
-  <div class="modal modal-custom" id="guess-town-modal" tabindex="-1" role="dialog">
-    <div class="modal-dialog modal-sm">
-      <div class="modal-content">
-        <button type="button" class="btn btn-default modal-custom__close close" data-dismiss="modal" aria-label="Close">
-          <i class="fa fa-times" aria-hidden="true"></i>
-        </button>
-        <h1 class="pg-title">Выбор региона</h1>
-        <p class="extra-text">
-          Ваш регион - <span id="guess-town">Санкт-Петербург</span>?
-        </p>
-        <p>От выбранного региона зависит ассортимент товаров, цены и пункты самовывоза</p>
-        <div class="btn-group modal-custom__btn-group" role="group" aria-label="...">
-          <button type="button" class="btn btn-custom" data-guess="yes">Да</button>
-          <button type="button" class="btn btn-custom  btn-custom--gray" data-guess="no">Нет</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
   <div class="modal modal-custom" id="modal-town" tabindex="-1" role="dialog">
     <div class="modal-dialog modal-sm">
       <div class="modal-content">
@@ -1037,6 +1027,7 @@
 
   <script src="js/jquery-2.2.3.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
   <script src="js/scripts.js"></script>
 </body>
 
