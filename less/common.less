@@ -18,3 +18,10 @@ a:active,
 a:hover{
   color: @color-info;
 }
+input[type="checkbox"],
+input[type="radio"]{
+  &:focus,
+  &:active{
+    outline: none;
+  }
+}
