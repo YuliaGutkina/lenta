@@ -636,6 +636,40 @@ a:active,
   font-size: 0;
   background: #ffdd00 url(../img/perfect.jpg) no-repeat 0 0;
 }
+#store-map__list {
+  padding: 0;
+  list-style: none;
+}
+.store-map {
+  width: 100%;
+  height: 490px;
+  border: 1px solid #cccccc;
+  margin-bottom: 15px;
+}
+.store-map__ul {
+  padding: 0;
+  list-style: none;
+}
+.store-map__li {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.store-map__li > a {
+  display: block !important;
+  color: #333333;
+}
+.store-map__li.active > a {
+  text-decoration: none;
+  font-weight: 700;
+}
+.store-map__info {
+  padding: 7.5px 0 7.5px 41.25px;
+  margin: 0;
+  display: none;
+}
+.active > .store-map__info {
+  display: block;
+}
 .breadcrumb {
   margin-bottom: 0;
   padding-left: 0;

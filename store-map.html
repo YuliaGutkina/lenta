@@ -103,7 +103,7 @@
               </div>
             </div>
           </div>
-          <div class="main-search  main-search--green col-xs-8 pull-right">
+          <div class="main-search col-xs-8 pull-right">
             <div class="input-group">
               <input type="search" class="form-control" placeholder="Поиск по товарам">
               <span class="input-group-btn">
@@ -155,10 +155,10 @@
         </div>
         <main class="main-content col-xs-8 pull-right">
           <h1 class="pg-title">Адреса пунктов самовывоза в регионе Санкт-Петербург</h1>
-          <div class="btn-group  btn-toggle" role="group" aria-label="...">
-            <button type="submit" class="btn btn-custom    btn-custom--gray">Список</button>
-            <button type="reset" class="btn btn-custom  btn-custom--active">На карте</button>
-          </div>
+
+          <div class="store-map" id="store-map"></div>
+          <ul id="store-map__list" class="row"></ul>
+
         </main>
       </div>
     </div>
@@ -293,6 +293,7 @@
 
     <script src="js/jquery-2.2.3.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 		<script src="js/scripts.js"></script>
   </body>
 </html>
