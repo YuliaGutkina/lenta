@@ -15,29 +15,40 @@
     }
   }
 
+  &__legend {
+    background: @color-gray-lighter;
+    border: 1px solid #cccccc;
+    font-size: @fs * 1.142857;
+    padding: 10px 15px;
+    margin: 0;
+    text-align: left;
+  }
+
+
+
   &__table {
     width: 100%;
     margin-bottom: @pad * 2;
 
-    tr {
+    tr,
+    td {
       border: 1px solid #cccccc;
     }
 
     th {
-      padding: 10px;
       font-weight: 400;
     }
 
-    th,
     td {
-      // text-align: center;
-    }
+      padding: @pad;
+      vertical-align: top;
 
-    td {
-      padding: 5px;
-      padding-left: @pad;
-      padding-right: @pad;
-      font-weight: 600;
+      .btn-custom {
+        margin-top: @pad;
+        margin-left: -@pad;
+        padding-left: @pad * 2;
+        padding-right: @pad * 2;;
+      }
     }
 
     .input-number-custom {
@@ -46,15 +57,45 @@
       font-size: @fs-title;
     }
 
+    &--products {
+
+      th {
+        padding: 10px;
+        font-weight: 400;
+      }
+
+      th,
+      td {
+        text-align: center;
+        border: none;
+      }
+
+      td {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-weight: 600;
+        vertical-align: middle;
+      }
+
+    }
+
   }
 
-  &__legend {
-    background: @color-gray-lighter;
+  &__orderitem {
+    margin-top: -1px;
+
+    .btn-custom {
+      margin-top: 20px;
+      margin-left: -@pad;
+      padding-left: @pad * 2;
+      padding-right: @pad * 2;;
+    }
+  }
+
+  &__orderinner {
+    padding: @pad;
+    margin-top: -1px;
     border: 1px solid #cccccc;
-    font-size: @fs * 1.142857;
-    padding: 10px 15px;
-    margin: 0;
-    text-align: left;
   }
 
   &__item-price,
@@ -72,7 +113,7 @@
   }
 
   &__item-del {
-    width: 72px;
+    width: 80px;
     text-align: center;
   }
 
@@ -105,7 +146,7 @@
   &__alliance3 {
     font-weight: 700;
     font-size: @fs * 1.714286;
-    border: 1px solid #cccccc;
+    border: 1px solid #cccccc !important;
   }
 
   &__buy {
@@ -216,29 +257,12 @@
     }
   }
 
-  &__orderitem {
-    margin-top: -1px;
+  &--form {
 
-    .btn-custom {
-      margin-top: 20px;
-      margin-left: -@pad;
-      padding-left: @pad * 2;
-      padding-right: @pad * 2;;
+    fieldset {
+      padding: 0;
+      border: none;
     }
-
-    &--left {
-      padding-right: 0;
-    }
-
-    &--right {
-      padding-left: 0;
-    }
-  }
-
-  &__orderinner {
-    padding: @pad;
-    margin-top: -1px;
-    border: 1px solid #cccccc;
   }
 
   .control-label {
@@ -257,10 +281,6 @@
     line-height: 32px;
   }
 
-  .checkbox-label {
-
-  }
-
   .btn-custom {
     border: none;
   }
@@ -269,6 +289,5 @@
     min-height: 110px;
     max-width: 100%;
   }
-
 
 }

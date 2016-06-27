@@ -1120,28 +1120,6 @@ input::-webkit-inner-spin-button {
 .form-main__fieldset--comment .form-group {
   margin-bottom: 0;
 }
-.form-main__table {
-  width: 100%;
-  margin-bottom: 30px;
-}
-.form-main__table tr {
-  border: 1px solid #cccccc;
-}
-.form-main__table th {
-  padding: 10px;
-  font-weight: 400;
-}
-.form-main__table td {
-  padding: 5px;
-  padding-left: 15px;
-  padding-right: 15px;
-  font-weight: 600;
-}
-.form-main__table .input-number-custom {
-  height: 25px;
-  width: 112px;
-  font-size: 19.999994px;
-}
 .form-main__legend {
   background: #f9f9f9;
   border: 1px solid #cccccc;
@@ -1149,6 +1127,61 @@ input::-webkit-inner-spin-button {
   padding: 10px 15px;
   margin: 0;
   text-align: left;
+}
+.form-main__table {
+  width: 100%;
+  margin-bottom: 30px;
+}
+.form-main__table tr,
+.form-main__table td {
+  border: 1px solid #cccccc;
+}
+.form-main__table th {
+  font-weight: 400;
+}
+.form-main__table td {
+  padding: 15px;
+  vertical-align: top;
+}
+.form-main__table td .btn-custom {
+  margin-top: 15px;
+  margin-left: -15px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.form-main__table .input-number-custom {
+  height: 25px;
+  width: 112px;
+  font-size: 19.999994px;
+}
+.form-main__table--products th {
+  padding: 10px;
+  font-weight: 400;
+}
+.form-main__table--products th,
+.form-main__table--products td {
+  text-align: center;
+  border: none;
+}
+.form-main__table--products td {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-weight: 600;
+  vertical-align: middle;
+}
+.form-main__orderitem {
+  margin-top: -1px;
+}
+.form-main__orderitem .btn-custom {
+  margin-top: 20px;
+  margin-left: -15px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.form-main__orderinner {
+  padding: 15px;
+  margin-top: -1px;
+  border: 1px solid #cccccc;
 }
 .form-main__item-price,
 .form-main__item-summ {
@@ -1160,7 +1193,7 @@ input::-webkit-inner-spin-button {
   display: block;
 }
 .form-main__item-del {
-  width: 72px;
+  width: 80px;
   text-align: center;
 }
 .form-main__delete {
@@ -1190,7 +1223,7 @@ input::-webkit-inner-spin-button {
 .form-main__alliance3 {
   font-weight: 700;
   font-size: 24.000004px;
-  border: 1px solid #cccccc;
+  border: 1px solid #cccccc !important;
 }
 .form-main__buy {
   padding-left: 30px;
@@ -1282,25 +1315,9 @@ input::-webkit-inner-spin-button {
   border-left-color: #e7ecf4;
   right: -6px;
 }
-.form-main__orderitem {
-  margin-top: -1px;
-}
-.form-main__orderitem .btn-custom {
-  margin-top: 20px;
-  margin-left: -15px;
-  padding-left: 30px;
-  padding-right: 30px;
-}
-.form-main__orderitem--left {
-  padding-right: 0;
-}
-.form-main__orderitem--right {
-  padding-left: 0;
-}
-.form-main__orderinner {
-  padding: 15px;
-  margin-top: -1px;
-  border: 1px solid #cccccc;
+.form-main--form fieldset {
+  padding: 0;
+  border: none;
 }
 .form-main .control-label {
   padding-right: 0;
