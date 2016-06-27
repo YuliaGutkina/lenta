@@ -470,7 +470,7 @@ input[type="radio"]:active {
   width: 70px;
   height: 50px;
   background: url(../img/sale50.png) no-repeat 0 0;
-  z-index: 50;
+  z-index: 1;
 }
 .goods__item--icon .goods__img::after {
   content: "";
