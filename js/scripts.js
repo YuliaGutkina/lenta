@@ -1,5 +1,5 @@
 $(function() {
-  $("body").append('<div id="arrowUp" class="arrowUp"><a href="#top" title="Наверх" class="scrollTo hidden-xs"><span class="fa fa-angle-up"></span></a></div>');
+  $("body").append('<div id="arrowUp" class="arrowUp"><a href="#top" title="Наверх" class="scrollTo hidden-xs"><span class="fa fa-chevron-up"></span></a></div>');
 
   /*===================== CATLIST DROPDOWN  ON HOVER =====================*/
   $('.catlist__title.dropdown').hover(function() {
@@ -106,6 +106,17 @@ $(function() {
     $(this).parent().toggleClass('active');
   });
 
+  $('#price-range').slider({
+      range: true,
+      min: 0,
+      max: 2999,
+      values: [2499, 2874],
+      slide: function( event, ui ) {
+        $('input[name="price-from"]').val(ui.values[0]);
+        $('input[name="price-to"]').val(ui.values[1]);
+      }
+    });
+    $('input[name="price-from"]').val($('#price-range').slider('values', 0 ))
 });
 /*===================== GLOBAL FUNCTIONS =====================*/
 function getCookie(name) {
