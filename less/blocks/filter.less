@@ -22,26 +22,32 @@
     position: relative;
     &::after{
       font-family: @ff-icon;
-      font-size: @fs*2;
+      content: "\f078";
+      font-size: @fs*1.125;
       display: block;
-      content: "\f107";
       position: absolute;
-      right: -@fs*2;
+      right: -@fs*1.5;
       top: 0;
-      transform: translate(-15%, -20%);
-      -webkit-transform: translate(-15%, -20%);
       .active > &{
-        content: "\f106";
+        content: "\f077";
+      }
+    }
+    .active > &{
+      color: @color-info;
+      text-decoration: none;
+    }
+    &:focus{
+      color: @color-primary;
+      text-decoration: underline;
+      .active &{
+        color: @color-info;
+        text-decoration: none;
       }
     }
   }
   &__checkbox{
     display: block;
     cursor: pointer;
-    & input:focus,
-    & input:active{
-      outline: none;
-    }
   }
 
   &__dropdown-block {
@@ -52,5 +58,8 @@
       display: block;
     }
   }
-
+  &__btn-group{
+    margin-top: @pad;
+    margin-left: -@pad*2;
+  }
 }
