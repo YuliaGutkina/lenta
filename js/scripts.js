@@ -10,13 +10,6 @@ $(function() {
     });
 
   /*===================== ARROW UP =====================*/
-  $(window).scroll(function() {
-    if ($(this).scrollTop() > 350) {
-      $("#arrowUp").fadeIn();
-    } else {
-      $("#arrowUp").fadeOut();
-    }
-  });
 
   function scrollTo(id) {
     if (id == '#top') {
@@ -47,20 +40,25 @@ $(function() {
     headerTopHeight = $('.pg-header > .container').outerHeight();
 
   $(window).scroll(function() {
+    // Sticky menu appearance
     if ($(this).scrollTop() > headerHeight) {
       $('.pg-header').next().css('margin-top', headerHeight);
       $('.pg-header > .container').addClass('hidden');
       $('.pg-header').affix({
         offset: {
-          top: headerHeight,
-          bottom: function() {
-            return (this.bottom = $('.pg-footer').outerHeight(true))
-          }
+          top: headerHeight
         }
       })
     } else {
       $('.pg-header').next().css('margin-top', 0);
       $('.pg-header > .container').removeClass('hidden');
+    }
+
+    // Arrow Up appearance
+    if ($(this).scrollTop() > 350) {
+      $("#arrowUp").fadeIn();
+    } else {
+      $("#arrowUp").fadeOut();
     }
   })
 
@@ -102,7 +100,53 @@ $(function() {
     });
   });
 
-  /*===================== YANDEX MAP =====================*/
+});
+/*===================== GLOBAL FUNCTIONS =====================*/
+function getCookie(name) {
+  var matches = document.cookie.match(new RegExp(
+    "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+  ));
+  return matches ? decodeURIComponent(matches[1]) : undefined;
+}
+
+function setCookie(name, value, options) {
+  options = options || {};
+
+  var expires = options.expires;
+
+  if (typeof expires == "number" && expires) {
+    var d = new Date();
+    d.setTime(d.getTime() + expires * 1000 * 60 * 60 * 24); //cookie for one day
+    expires = options.expires = d;
+  }
+  if (expires && expires.toUTCString) {
+    options.expires = expires.toUTCString();
+  }
+
+  value = encodeURIComponent(value);
+
+  var updatedCookie = name + "=" + value;
+
+  for (var propName in options) {
+    updatedCookie += "; " + propName;
+    var propValue = options[propName];
+    if (propValue !== true) {
+      updatedCookie += "=" + propValue;
+    }
+  }
+
+  document.cookie = updatedCookie;
+}
+
+function deleteCookie(name) {
+  setCookie(name, "", {
+    expires: -1
+  })
+}
+
+/*===================== YANDEX MAP =====================*/
+if (ymaps != undefined) {
+
   var stores = [{
     name: "Фэйковый элемент для двухколоночности",
     items: [{}]
@@ -200,48 +244,4 @@ $(function() {
     myMap.setBounds(myMap.geoObjects.getBounds());
   }
 
-});
-
-
-/*===================== GLOBAL FUNCTIONS =====================*/
-function getCookie(name) {
-  var matches = document.cookie.match(new RegExp(
-    "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
-  ));
-  return matches ? decodeURIComponent(matches[1]) : undefined;
-}
-
-function setCookie(name, value, options) {
-  options = options || {};
-
-  var expires = options.expires;
-
-  if (typeof expires == "number" && expires) {
-    var d = new Date();
-    d.setTime(d.getTime() + expires * 1000 * 60 * 60 * 24); //cookie for one day
-    expires = options.expires = d;
-  }
-  if (expires && expires.toUTCString) {
-    options.expires = expires.toUTCString();
-  }
-
-  value = encodeURIComponent(value);
-
-  var updatedCookie = name + "=" + value;
-
-  for (var propName in options) {
-    updatedCookie += "; " + propName;
-    var propValue = options[propName];
-    if (propValue !== true) {
-      updatedCookie += "=" + propValue;
-    }
-  }
-
-  document.cookie = updatedCookie;
-}
-
-function deleteCookie(name) {
-  setCookie(name, "", {
-    expires: -1
-  })
 }

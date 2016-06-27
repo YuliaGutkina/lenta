@@ -18,8 +18,11 @@
     padding-left: @pad;
     padding-right: @pad;
     & > a{
-      display: block !important;;
+      display: block;
       color: @color-gray;
+      &:hover{
+        color: @color-info;
+      }
     }
     &.active > a{
       text-decoration: none;
