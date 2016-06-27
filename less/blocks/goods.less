@@ -37,36 +37,29 @@
     text-align: center;
     padding-top: 5px;
   }
-
   &__price {
     margin-bottom: 10px;
   }
-
   &__old-price {
     margin-right: 5px;
     text-decoration: line-through;
   }
-
   &__new-price {
     font-size: @fs-large;
     font-weight: 700;
     color: @color-primary;
-
     .fa {
       color: @color-text;
     }
   }
-
   &__summ {
     margin-bottom: 5px;
     margin-right: -15px;
     font-weight: 700;
   }
-
   &__buy {
     line-height: 32px;
     margin-right: -15px;
-
     .btn-default {
       line-height: 0;
       padding-top: 4px;
@@ -75,7 +68,6 @@
       padding-right: 8px;
     }
   }
-
   &__box {
     display: inline-block;
     vertical-align: middle;
@@ -85,7 +77,6 @@
     background: url(../img/box.png) no-repeat 0 0;
     cursor: pointer;
   }
-
   &__scales {
     display: inline-block;
     vertical-align: middle;
@@ -95,16 +86,12 @@
     background: url(../img/scales.png) no-repeat 0 0;
     cursor: pointer;
   }
-
   &--mini {
-
     .goods-list {
-
       &__count,
       &__buy {
         display: none;
       }
-
       &__price,
       &__summ {
         margin-top: 10px;
@@ -112,15 +99,12 @@
     }
   }
 }
-
 .goods {
   margin-bottom: @pad;
-
   > .row {
     margin-left: 0;
     margin-right: 0;
   }
-
   &__item {
     position: relative;
     border: 1px solid #cccccc;
@@ -150,9 +134,7 @@
         z-index: 50;
       }
     }
-
     &--icon {
-
       .goods__img::after {
         content: "";
         position: absolute;
@@ -165,7 +147,6 @@
       }
     }
   }
-
   &__name {
     padding-left: 0;
     padding-right: 0;
@@ -175,22 +156,18 @@
     font-weight: 600;
     text-align: center;
     height: 40px;
-
     &:hover {
       color: @color-info;
     }
   }
-
   &__img {
     text-align: center;
     margin-bottom: 15px;
     position: relative;
   }
-
   &__price {
     margin-bottom: 10px;
   }
-
   &__old-price {
     display: block;
     float: left;
@@ -198,26 +175,21 @@
     margin-top: 5px;
     text-decoration: line-through;
   }
-
   &__new-price {
     font-size: @fs-large;
     font-weight: 700;
     color: @color-primary;
-
     .fa {
       color: @color-text;
     }
   }
-
   &__buy {
     line-height: 32px;
     margin-bottom: @pad;
   }
-
   &__box {
     float: left;
   }
-
   &__box-img {
     display: inline-block;
     vertical-align: middle;
@@ -226,11 +198,9 @@
     height: 20px;
     background: url(../img/box.png) no-repeat 0 0;
   }
-
   &__scales {
     float: right;
   }
-
   &__scales-img {
     display: inline-block;
     margin-right: 4px;
@@ -238,7 +208,6 @@
     height: 17px;
     background: url(../img/scales.png) no-repeat 0 0;
   }
-
   &__footer {
     margin-left: -7px;
     margin-right: -7px;
@@ -247,38 +216,31 @@
     padding-top: 20px;
     border-top: 1px solid #cccccc;
   }
-
   &__count {
     text-align: right;
     margin-bottom: @pad;
   }
-
   &__count-input {
     display: block;
     float: left;
   }
-
   &__summ {
     float: left;
     font-weight: 700;
     line-height: 33px;
     font-size: @fs * 1.142857;
   }
-
   &__btn {
     float: right;
     padding-top: 4px;
     padding-bottom: 4px;
-
     &:hover {
       background: @color-info;
     }
   }
-
   &--mini {
     .goods__footer {
       display: none;
     }
   }
-
 }
