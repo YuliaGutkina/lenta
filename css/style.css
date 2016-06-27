@@ -32,6 +32,9 @@ a:active,
   outline: none;
   box-shadow: none;
 }
+a:hover {
+  color: #afb5e8;
+}
 @font-face {
   font-family: 'DINCondensed';
   src: url('../fonts/DINCondensed.eot?#iefix') format('embedded-opentype'), url('../fonts/DINCondensed.otf') format('opentype'), url('../fonts/DINCondensed.woff') format('woff'), url('../fonts/DINCondensed.woff2') format('woff2'), url('../fonts/DINCondensed.ttf') format('truetype'), url('../fonts/DINCondensed.svg#DINCondensed') format('svg');
@@ -655,8 +658,11 @@ a:active,
   padding-right: 15px;
 }
 .store-map__li > a {
-  display: block !important;
+  display: block;
   color: #333333;
+}
+.store-map__li > a:hover {
+  color: #afb5e8;
 }
 .store-map__li.active > a {
   text-decoration: none;
