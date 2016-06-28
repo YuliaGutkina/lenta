@@ -1274,6 +1274,9 @@ input::-webkit-inner-spin-button {
   font-weight: 600;
   vertical-align: middle;
 }
+.form-main__table--products .input-number-custom {
+  font-weight: 400;
+}
 .form-main__orderitem {
   margin-top: -1px;
 }
@@ -1439,6 +1442,9 @@ input::-webkit-inner-spin-button {
 .form-main__telcode {
   padding: 0;
   text-align: right;
+}
+.form-main__telcode span {
+  font-weight: 600;
 }
 .form-main__telcode .form-control {
   margin-right: 5px;
