@@ -276,15 +276,11 @@
 
   &__star {
     color: #ff0000;
+    font-size: @fs-large;
   }
 
   &__tel {
     margin: 0;
-  }
-
-  &__telcode {
-    padding: 0;
-    text-align: right;
 
     span {
       font-weight: 600;
@@ -292,12 +288,11 @@
 
     .form-control {
       margin-right: 5px;
-      width: 65px;
     }
-
   }
 
-  &__telnum {
+  &__telnum,
+  &__telcode {
     padding: 0;
   }
 
@@ -305,6 +300,19 @@
     height: 40px;
     margin-bottom: @pad;
     border: 1px solid @color-text;
+  }
+
+  &__question {
+    position: absolute;
+    height: 32px;
+    width: 24px;
+    text-align: center;
+    top: 0;
+    right: @pad;
+  }
+
+  &__card-input {
+    padding-right: 45px;
   }
 
   &--form {
@@ -341,6 +349,10 @@
   .control-label {
     padding: 0;
     font-weight: 600;
+
+    &--long {
+      line-height: @fs-large;
+    }
   }
 
   .form-control {
@@ -368,6 +380,19 @@
 
       &--tel2 {
         width: 70px;
+        display: inline-block;
+      }
+    }
+
+    .checkbox-label {
+      padding-left: 20px;
+      position: relative;
+      line-height: @fs-large;
+
+      .checkbox-custom {
+        position: absolute;
+        top: 5px;
+        left: 0;
       }
     }
 
@@ -375,6 +400,11 @@
 
   .form-group {
     line-height: 32px;
+
+    &--email,
+    &--captcha {
+      margin-bottom: 0;
+    }
   }
 
   .btn-custom {
@@ -391,6 +421,13 @@
         font-size: @fs-large;
       }
     }
+  }
+
+  .fa-question-circle {
+    font-size: @fs * 1.714286;
+    color: @color-primary;
+    line-height: 32px;
+    padding-left: 0;
   }
 
   textarea {
