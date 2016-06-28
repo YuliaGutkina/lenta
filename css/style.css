@@ -276,14 +276,14 @@ input[type="radio"]:active {
 }
 .filter__dropdown-toggle {
   display: inline-block;
-  font-size: 15.75px;
+  font-size: 14px;
   font-weight: 700;
   position: relative;
 }
 .filter__dropdown-toggle::after {
   font-family: "FontAwesome";
   content: "\f078";
-  font-size: 15.75px;
+  font-size: 14px;
   display: block;
   position: absolute;
   right: -21px;
@@ -293,7 +293,6 @@ input[type="radio"]:active {
   content: "\f077";
 }
 .active > .filter__dropdown-toggle {
-  color: #afb5e8;
   text-decoration: none;
 }
 .filter__dropdown-toggle:focus {
@@ -301,7 +300,6 @@ input[type="radio"]:active {
   text-decoration: underline;
 }
 .active .filter__dropdown-toggle:focus {
-  color: #afb5e8;
   text-decoration: none;
 }
 .filter__checkbox {
@@ -467,25 +465,6 @@ input[type="radio"]:active {
   border: 1px solid #afb5e8;
   outline: 2px solid #afb5e8;
 }
-.goods__item--sale .goods__img::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 70px;
-  height: 50px;
-  background: url(../img/sale50.png) no-repeat 0 0;
-  z-index: 1;
-}
-.goods__item--icon .goods__img::after {
-  content: "";
-  position: absolute;
-  top: 37px;
-  right: 0;
-  width: 70px;
-  height: 63px;
-  background: url(../img/icon.png) no-repeat 55% 70%, url(../img/icon-bg.png) no-repeat 0 0;
-}
 .goods__name {
   padding-left: 0;
   padding-right: 0;
@@ -503,6 +482,41 @@ input[type="radio"]:active {
   text-align: center;
   margin-bottom: 15px;
   position: relative;
+}
+.goods__sale {
+  display: block;
+  width: 70px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  color: #1a2791;
+  background-color: #ffdd00;
+  letter-spacing: -1px;
+  font-family: "DINCondensed", "Arial Narrow", Arial, sans-serif;
+  font-size: 28px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.goods__sale::after {
+  display: block;
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 35px solid transparent;
+  border-right: 35px solid transparent;
+  border-top: 15px solid #ffdd00;
+  position: absolute;
+  bottom: -15px;
+}
+.goods__sale--iconed::before {
+  content: "";
+  position: absolute;
+  top: 40px;
+  right: 0;
+  width: 70px;
+  height: 63px;
+  background: url(../img/icon.png) no-repeat 55% 70%, url(../img/icon-bg.png) no-repeat 0 0;
 }
 .goods__price {
   margin-bottom: 10px;
@@ -524,7 +538,6 @@ input[type="radio"]:active {
 }
 .goods__buy {
   line-height: 32px;
-  margin-bottom: 15px;
 }
 .goods__box {
   float: left;
@@ -548,6 +561,7 @@ input[type="radio"]:active {
   background: url(../img/scales.png) no-repeat 0 0;
 }
 .goods__footer {
+  margin-top: 15px;
   margin-left: -7px;
   margin-right: -7px;
   padding-left: 8px;
