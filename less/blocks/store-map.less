@@ -38,28 +38,34 @@
     }
   }
 }
-.ymaps-2-1-41-balloon__close-button{
-  width: 30px !important;
-  height: 30px !important;
-  line-height: 30px !important;
-  background: none !important;
-  opacity: 1 !important;
-  text-align: center;
-  background-color: @color-primary !important;
-  margin-right: 0 !important;
-  color: @color-inverse;
-  position: relative;
-  &:hover{
-    background-color: @color-info !important;
+.ymaps-2-1-41-balloon{
+  &__content{
+    font-family: @ff !important;
+    font-size: @fs !important;
   }
-  &::after{
-    display: none;
-  }
-  &::before{
-    display: block;
-    line-height: 30px;
-    font-family: @ff-icon;
-    content: "\f00d";
-    font-size: @fs*1.5;
+  &__close-button{
+    width: 30px !important;
+    height: 30px !important;
+    line-height: 30px !important;
+    background: none !important;
+    opacity: 1 !important;
+    text-align: center;
+    background-color: @color-primary !important;
+    margin-right: 0 !important;
+    color: @color-inverse;
+    position: relative;
+    &:hover{
+      background-color: @color-info !important;
+    }
+    &::after{
+      display: none;
+    }
+    &::before{
+      display: block;
+      line-height: 30px;
+      font-family: @ff-icon;
+      content: "\f00d";
+      font-size: @fs*1.5;
+    }
   }
 }
