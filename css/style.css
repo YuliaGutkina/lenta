@@ -17,6 +17,10 @@
 .link-custom:hover {
   border-bottom-color: transparent;
 }
+.p-normal {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
 a,
 button,
 input[type="submit"],
@@ -1453,6 +1457,11 @@ input::-webkit-inner-spin-button {
 .form-main__telnum {
   padding: 0;
 }
+.form-main__captcha {
+  height: 40px;
+  margin-bottom: 15px;
+  border: 1px solid #000000;
+}
 .form-main--form fieldset {
   padding: 0;
   border: none;
@@ -1480,6 +1489,16 @@ input::-webkit-inner-spin-button {
 .form-main .form-control--tel1 {
   width: 60px;
   display: inline-block;
+}
+.form-main--reg .form-control {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.form-main--reg .form-control--tel1 {
+  width: 45px;
+}
+.form-main--reg .form-control--tel2 {
+  width: 70px;
 }
 .form-main .form-group {
   line-height: 32px;
