@@ -1430,6 +1430,9 @@ input::-webkit-inner-spin-button {
 .form-main--orderlist .form-main__legend {
   font-weight: 600;
 }
+.form-main--recovery {
+  margin-top: 15px;
+}
 .form-main .control-label {
   padding-right: 0;
 }
