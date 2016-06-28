@@ -17,13 +17,13 @@
   }
   &__dropdown-toggle{
     display: inline-block;
-    font-size: @fs*1.125;
+    font-size: @fs;
     font-weight: 700;
     position: relative;
     &::after{
       font-family: @ff-icon;
       content: "\f078";
-      font-size: @fs*1.125;
+      font-size: @fs;
       display: block;
       position: absolute;
       right: -@fs*1.5;
@@ -33,14 +33,12 @@
       }
     }
     .active > &{
-      color: @color-info;
       text-decoration: none;
     }
     &:focus{
       color: @color-primary;
       text-decoration: underline;
       .active &{
-        color: @color-info;
         text-decoration: none;
       }
     }
