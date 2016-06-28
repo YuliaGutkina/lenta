@@ -82,7 +82,7 @@ $(function() {
     .mousedown(function(e){
       pressTimer = window.setTimeout(function() {
         numberInputChange(e);
-      },50)
+      },50);
       return false;
     });
 
