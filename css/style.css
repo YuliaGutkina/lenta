@@ -725,6 +725,19 @@ input[type="radio"]:active {
 .active > .store-map__info {
   display: block;
 }
+.err-page {
+  text-align: center;
+  margin-top: 30px;
+  padding: 85px;
+}
+.err-page__num {
+  color: #afb5e8;
+  font-weight: 700;
+  font-size: 64.000006px;
+}
+.err-page__err-text {
+  font-size: 32.00001px;
+}
 .breadcrumb {
   margin-bottom: 0;
   padding-left: 0;
