@@ -77,12 +77,12 @@ $(function() {
     });
 
     $('.number__control').mouseup(function(){
-        clearInterval(pressTimer);
+        clearTimeout(pressTimer);
       })
     .mousedown(function(e){
-      pressTimer = window.setInterval(function() {
+      pressTimer = window.setTimeout(function() {
         numberInputChange(e);
-      },100)
+      },50)
       return false;
     });
 
