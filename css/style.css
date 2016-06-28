@@ -304,6 +304,10 @@ input[type="radio"]:active {
   display: block;
   cursor: pointer;
 }
+.filter__checkbox input:focus,
+.filter__checkbox input:active {
+  outline: none;
+}
 .filter__dropdown-block {
   margin-top: 10px;
   margin-bottom: 30px;
