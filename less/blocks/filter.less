@@ -1,75 +1,65 @@
 // main: ../style.less
 
 .filter {
-  padding-top: 20px;
-  padding-bottom: @pad *2;
+  padding: @pad*2;
   background: @color-gray-lighter;
+  &__block{
+    & + &{
+      margin-top: @pad/1.5;
+    }
+  }
 
   label {
     font-weight: 400;
   }
-
-  &__fieldset {
-    padding-left: @pad *2;
-    padding-right: @pad *2;
+  &__counter{
+    color: lighten(@color-text, 80%);
   }
-
-  &__fieldset-inner {
-    margin-bottom: @pad *2;
-  }
-
-  &__legend {
-    margin-bottom: 5px;
-    font-size: @fs;
+  &__dropdown-toggle{
+    display: inline-block;
+    font-size: @fs*1.125;
     font-weight: 700;
-    border: none;
-
-    &::after {
+    position: relative;
+    &::after{
       font-family: @ff-icon;
-      content: "\f077";
-      color: @color-primary;
-      cursor: pointer;
+      content: "\f078";
+      font-size: @fs*1.125;
+      display: block;
+      position: absolute;
+      right: -@fs*1.5;
+      top: 0;
+      .active > &{
+        content: "\f077";
+      }
+    }
+    .active > &{
+      color: @color-info;
       text-decoration: none;
     }
-
-    &--open::after {
-      content: "\f078";
+    &:focus{
+      color: @color-primary;
+      text-decoration: underline;
+      .active &{
+        color: @color-info;
+        text-decoration: none;
+      }
     }
   }
-
-  &__checkbox-label {
+  &__checkbox{
     display: block;
+    cursor: pointer;
   }
 
-  &__checkbox-input {
+  &__dropdown-block {
+    margin-top: @pad/1.5;
+    margin-bottom: @pad *2;
     display: none;
-  }
-
-  &__checkbox-custom {
-    display: inline-block;
-    position: relative;
-    width: 13px;
-    height: 13px;
-
-    border: 1px solid #707070;
-  }
-
-  &__checkbox-input:checked ~ &__checkbox-custom {
-    background: url(../img/checked.png) no-repeat 50% 50%;
-  }
-
-  &__counter {
-    color: #ccc;
-  }
-
-  .range__input {
-    width: 63px;
-    height: 28px;
-    border: 1px solid @color-primary;
-    padding-left: 5px;
-
-    &--first {
-      margin-right: @pad;
+    .active &{
+      display: block;
     }
+  }
+  &__btn-group{
+    margin-top: @pad;
+    margin-left: -@pad*2;
   }
 }
