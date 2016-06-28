@@ -729,6 +729,10 @@ input[type="radio"]:active {
 .active > .store-map__info {
   display: block;
 }
+.ymaps-2-1-41-balloon__content {
+  font-family: "Open Sans", Helvetica, Arial, sans-serif !important;
+  font-size: 14px !important;
+}
 .ymaps-2-1-41-balloon__close-button {
   width: 30px !important;
   height: 30px !important;
