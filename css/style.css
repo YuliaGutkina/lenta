@@ -1423,6 +1423,13 @@ input::-webkit-inner-spin-button {
   border-left-color: #e7ecf4;
   right: -6px;
 }
+.form-main__login {
+  display: block;
+  line-height: 17.999996px;
+}
+.form-main__info {
+  margin-top: 25px;
+}
 .form-main--form fieldset {
   padding: 0;
   border: none;
@@ -1432,6 +1439,11 @@ input::-webkit-inner-spin-button {
 }
 .form-main--recovery {
   margin-top: 15px;
+}
+.form-main--password .control-label {
+  padding-top: 0;
+  padding-left: 0;
+  line-height: 17.999996px;
 }
 .form-main .control-label {
   padding-right: 0;
