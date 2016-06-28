@@ -1433,6 +1433,20 @@ input::-webkit-inner-spin-button {
 .form-main__star {
   color: #ff0000;
 }
+.form-main__tel {
+  margin: 0;
+}
+.form-main__telcode {
+  padding: 0;
+  text-align: right;
+}
+.form-main__telcode .form-control {
+  margin-right: 5px;
+  width: 65px;
+}
+.form-main__telnum {
+  padding: 0;
+}
 .form-main--form fieldset {
   padding: 0;
   border: none;
@@ -1457,11 +1471,20 @@ input::-webkit-inner-spin-button {
   padding-top: 4px;
   padding-bottom: 4px;
 }
+.form-main .form-control--tel1 {
+  width: 60px;
+  display: inline-block;
+}
 .form-main .form-group {
   line-height: 32px;
 }
 .form-main .btn-custom {
   border: none;
+}
+.form-main .control-label--important::before {
+  content: "*";
+  color: #ff0000;
+  font-size: 17.999996px;
 }
 .form-main textarea {
   min-height: 110px;

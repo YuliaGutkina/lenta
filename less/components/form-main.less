@@ -274,6 +274,24 @@
     color: #ff0000;
   }
 
+  &__tel {
+    margin: 0;
+  }
+
+  &__telcode {
+    padding: 0;
+    text-align: right;
+
+    .form-control {
+      margin-right: 5px;
+      width: 65px;
+    }
+  }
+
+  &__telnum {
+    padding: 0;
+  }
+
   &--form {
 
     fieldset {
@@ -314,6 +332,11 @@
     box-shadow: none;
     padding-top: 4px;
     padding-bottom: 4px;
+
+    &--tel1 {
+      width: 60px;
+      display: inline-block;
+    }
   }
 
   .form-group {
@@ -322,6 +345,18 @@
 
   .btn-custom {
     border: none;
+  }
+
+  .control-label {
+
+    &--important {
+
+      &::before {
+        content: "*";
+        color: #ff0000;
+        font-size: @fs-large;
+      }
+    }
   }
 
   textarea {
