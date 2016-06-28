@@ -459,8 +459,8 @@ input[type="radio"]:active {
 }
 .goods__item:hover {
   z-index: 2;
-  padding: 13px;
-  border: 3px solid #afb5e8;
+  border: 1px solid #afb5e8;
+  outline: 2px solid #afb5e8;
 }
 .goods__item--sale .goods__img::before {
   content: "";
