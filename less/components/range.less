@@ -3,8 +3,8 @@
 .range{
   &__controls{
     padding-top: @pad*3;
-    padding-left: @pad/1.5;
-    padding-right: @pad/1.5;
+    padding-left: @pad*1.66;
+    padding-right: @pad*1.66;
     position: relative;
     .filter__range &{
       margin-bottom: @pad*2.5;
@@ -46,6 +46,9 @@
         border-right: 15px solid transparent;
         margin-left: 0;
       }
+      &:focus{
+        outline: none;
+      }
     }
   }
   &__step{
@@ -73,7 +76,7 @@
       border-left: 1px solid lighten(@color-green, 40%);
       position: absolute;
       left: 50%;
-      bottom: -25px;
+      bottom: -20px;
     }
   }
   &__price-inputs{
@@ -98,8 +101,11 @@
     padding-right: @pad;
   }
   &__input{
-    width: 70%;
+    width: 65px;
     margin-left: @pad/3;
     text-align: center;
+    border: 1px solid @color-primary;
+    text-align: left;
+    padding-left: 3px;
   }
 }
