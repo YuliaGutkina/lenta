@@ -83,6 +83,7 @@ $(function() {
       pressTimer = window.setTimeout(function() {
         numberInputChange(e);
       },50);
+      
       return false;
     });
 
