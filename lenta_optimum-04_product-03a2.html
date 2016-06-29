@@ -9,6 +9,7 @@
 		<link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/jquery-ui.structure.min.css" rel="stylesheet">
     <link href="css/jquery-ui.theme.min.css" rel="stylesheet">
+    <link href="css/fancybox/jquery.fancybox.css" rel="stylesheet">
 		<link href="css/style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&subset=latin,cyrillic" rel="stylesheet" type="text/css">
     <!--[if lt IE 9]>
@@ -132,28 +133,30 @@
       <div class="row">
         <div class="sidebar">
           <div class="product-photo">
-            <div class="product-photo__big  product-photo__big--sale">
+            <a class="fancy product-photo__big" data-fancybox-group="goods-img" title="Чай Lipton Pear Chocolate черный байховый ароматизированный с кусочками груши, 20 пир" href="img/product.jpg">
               <img src="img/product.jpg" alt="" width="300" height="300">
-            </div>
-            <div class="product-photo__small">
+            </a>
+            <a class="fancy product-photo__small" data-fancybox-group="goods-img" title="Чай Lipton Pear Chocolate черный байховый ароматизированный с кусочками груши, 20 пир" href="img/product-small.jpg">
               <img src="img/product-small.jpg" alt="" width="98" height="98">
-            </div>
-            <div class="product-photo__small">
+            </a>
+            <a class="fancy product-photo__small" data-fancybox-group="goods-img" title="Чай Lipton Pear Chocolate черный байховый ароматизированный с кусочками груши, 20 пир" href="img/product-small.jpg">
               <img src="img/product-small.jpg" alt="" width="98" height="98">
-            </div>
-            <div class="product-photo__small">
+            </a>
+            <a class="fancy product-photo__small" data-fancybox-group="goods-img" title="Чай Lipton Pear Chocolate черный байховый ароматизированный с кусочками груши, 20 пир" href="img/product-small.jpg">
               <img src="img/product-small.jpg" alt="" width="98" height="98">
-            </div>
-            <div class="product-photo__small">
+            </a>
+            <a class="fancy product-photo__small" data-fancybox-group="goods-img" title="Чай Lipton Pear Chocolate черный байховый ароматизированный с кусочками груши, 20 пир" href="img/product-small.jpg">
               <img src="img/product-small.jpg" alt="" width="98" height="98">
-            </div>
+            </a>
+
+            <span class="goods__sale">-90%</span>
           </div>
         </div>
         <main class="main-content  main-content--product-page  col-xs-8 pull-right">
           <h1 class="pg-title">
             Чай Lipton Pear Chocolate черный байховый ароматизированный с кусочками груши, 20 пир
           </h1>
-          <p class="price">
+          <p class="price__parag">
             <span class="price__sale">
               Акционная цена:
               <span class="price__new">
@@ -164,16 +167,17 @@
             <span class="price__default">
               <b>Обычная цена:</b>
               <span class="price__old">99 999,01</span>
-              <i class="fa fa-rub" aria-hidden="true"></i>           /шт.
+              <i class="fa fa-rub" aria-hidden="true"></i> /шт.
             </span>
           </p>
-          <p>
+          <p class="price__parag">
             <b>Артикул: </b>123456
           </p>
-          <p>
+          <p class="price__parag">
             <b>В упаковке: </b>999 шт.<br>
             <b>Вес брутто в упаковке: </b>9 999,02 кг.
           </p>
+          
           <h2 class="pg-title">
             Характеристики
           </h2>
@@ -317,6 +321,7 @@
     <script src="js/jquery-2.2.3.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.fancybox.pack.js"></script>
 		<script src="js/scripts.js"></script>
   </body>
 </html>

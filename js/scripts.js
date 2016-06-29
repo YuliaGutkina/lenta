@@ -1,6 +1,8 @@
 $(function() {
   $("body").append('<div id="arrowUp" class="arrowUp"><a href="#top" title="Наверх" class="scrollTo hidden-xs"><span class="fa fa-chevron-up"></span></a></div>');
 
+  $('.fancy').fancybox();
+
   $('.goods-list__box, .goods-list__scales').tooltip({
     'placement': 'bottom'
   });

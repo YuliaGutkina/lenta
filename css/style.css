@@ -616,6 +616,7 @@ input[type="radio"]:active {
   font-size: 0;
 }
 .product-photo__big {
+  display: block;
   margin-bottom: 10px;
 }
 .product-photo__big--sale::after {
@@ -630,6 +631,7 @@ input[type="radio"]:active {
 .product-photo__small {
   display: inline-block;
   padding-right: 2px;
+  margin-bottom: 2px;
   cursor: pointer;
 }
 .price__sale {
@@ -655,6 +657,10 @@ input[type="radio"]:active {
 .price--no {
   color: #cccccc;
   font-weight: 700;
+}
+.price__parag {
+  margin-top: 25px;
+  margin-bottom: 10px;
 }
 .buy__summ {
   font-weight: 600px;
