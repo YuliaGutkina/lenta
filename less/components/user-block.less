@@ -14,7 +14,6 @@
     color: @color-primary;
   }
 
-  .fa-user,
   .fa-map-marker {
     font-size: @fs-large;
   }
@@ -29,5 +28,12 @@
 
   &__block-item {
     margin-left: 40px;
+    & > *{
+      display: inline-block;
+      vertical-align: middle;
+    }
+    & .fa{
+      font-size: @fs-large;
+    }
   }
 }

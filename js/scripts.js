@@ -1,6 +1,12 @@
 $(function() {
   $("body").append('<div id="arrowUp" class="arrowUp"><a href="#top" title="Наверх" class="scrollTo hidden-xs"><span class="fa fa-chevron-up"></span></a></div>');
 
+  $('.fancy').fancybox();
+
+  $('.goods-list__box, .goods-list__scales').tooltip({
+    'placement': 'bottom'
+  });
+
   /*===================== CATLIST DROPDOWN  ON HOVER =====================*/
   $('.catlist__title.dropdown').hover(function() {
       $(this).addClass('open');
@@ -62,6 +68,54 @@ $(function() {
     }
   })
 
+  /*===================== INPUT NUMBERS =====================*/
+  var pressTimer,
+      controlASC = $('<span/>',{
+      'class': 'number__control number__control--asc'
+    }),
+    controlDESC = $('<span/>',{
+      'class': 'number__control number__control--desc'
+    });
+
+    $('.number-custom input[type="number"]').each(function(){
+      controlDESC.clone().appendTo($(this).parent());
+      controlASC.clone().appendTo($(this).parent());
+    });
+
+    $('.number__control').mouseup(function(){
+        clearTimeout(pressTimer);
+      })
+    .mousedown(function(e){
+      pressTimer = window.setTimeout(function() {
+        numberInputChange(e);
+      },50);
+
+      return false;
+    });
+
+    function numberInputChange(e) {
+      var parent = $(e.target).parent(),
+            input = $('input[type="number"]', parent),
+            val = parseInt(input.val()),
+            min = parseInt(input.attr('min')) - 1,
+            max = parseInt(input.attr('max')) + 1;
+
+        if ($(e.target).hasClass('number__control--asc')) {
+          if ((val + 1) < max) {
+            input.val(val + 1);
+          }
+        } else if ($(e.target).hasClass('number__control--desc')) {
+          if ((val - 1) > min) {
+            input.val(val - 1);
+          }
+        } else if ($(e.target).is(input)){
+          if (input.val() > max) {
+            input.val(max - 1);
+          } else if (input.val() < min || input.val() == NaN) {
+            input.val(min + 1);
+          }
+        }
+    }
   /*===================== FILTER FUNCTIONS =====================*/
   $('.filter__dropdown-toggle').click(function(e){
     e.preventDefault();

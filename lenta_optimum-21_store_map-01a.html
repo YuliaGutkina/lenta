@@ -7,6 +7,9 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/non-responsive.min.css" rel="stylesheet">
 		<link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/jquery-ui.structure.min.css" rel="stylesheet">
+    <link href="css/jquery-ui.theme.min.css" rel="stylesheet">
+    <link href="css/fancybox/jquery.fancybox.css" rel="stylesheet">
 		<link href="css/style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&subset=latin,cyrillic" rel="stylesheet" type="text/css">
     <!--[if lt IE 9]>
@@ -255,6 +258,8 @@
 
     <script src="js/jquery-2.2.3.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.fancybox.pack.js"></script>
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
     <script>
       $(function(){
@@ -288,13 +293,13 @@
         function init() {
 
           var myMap = new ymaps.Map('store-map', {
-              center: [59.91815363876071, 30.30557799999997], // Санкт-Петербург
+              center: [59.91815363876071, 30.30557799999997], // SPb center
               controls: ['zoomControl'],
               zoom: 10
             }, {
               searchControlProvider: 'yandex#search'
             }),
-            // Контейнер для меню.
+            // menu container
             menu = $('#store-map__list');
 
           for (var i = 0, l = stores.length; i < l; i++) {

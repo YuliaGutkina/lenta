@@ -7,6 +7,9 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/non-responsive.min.css" rel="stylesheet">
 		<link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/jquery-ui.structure.min.css" rel="stylesheet">
+    <link href="css/jquery-ui.theme.min.css" rel="stylesheet">
+    <link href="css/fancybox/jquery.fancybox.css" rel="stylesheet">
 		<link href="css/style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&subset=latin,cyrillic" rel="stylesheet" type="text/css">
     <!--[if lt IE 9]>
@@ -128,67 +131,76 @@
     <div class="container">
       <div class="row">
         <div class="sidebar">
-          <form class="filter" action="" method="get">
-            <fieldset class="filter__fieldset">
-              <legend class="filter__legend   filter__legend--open">
-                <a href="#">Бренд</a>
-              </legend>
-              <div class="filter__fieldset-inner">
-                <label class="filter__checkbox-label">
-                  <input type="checkbox" class="filter__checkbox-input" name="moscow-coffee">
-                  <span class="filter__checkbox-custom"></span>
-                  Московская кофейня на паяхъ
+          <form class="filter" action="#" method="get">
+            <div class="filter__block">
+              <a href="#" class="filter__dropdown-toggle">Бренд</a>
+              <div class="filter__dropdown-block">
+                <label class="filter__checkbox">
+                  <input type="checkbox" class="filter__checkbox-input" name="moscow-coffee" id="moscow-coffee" value="">
+                  <span class="filter__checkbox-title">Московская кофейня на паяхъ</span>
                   <span class="filter__counter">(10)</span>
                 </label>
-                <label class="filter__checkbox-label">
-                  <input type="checkbox" class="filter__checkbox-input" name="jokey" checked>
-                  <span class="filter__checkbox-custom"></span>
-                  Жокей
+                <label class="filter__checkbox">
+                  <input type="checkbox" class="filter__checkbox-input" name="jokey" id="jokey" checked value="">
+                  <span class="filter__checkbox-title">Жокей</span>
                   <span class="filter__counter">(4)</span>
                 </label>
-                <label class="filter__checkbox-label">
-                  <input type="checkbox" class="filter__checkbox-input" name="petr-sloboda">
-                  <span class="filter__checkbox-custom"></span>
-                  Петровская слобода
+                <label class="filter__checkbox">
+                  <input type="checkbox" class="filter__checkbox-input" name="petr-sloboda" id="petr-sloboda" value="">
+                  <span class="filter__checkbox-title">Петровская слобода</span>
                   <span class="filter__counter">(7)</span>
                 </label>
               </div>
-            </fieldset>
-            <fieldset class="filter__fieldset">
-              <legend class="filter__legend">
-                <a href="#">Вес (кг)</a>
-              </legend>
-
-            </fieldset>
-            <fieldset class="filter__fieldset">
-              <legend class="filter__legend   filter__legend--open">
-                <a href="#">Цена</a>
-              </legend>
-              <div class="filter__fieldset-inner">
+            </div>
+            <div class="filter__block">
+              <a href="#" class="filter__dropdown-toggle">Вес (кг)</a>
+              <div class="filter__dropdown-block">
+                <label class="filter__checkbox">
+                  <input type="checkbox" class="filter__checkbox-input" name="kg1" id="kg1" value="">
+                  <span class="filter__checkbox-title">1 кг</span>
+                  <span class="filter__counter">(10)</span>
+                </label>
+                <label class="filter__checkbox">
+                  <input type="checkbox" class="filter__checkbox-input" name="kg5" id="kg5" checked value="">
+                  <span class="filter__checkbox-title">5 кг</span>
+                  <span class="filter__counter">(4)</span>
+                </label>
+                <label class="filter__checkbox">
+                  <input type="checkbox" class="filter__checkbox-input" name="kg10" id="kg10" value="">
+                  <span class="filter__checkbox-title">10 кг</span>
+                  <span class="filter__counter">(7)</span>
+                </label>
+              </div>
+            </div>
+            <div class="filter__block active">
+              <a class="filter__dropdown-toggle" href="#">Цена</a>
+              <div class="filter__dropdown-block">
                 <div class="filter__range range">
+
                   <div class="range__controls">
-                    <div class="range__scale">
-                    </div>
-                    <div class="range__toggle range__toggle--min">
-                    </div>
-                    <div class="range__toggle  range__toggle--max">
+                    <div id="price-range" class="range__slider">
+                      <span class="range__step range__step--0">0</span>
+                      <span class="range__step range__step--1">750</span>
+                      <span class="range__step range__step--2">1500</span>
+                      <span class="range__step range__step--3">2250</span>
+                      <span class="range__step range__step--4">2999</span>
                     </div>
                   </div>
-                  <div class="range__price-controls">
-                    <label>
+
+                  <div class="range__price-inputs">
+                    <label class="range__label">
                       От:
-                      <input class="range__input  range__input--first" type="text" value="2499" name="min-price">
+                      <input class="range__input" type="text" value="2499" name="price-from">
                     </label>
-                    <label>
+                    <label class="range__label">
                       До:
-                      <input class="range__input" type="text" value="2874" name="max-price">
+                      <input class="range__input" type="text" value="2874" name="price-to">
                     </label>
-                    <span>₽</span>
                   </div>
                 </div>
               </div>
-            </fieldset>
-            <div class="btn-group" role="group" aria-label="...">
+            </div>
+            <div class="filter__btn-group btn-group">
               <button type="submit" class="btn btn-custom  btn-custom--wide">Применить</button>
               <button type="reset" class="btn btn-custom  btn-custom--gray">Сбросить</button>
             </div>
@@ -225,24 +237,24 @@
             </div>
             <div class="col-xs-6 pull-right text-right sorter">
               <select name="sort-price" id="sort-price" class="select-custom">
-								<option value="value1">Дешевле <i class="fa fa-long-arrow-right" aria-hidden="true"></i> дороже</option>
-								<option value="value2"></option>
-								<option value="value3"></option>
-								<option value="value4"></option>
-							</select>
-              <label for="">Показывать  по:  </label>
+                <option value="value1">Дешевле &rarr; дороже</option>
+                <option value="value2">Быстрее &rarr; медленнее</option>
+                <option value="value3">Выше &rarr; сильнее</option>
+                <option value="value4">Артем</option>
+              </select>
+              <label for="sort-num">Показывать по: </label>
               <select name="sort-num" id="sort-num" class="select-custom">
-								<option value="value1">20</option>
-								<option value="value2"></option>
-								<option value="value3"></option>
-								<option value="value4"></option>
-							</select>
+                <option value="value1">12</option>
+                <option value="value2">24</option>
+                <option value="value3">36</option>
+                <option value="value4">48</option>
+              </select>
             </div>
           </div>
           <section class="goods-list">
-            <div class="goods-list__item row">
+            <div class="goods-list__item goods-list__item--sale row">
               <div class="col-xs-6 goods-list__name">
-                <span class="goods-list__sale">25%</span>
+                <span class="goods__sale goods__sale--small">-90%</span>
                 <a href="">КОНФЕТЫ АССОРТИ А. КОРКУНОВ, из молочного шоколада с цельным и дробленым лесным орехом, 190 г</a>
               </div>
               <div class="col-xs-4 text-right">
@@ -256,7 +268,9 @@
                   </span>
                 </div>
                 <div class="goods-list__count">
-                  <input type="number" class="input-number-custom" value="5555">
+                  <span class="number-custom">
+                      <input type="number" min="1" max="240" value="155">
+                    </span>
                   <span>
                     уп.&nbsp; (444шт.)
                   </span>
@@ -267,21 +281,17 @@
                   9 999 999.03 <i class="fa fa-rub" aria-hidden="true"></i>
                 </div>
                 <div class="goods-list__buy">
-                  <div class="goods-list__box">
-
-                  </div>
-                  <div class="goods-list__scales">
-
-                  </div>
+                  <span class="goods-list__box" data-toggle="tooltip" title="777 шт"></span>
+                  <span class="goods-list__scales" data-toggle="tooltip" title="666,02 кг"></span>
                   <a href="" class="goods-list__btn btn btn-default">
                     <img src="img/cart-min.png" alt="">
                   </a>
                 </div>
               </div>
             </div>
-            <div class="goods-list__item row">
+            <div class="goods-list__item goods-list__item--sale row">
               <div class="col-xs-6 goods-list__name">
-                <span class="goods-list__sale">88%</span>
+                <span class="goods__sale goods__sale--small">-88%</span>
                 <a href="">КОНФЕТЫ АССОРТИ А. КОРКУНОВ, из молочного шоколада с цельным и дробленым лесным орехом, 190 г</a>
               </div>
               <div class="col-xs-4 text-right">
@@ -295,7 +305,9 @@
                   </span>
                 </div>
                 <div class="goods-list__count">
-                  <input type="number" class="input-number-custom" value="5555">
+                  <span class="number-custom">
+                      <input type="number" min="1" max="240" value="155">
+                    </span>
                   <span>
                     уп.&nbsp; (444шт.)
                   </span>
@@ -306,21 +318,17 @@
                   9 999 999.03 <i class="fa fa-rub" aria-hidden="true"></i>
                 </div>
                 <div class="goods-list__buy">
-                  <div class="goods-list__box">
-
-                  </div>
-                  <div class="goods-list__scales">
-
-                  </div>
+                  <span class="goods-list__box" data-toggle="tooltip" title="777 шт"></span>
+                  <span class="goods-list__scales" data-toggle="tooltip" title="666,02 кг"></span>
                   <a href="" class="goods-list__btn btn btn-default">
                     <img src="img/cart-min.png" alt="">
                   </a>
                 </div>
               </div>
             </div>
-            <div class="goods-list__item row">
+            <div class="goods-list__item goods-list__item--sale row">
               <div class="col-xs-6 goods-list__name">
-                <span class="goods-list__sale">5%</span>
+                <span class="goods__sale goods__sale--small">-5%</span>
                 <a href="">Томаты, 250 г</a>
               </div>
               <div class="col-xs-4 text-right">
@@ -334,7 +342,9 @@
                   </span>
                 </div>
                 <div class="goods-list__count">
-                  <input type="number" class="input-number-custom" value="1">
+                  <span class="number-custom">
+                      <input type="number" min="1" max="240" value="155">
+                    </span>
                   <span>
                     уп.&nbsp; (20шт.)
                   </span>
@@ -345,12 +355,8 @@
                   9 999 999.03 <i class="fa fa-rub" aria-hidden="true"></i>
                 </div>
                 <div class="goods-list__buy">
-                  <div class="goods-list__box">
-
-                  </div>
-                  <div class="goods-list__scales">
-
-                  </div>
+                  <span class="goods-list__box" data-toggle="tooltip" title="777 шт"></span>
+                  <span class="goods-list__scales" data-toggle="tooltip" title="666,02 кг"></span>
                   <a href="" class="goods-list__btn btn btn-default">
                     <img src="img/cart-min.png" alt="">
                   </a>
@@ -372,7 +378,9 @@
                   </span>
                 </div>
                 <div class="goods-list__count">
-                  <input type="number" class="input-number-custom" value="5555">
+                  <span class="number-custom">
+                      <input type="number" min="1" max="240" value="155">
+                    </span>
                   <span>
                     уп.&nbsp; (444шт.)
                   </span>
@@ -383,12 +391,8 @@
                   9 999 999.03 <i class="fa fa-rub" aria-hidden="true"></i>
                 </div>
                 <div class="goods-list__buy">
-                  <div class="goods-list__box">
-
-                  </div>
-                  <div class="goods-list__scales">
-
-                  </div>
+                  <span class="goods-list__box" data-toggle="tooltip" title="777 шт"></span>
+                  <span class="goods-list__scales" data-toggle="tooltip" title="666,02 кг"></span>
                   <a href="" class="goods-list__btn btn btn-default">
                     <img src="img/cart-min.png" alt="">
                   </a>
@@ -410,7 +414,9 @@
                   </span>
                 </div>
                 <div class="goods-list__count">
-                  <input type="number" class="input-number-custom" value="5555">
+                  <span class="number-custom">
+                      <input type="number" min="1" max="240" value="155">
+                    </span>
                   <span>
                     уп.&nbsp; (444шт.)
                   </span>
@@ -421,12 +427,8 @@
                   9 999 999.03 <i class="fa fa-rub" aria-hidden="true"></i>
                 </div>
                 <div class="goods-list__buy">
-                  <div class="goods-list__box">
-
-                  </div>
-                  <div class="goods-list__scales">
-
-                  </div>
+                  <span class="goods-list__box" data-toggle="tooltip" title="777 шт"></span>
+                  <span class="goods-list__scales" data-toggle="tooltip" title="666,02 кг"></span>
                   <a href="" class="goods-list__btn btn btn-default">
                     <img src="img/cart-min.png" alt="">
                   </a>
@@ -448,7 +450,9 @@
                   </span>
                 </div>
                 <div class="goods-list__count">
-                  <input type="number" class="input-number-custom" value="5555">
+                  <span class="number-custom">
+                      <input type="number" min="1" max="240" value="155">
+                    </span>
                   <span>
                     уп.&nbsp; (444шт.)
                   </span>
@@ -459,12 +463,8 @@
                   9 999 999.03 <i class="fa fa-rub" aria-hidden="true"></i>
                 </div>
                 <div class="goods-list__buy">
-                  <div class="goods-list__box">
-
-                  </div>
-                  <div class="goods-list__scales">
-
-                  </div>
+                  <span class="goods-list__box" data-toggle="tooltip" title="777 шт"></span>
+                  <span class="goods-list__scales" data-toggle="tooltip" title="666,02 кг"></span>
                   <a href="" class="goods-list__btn btn btn-default">
                     <img src="img/cart-min.png" alt="">
                   </a>
@@ -486,7 +486,9 @@
                   </span>
                 </div>
                 <div class="goods-list__count">
-                  <input type="number" class="input-number-custom" value="5555">
+                  <span class="number-custom">
+                      <input type="number" min="1" max="240" value="155">
+                    </span>
                   <span>
                     уп.&nbsp; (444шт.)
                   </span>
@@ -497,12 +499,8 @@
                   9 999 999.03 <i class="fa fa-rub" aria-hidden="true"></i>
                 </div>
                 <div class="goods-list__buy">
-                  <div class="goods-list__box">
-
-                  </div>
-                  <div class="goods-list__scales">
-
-                  </div>
+                  <span class="goods-list__box" data-toggle="tooltip" title="777 шт"></span>
+                  <span class="goods-list__scales" data-toggle="tooltip" title="666,02 кг"></span>
                   <a href="" class="goods-list__btn btn btn-default">
                     <img src="img/cart-min.png" alt="">
                   </a>
@@ -524,7 +522,9 @@
                   </span>
                 </div>
                 <div class="goods-list__count">
-                  <input type="number" class="input-number-custom" value="5555">
+                  <span class="number-custom">
+                      <input type="number" min="1" max="240" value="155">
+                    </span>
                   <span>
                     уп.&nbsp; (444шт.)
                   </span>
@@ -535,12 +535,8 @@
                   9 999 999.03 <i class="fa fa-rub" aria-hidden="true"></i>
                 </div>
                 <div class="goods-list__buy">
-                  <div class="goods-list__box">
-
-                  </div>
-                  <div class="goods-list__scales">
-
-                  </div>
+                  <span class="goods-list__box" data-toggle="tooltip" title="777 шт"></span>
+                  <span class="goods-list__scales" data-toggle="tooltip" title="666,02 кг"></span>
                   <a href="" class="goods-list__btn btn btn-default">
                     <img src="img/cart-min.png" alt="">
                   </a>
@@ -562,7 +558,9 @@
                   </span>
                 </div>
                 <div class="goods-list__count">
-                  <input type="number" class="input-number-custom" value="5555">
+                  <span class="number-custom">
+                      <input type="number" min="1" max="240" value="155">
+                    </span>
                   <span>
                     уп.&nbsp; (444шт.)
                   </span>
@@ -573,12 +571,8 @@
                   9 999 999.03 <i class="fa fa-rub" aria-hidden="true"></i>
                 </div>
                 <div class="goods-list__buy">
-                  <div class="goods-list__box">
-
-                  </div>
-                  <div class="goods-list__scales">
-
-                  </div>
+                  <span class="goods-list__box" data-toggle="tooltip" title="777 шт"></span>
+                  <span class="goods-list__scales" data-toggle="tooltip" title="666,02 кг"></span>
                   <a href="" class="goods-list__btn btn btn-default">
                     <img src="img/cart-min.png" alt="">
                   </a>
@@ -600,7 +594,9 @@
                   </span>
                 </div>
                 <div class="goods-list__count">
-                  <input type="number" class="input-number-custom" value="5555">
+                  <span class="number-custom">
+                      <input type="number" min="1" max="240" value="155">
+                    </span>
                   <span>
                     уп.&nbsp; (444шт.)
                   </span>
@@ -611,12 +607,8 @@
                   9 999 999.03 <i class="fa fa-rub" aria-hidden="true"></i>
                 </div>
                 <div class="goods-list__buy">
-                  <div class="goods-list__box">
-
-                  </div>
-                  <div class="goods-list__scales">
-
-                  </div>
+                  <span class="goods-list__box" data-toggle="tooltip" title="777 шт"></span>
+                  <span class="goods-list__scales" data-toggle="tooltip" title="666,02 кг"></span>
                   <a href="" class="goods-list__btn btn btn-default">
                     <img src="img/cart-min.png" alt="">
                   </a>
@@ -638,7 +630,9 @@
                   </span>
                 </div>
                 <div class="goods-list__count">
-                  <input type="number" class="input-number-custom" value="5555">
+                  <span class="number-custom">
+                      <input type="number" min="1" max="240" value="155">
+                    </span>
                   <span>
                     уп.&nbsp; (444шт.)
                   </span>
@@ -649,12 +643,8 @@
                   9 999 999.03 <i class="fa fa-rub" aria-hidden="true"></i>
                 </div>
                 <div class="goods-list__buy">
-                  <div class="goods-list__box">
-
-                  </div>
-                  <div class="goods-list__scales">
-
-                  </div>
+                  <span class="goods-list__box" data-toggle="tooltip" title="777 шт"></span>
+                  <span class="goods-list__scales" data-toggle="tooltip" title="666,02 кг"></span>
                   <a href="" class="goods-list__btn btn btn-default">
                     <img src="img/cart-min.png" alt="">
                   </a>
@@ -676,7 +666,9 @@
                   </span>
                 </div>
                 <div class="goods-list__count">
-                  <input type="number" class="input-number-custom" value="5555">
+                  <span class="number-custom">
+                      <input type="number" min="1" max="240" value="155">
+                    </span>
                   <span>
                     уп.&nbsp; (444шт.)
                   </span>
@@ -687,12 +679,8 @@
                   9 999 999.03 <i class="fa fa-rub" aria-hidden="true"></i>
                 </div>
                 <div class="goods-list__buy">
-                  <div class="goods-list__box">
-
-                  </div>
-                  <div class="goods-list__scales">
-
-                  </div>
+                  <span class="goods-list__box" data-toggle="tooltip" title="777 шт"></span>
+                  <span class="goods-list__scales" data-toggle="tooltip" title="666,02 кг"></span>
                   <a href="" class="goods-list__btn btn btn-default">
                     <img src="img/cart-min.png" alt="">
                   </a>
@@ -714,7 +702,9 @@
                   </span>
                 </div>
                 <div class="goods-list__count">
-                  <input type="number" class="input-number-custom" value="5555">
+                  <span class="number-custom">
+                      <input type="number" min="1" max="240" value="155">
+                    </span>
                   <span>
                     уп.&nbsp; (444шт.)
                   </span>
@@ -725,12 +715,8 @@
                   9 999 999.03 <i class="fa fa-rub" aria-hidden="true"></i>
                 </div>
                 <div class="goods-list__buy">
-                  <div class="goods-list__box">
-
-                  </div>
-                  <div class="goods-list__scales">
-
-                  </div>
+                  <span class="goods-list__box" data-toggle="tooltip" title="777 шт"></span>
+                  <span class="goods-list__scales" data-toggle="tooltip" title="666,02 кг"></span>
                   <a href="" class="goods-list__btn btn btn-default">
                     <img src="img/cart-min.png" alt="">
                   </a>
@@ -752,7 +738,9 @@
                   </span>
                 </div>
                 <div class="goods-list__count">
-                  <input type="number" class="input-number-custom" value="5555">
+                  <span class="number-custom">
+                      <input type="number" min="1" max="240" value="155">
+                    </span>
                   <span>
                     уп.&nbsp; (444шт.)
                   </span>
@@ -763,12 +751,8 @@
                   9 999 999.03 <i class="fa fa-rub" aria-hidden="true"></i>
                 </div>
                 <div class="goods-list__buy">
-                  <div class="goods-list__box">
-
-                  </div>
-                  <div class="goods-list__scales">
-
-                  </div>
+                  <span class="goods-list__box" data-toggle="tooltip" title="777 шт"></span>
+                  <span class="goods-list__scales" data-toggle="tooltip" title="666,02 кг"></span>
                   <a href="" class="goods-list__btn btn btn-default">
                     <img src="img/cart-min.png" alt="">
                   </a>
@@ -790,7 +774,9 @@
                   </span>
                 </div>
                 <div class="goods-list__count">
-                  <input type="number" class="input-number-custom" value="5555">
+                  <span class="number-custom">
+                      <input type="number" min="1" max="240" value="155">
+                    </span>
                   <span>
                     уп.&nbsp; (444шт.)
                   </span>
@@ -801,12 +787,8 @@
                   9 999 999.03 <i class="fa fa-rub" aria-hidden="true"></i>
                 </div>
                 <div class="goods-list__buy">
-                  <div class="goods-list__box">
-
-                  </div>
-                  <div class="goods-list__scales">
-
-                  </div>
+                  <span class="goods-list__box" data-toggle="tooltip" title="777 шт"></span>
+                  <span class="goods-list__scales" data-toggle="tooltip" title="666,02 кг"></span>
                   <a href="" class="goods-list__btn btn btn-default">
                     <img src="img/cart-min.png" alt="">
                   </a>
@@ -828,7 +810,9 @@
                   </span>
                 </div>
                 <div class="goods-list__count">
-                  <input type="number" class="input-number-custom" value="5555">
+                  <span class="number-custom">
+                      <input type="number" min="1" max="240" value="155">
+                    </span>
                   <span>
                     уп.&nbsp; (444шт.)
                   </span>
@@ -839,12 +823,8 @@
                   9 999 999.03 <i class="fa fa-rub" aria-hidden="true"></i>
                 </div>
                 <div class="goods-list__buy">
-                  <div class="goods-list__box">
-
-                  </div>
-                  <div class="goods-list__scales">
-
-                  </div>
+                  <span class="goods-list__box" data-toggle="tooltip" title="777 шт"></span>
+                  <span class="goods-list__scales" data-toggle="tooltip" title="666,02 кг"></span>
                   <a href="" class="goods-list__btn btn btn-default">
                     <img src="img/cart-min.png" alt="">
                   </a>
@@ -866,7 +846,9 @@
                   </span>
                 </div>
                 <div class="goods-list__count">
-                  <input type="number" class="input-number-custom" value="5555">
+                  <span class="number-custom">
+                      <input type="number" min="1" max="240" value="155">
+                    </span>
                   <span>
                     уп.&nbsp; (444шт.)
                   </span>
@@ -877,12 +859,8 @@
                   9 999 999.03 <i class="fa fa-rub" aria-hidden="true"></i>
                 </div>
                 <div class="goods-list__buy">
-                  <div class="goods-list__box">
-
-                  </div>
-                  <div class="goods-list__scales">
-
-                  </div>
+                  <span class="goods-list__box" data-toggle="tooltip" title="777 шт"></span>
+                  <span class="goods-list__scales" data-toggle="tooltip" title="666,02 кг"></span>
                   <a href="" class="goods-list__btn btn btn-default">
                     <img src="img/cart-min.png" alt="">
                   </a>
@@ -904,7 +882,9 @@
                   </span>
                 </div>
                 <div class="goods-list__count">
-                  <input type="number" class="input-number-custom" value="5555">
+                  <span class="number-custom">
+                      <input type="number" min="1" max="240" value="155">
+                    </span>
                   <span>
                     уп.&nbsp; (444шт.)
                   </span>
@@ -915,12 +895,8 @@
                   9 999 999.03 <i class="fa fa-rub" aria-hidden="true"></i>
                 </div>
                 <div class="goods-list__buy">
-                  <div class="goods-list__box">
-
-                  </div>
-                  <div class="goods-list__scales">
-
-                  </div>
+                  <span class="goods-list__box" data-toggle="tooltip" title="777 шт"></span>
+                  <span class="goods-list__scales" data-toggle="tooltip" title="666,02 кг"></span>
                   <a href="" class="goods-list__btn btn btn-default">
                     <img src="img/cart-min.png" alt="">
                   </a>
@@ -942,7 +918,9 @@
                   </span>
                 </div>
                 <div class="goods-list__count">
-                  <input type="number" class="input-number-custom" value="5555">
+                  <span class="number-custom">
+                      <input type="number" min="1" max="240" value="155">
+                    </span>
                   <span>
                     уп.&nbsp; (444шт.)
                   </span>
@@ -953,12 +931,8 @@
                   9 999 999.03 <i class="fa fa-rub" aria-hidden="true"></i>
                 </div>
                 <div class="goods-list__buy">
-                  <div class="goods-list__box">
-
-                  </div>
-                  <div class="goods-list__scales">
-
-                  </div>
+                  <span class="goods-list__box" data-toggle="tooltip" title="777 шт"></span>
+                  <span class="goods-list__scales" data-toggle="tooltip" title="666,02 кг"></span>
                   <a href="" class="goods-list__btn btn btn-default">
                     <img src="img/cart-min.png" alt="">
                   </a>
@@ -1079,6 +1053,8 @@
 
     <script src="js/jquery-2.2.3.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.fancybox.pack.js"></script>
 		<script src="js/scripts.js"></script>
   </body>
 </html>

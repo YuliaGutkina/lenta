@@ -1,0 +1,20 @@
+// main: ../style.less
+
+.tooltip{
+  padding: 0;
+  margin: 0;
+  &.in{
+    opacity: 1;
+  }
+  &-inner{
+    border: 0;
+    background-color: @color-inverse;
+    border: 1px solid #767676;
+    border-radius: 0;
+    color: #767676;
+    padding: @pad/3;
+  }
+  &-arrow{
+    display: none;
+  }
+}

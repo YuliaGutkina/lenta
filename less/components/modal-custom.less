@@ -13,6 +13,7 @@
     line-height: @fs * 1.857143;
     background: @color-gray-lighter;
     border: none;
+    box-shadow: none;
 
     p {
       margin-top: 20px;
@@ -43,11 +44,26 @@
     background-color: @color-primary !important;
     opacity: 1;
     color: @color-inverse;
+    &:hover,
+    &:focus,
+    &:active{
+      color: @color-inverse;
+    }
   }
 
   &__btn-group {
+    margin-left: -20px;
     .btn-custom:first-child {
       padding-left: 40px;
     }
   }
+}
+.modal{
+  &-backdrop{
+    background-color: @color-inverse;
+    &.in{
+      opacity: 0.8;
+    }
+  }
+
 }

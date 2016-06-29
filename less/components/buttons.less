@@ -35,9 +35,9 @@
     height: 0;
     border-top: 16px solid transparent;
     border-bottom: 16px solid transparent;
-    border-left: 7px solid @color-primary;
+    border-left: 8px solid @color-primary;
     position: absolute;
-    right: -7px;
+    right: -8px;
     top: 0;
     z-index: 4;
   }
@@ -45,6 +45,18 @@
     background-color: @color-info;
     &::after{
       border-left-color: @color-info;
+    }
+  }
+
+  .btn-group > &{
+    &:hover,
+    &:focus,
+    &:active,
+    &.active{
+      z-index: auto;
+    }
+    & + .btn-custom{
+      margin-left: 0;
     }
   }
 
