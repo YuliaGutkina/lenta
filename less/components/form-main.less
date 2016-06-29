@@ -51,12 +51,6 @@
       }
     }
 
-    .input-number-custom {
-      height: 25px;
-      width: 112px;
-      font-size: @fs-title;
-    }
-
     &--products {
 
       th {
@@ -80,15 +74,27 @@
       .number-custom {
         font-weight: 400;
         width: 112px;
-        // height: 25px;
-        //
-        // input {
-        //   height: 25px;
-        // }
+        height: 25px;
+
+        input {
+          height: 25px;
+          font-size: @fs-title;
+        }
+
+        .number__control {
+          width: 25px;
+          height: 25px;
+          line-height: 25px;
+        }
       }
 
-    }
+      .form-main {
 
+        &__item-summ {
+          font-weight: 400;
+        }
+      }
+    }
   }
 
   &__orderitem {
@@ -171,7 +177,7 @@
   &__total {
     float: left;
     font-size: @fs * 1.714286;
-    font-weight: 600;
+    font-weight: 400;
 
     p {
       margin-bottom: 0;
@@ -367,6 +373,7 @@
     box-shadow: none;
     padding-top: 4px;
     padding-bottom: 4px;
+    height: 29px;
 
     &--tel1 {
       width: 60px;
@@ -405,7 +412,7 @@
   }
 
   .form-group {
-    line-height: 32px;
+    line-height: 29px;
 
     &--email,
     &--captcha {
@@ -415,6 +422,13 @@
 
   .btn-custom {
     border: none;
+  }
+
+  .select-custom {
+    outline: none;
+    height: 29px;
+    border: 1px solid @color-primary;
+
   }
 
   .control-label {

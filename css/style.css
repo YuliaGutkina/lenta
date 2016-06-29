@@ -1402,11 +1402,6 @@ input[type="radio"]:active {
   padding-left: 30px;
   padding-right: 30px;
 }
-.form-main__table .input-number-custom {
-  height: 25px;
-  width: 112px;
-  font-size: 19.999994px;
-}
 .form-main__table--products th {
   padding: 10px;
   font-weight: 400;
@@ -1425,6 +1420,19 @@ input[type="radio"]:active {
 .form-main__table--products .number-custom {
   font-weight: 400;
   width: 112px;
+  height: 25px;
+}
+.form-main__table--products .number-custom input {
+  height: 25px;
+  font-size: 19.999994px;
+}
+.form-main__table--products .number-custom .number__control {
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+}
+.form-main__table--products .form-main__item-summ {
+  font-weight: 400;
 }
 .form-main__orderitem {
   margin-top: -1px;
@@ -1492,7 +1500,7 @@ input[type="radio"]:active {
 .form-main__total {
   float: left;
   font-size: 24.000004px;
-  font-weight: 600;
+  font-weight: 400;
 }
 .form-main__total p {
   margin-bottom: 0;
@@ -1641,6 +1649,7 @@ input[type="radio"]:active {
   box-shadow: none;
   padding-top: 4px;
   padding-bottom: 4px;
+  height: 29px;
 }
 .form-main .form-control--tel1 {
   width: 60px;
@@ -1668,7 +1677,7 @@ input[type="radio"]:active {
   left: 0;
 }
 .form-main .form-group {
-  line-height: 32px;
+  line-height: 29px;
 }
 .form-main .form-group--email,
 .form-main .form-group--captcha {
@@ -1676,6 +1685,11 @@ input[type="radio"]:active {
 }
 .form-main .btn-custom {
   border: none;
+}
+.form-main .select-custom {
+  outline: none;
+  height: 29px;
+  border: 1px solid #1a2791;
 }
 .form-main .control-label--important::before {
   content: "*";
