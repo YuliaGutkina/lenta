@@ -1,6 +1,10 @@
 $(function() {
   $("body").append('<div id="arrowUp" class="arrowUp"><a href="#top" title="Наверх" class="scrollTo hidden-xs"><span class="fa fa-chevron-up"></span></a></div>');
 
+  $('.goods-list__box, .goods-list__scales').tooltip({
+    'placement': 'bottom'
+  });
+
   /*===================== CATLIST DROPDOWN  ON HOVER =====================*/
   $('.catlist__title.dropdown').hover(function() {
       $(this).addClass('open');
