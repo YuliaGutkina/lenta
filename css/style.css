@@ -1422,8 +1422,9 @@ input[type="radio"]:active {
   font-weight: 600;
   vertical-align: middle;
 }
-.form-main__table--products .input-number-custom {
+.form-main__table--products .number-custom {
   font-weight: 400;
+  width: 112px;
 }
 .form-main__orderitem {
   margin-top: -1px;
