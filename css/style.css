@@ -1080,7 +1080,7 @@ input[type="radio"]:active {
   height: 0;
   border-top: 16px solid transparent;
   border-bottom: 16px solid transparent;
-  border-left: 7px solid #1a2791;
+  border-left: 8px solid #1a2791;
   position: absolute;
   right: -8px;
   top: 0;
