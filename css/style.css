@@ -27,12 +27,15 @@ input[type="submit"],
 img {
   outline: none;
 }
-a:hover,
 a:focus,
 a:active,
-.btn:hover,
 .btn:focus,
-.btn:active {
+.btn:active,
+.btn:active:focus,
+.btn.active:focus,
+.btn.focus,
+.btn.focus:active,
+.btn.active.focus {
   outline: none;
   box-shadow: none;
 }
@@ -1054,7 +1057,7 @@ input[type="radio"]:active {
   border-bottom: 16px solid transparent;
   border-left: 7px solid #1a2791;
   position: absolute;
-  right: -7px;
+  right: -8px;
   top: 0;
   z-index: 4;
 }
@@ -1063,6 +1066,15 @@ input[type="radio"]:active {
 }
 .btn-custom:hover::after {
   border-left-color: #afb5e8;
+}
+.btn-group > .btn-custom:hover,
+.btn-group > .btn-custom:focus,
+.btn-group > .btn-custom:active,
+.btn-group > .btn-custom.active {
+  z-index: auto;
+}
+.btn-group > .btn-custom + .btn-custom {
+  margin-left: 0;
 }
 .btn-custom--wide {
   width: 175px;
@@ -1264,6 +1276,14 @@ input[type="radio"]:active {
   text-align: center;
   background-color: #1a2791 !important;
   opacity: 1;
+  color: #ffffff;
+}
+.modal-custom__close:hover,
+.modal-custom btn.close:hover,
+.modal-custom__close:focus,
+.modal-custom btn.close:focus,
+.modal-custom__close:active,
+.modal-custom btn.close:active {
   color: #ffffff;
 }
 .modal-custom__btn-group .btn-custom:first-child {
