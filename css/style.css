@@ -1124,8 +1124,9 @@ input[type="radio"]:active {
   padding-left: 5px;
   padding-right: 22px;
   height: 19px;
-  border: 1px solid #1a2791;
-  background: url(../img/select-back.jpg) no-repeat right -20px;
+  border: 0;
+  outline: 1px solid #1a2791;
+  background: url(../img/select-back.jpg) no-repeat right -19px;
   font-size: 12.000002px;
   line-height: 19px;
   cursor: pointer;
@@ -1139,7 +1140,7 @@ input[type="radio"]:active {
 }
 .select-custom:hover,
 .select-custom:focus {
-  background-position: right -1px;
+  background-position: right 0;
 }
 .number-custom {
   display: inline-block;
@@ -1252,6 +1253,7 @@ input[type="radio"]:active {
   line-height: 26.000002px;
   background: #f9f9f9;
   border: none;
+  box-shadow: none;
 }
 .modal-custom .modal-content p {
   margin-top: 20px;
@@ -1286,8 +1288,17 @@ input[type="radio"]:active {
 .modal-custom btn.close:active {
   color: #ffffff;
 }
+.modal-custom__btn-group {
+  margin-left: -20px;
+}
 .modal-custom__btn-group .btn-custom:first-child {
   padding-left: 40px;
+}
+.modal-backdrop {
+  background-color: #ffffff;
+}
+.modal-backdrop.in {
+  opacity: 0.8;
 }
 .reglist__item {
   margin-bottom: 10px;
