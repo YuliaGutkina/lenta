@@ -1391,6 +1391,7 @@ input[type="radio"]:active {
 }
 .form-main__table th {
   font-weight: 400;
+  width: 50%;
 }
 .form-main__table td {
   padding: 15px;
@@ -1587,9 +1588,6 @@ input[type="radio"]:active {
   display: block;
   line-height: 17.999996px;
 }
-.form-main__info {
-  margin-top: 25px;
-}
 .form-main__star {
   color: #ff0000;
   font-size: 17.999996px;
@@ -1676,12 +1674,22 @@ input[type="radio"]:active {
   top: 5px;
   left: 0;
 }
+.form-main--profile .btn-custom {
+  margin-left: 0 !important;
+  margin-top: 0 !important;
+}
 .form-main .form-group {
   line-height: 29px;
 }
 .form-main .form-group--email,
 .form-main .form-group--captcha {
   margin-bottom: 0;
+}
+.form-main .form-group--email {
+  margin-right: 0;
+}
+.form-main .form-group--change-login {
+  margin-bottom: 30px;
 }
 .form-main .btn-custom {
   border: none;
@@ -1690,6 +1698,11 @@ input[type="radio"]:active {
   outline: none;
   height: 29px;
   border: 1px solid #1a2791;
+  font-size: 14px;
+  background: url(../img/select-back-big.jpg) no-repeat 100% -27px;
+}
+.form-main .select-custom:hover {
+  background-position: 100% 0;
 }
 .form-main .control-label--important::before {
   content: "*";

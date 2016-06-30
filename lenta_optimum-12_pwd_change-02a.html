@@ -129,15 +129,19 @@
     <h1 class="pg-title">
         Изменение пароля
     </h1>
-    <div class="row">
-      <div class="col-xs-6">
-        <form class="form-horizontal  form-main  form-main--password" action="#" method="get">
+    <form class="form-horizontal  form-main  form-main--password" action="#" method="get">
+      <div class="row">
+        <div class="col-xs-6">
           <div class="form-group row">
             <label for="inputLogin3" class="col-xs-3 control-label">Логин:</label>
             <div class="col-xs-9">
               <span class="form-main__login">1234 5678 9012</span>
             </div>
           </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-6">
           <div class="form-group row">
             <label for="inputLogin3" class="col-xs-3 control-label">Новый пароль:</label>
             <div class="col-xs-9">
@@ -159,13 +163,14 @@
               <a href="">Авторизация</a>
             </div>
           </div>
-        </form>
+        </div>
+        <div class="col-xs-6">
+          <p class="form-main__info">
+            Введите пароль не менее 6 символов длиной, используя заглавные и строчные буквы латинского алфавита (A-Z, a-z), цифры (0-9), знаки пунктуации<br> (,.<>/?;:'"[]{}|`~!@#$%^&*()-_+=).
+          </p>
+        </div>
       </div>
-      <div class="col-xs-6">
-        <p class="form-main__info">
-          Введите пароль не менее 6 символов длиной, используя заглавные и строчные буквы латинского алфавита (A-Z, a-z), цифры (0-9), знаки пунктуации<br> (,.<>/?;:'"[]{}|`~!@#$%^&*()-_+=).</p>
-      </div>
-    </div>
+    </form>
   </main>
   <div class="pg-footer">
     <div class="container">

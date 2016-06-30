@@ -37,6 +37,7 @@
 
     th {
       font-weight: 400;
+      width: 50%;
     }
 
     td {
@@ -282,10 +283,6 @@
     line-height: @fs-large;
   }
 
-  &__info {
-    margin-top: 25px;
-  }
-
   &__star {
     color: #ff0000;
     font-size: @fs-large;
@@ -411,12 +408,29 @@
 
   }
 
+  &--profile {
+
+    .btn-custom {
+      margin-left: 0 !important;
+      margin-top: 0 !important;
+    }
+
+  }
+
   .form-group {
     line-height: 29px;
 
     &--email,
     &--captcha {
       margin-bottom: 0;
+    }
+
+    &--email {
+      margin-right: 0;
+    }
+
+    &--change-login {
+      margin-bottom: @pad * 2;
     }
   }
 
@@ -428,7 +442,12 @@
     outline: none;
     height: 29px;
     border: 1px solid @color-primary;
+    font-size: @fs;
+    background: url(../img/select-back-big.jpg) no-repeat 100% -27px;
 
+    &:hover {
+      background-position: 100% 0;
+    }
   }
 
   .control-label {
