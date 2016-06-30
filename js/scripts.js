@@ -7,7 +7,22 @@ $(function() {
     'placement': 'bottom'
   });
 
-  /*===================== CATLIST DROPDOWN  ON HOVER =====================*/
+  /*===================== REGION POPUP =====================*/
+  setTimeout(function() {
+    $('#guess-town-modal').modal();
+  }, 1000);
+  $('#guess-town-modal .btn-custom').click(function(e) {
+     if ($(e.target).attr('data-guess') == 'yes') {
+       $('#guess-town-modal').modal('hide');
+     } else {
+       $('#guess-town-modal').modal('hide');
+       setTimeout(function() {
+         $('#modal-town').modal();
+       }, 500);
+     }
+   });
+
+  /*===================== CATLIST DROPDOWN ON HOVER =====================*/
   $('.catlist__title.dropdown').hover(function() {
       $(this).addClass('open');
     },
