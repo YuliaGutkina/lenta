@@ -20,6 +20,7 @@
 </head>
 
 <body>
+
   <header class="pg-header">
     <div class="container">
       <div class="row user">
@@ -84,6 +85,7 @@
       </div>
     </div>
   </header>
+
   <div class="main-search-block">
     <div class="container">
       <div class="row">
@@ -129,92 +131,98 @@
       </div>
     </div>
   </div>
-  <main class="container">
-    <h1 class="pg-title">
-      Форма обратной связи
-    </h1>
-    <div class="row">
-      <div class="col-xs-6">
-        <form class="form-horizontal  form-main" action="" method="get">
-          <div class="form-group">
-            <label for="select1" class="col-xs-4 control-label">Регион:</label>
-            <div class="col-xs-8">
-              <select class="form-control  select-custom" id="select1" name="region">
-                <option value="spb">Санкт-Петербург</option>
-                <option value="msk">Москва</option>
-              </select>
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="inputName" class="col-xs-4 control-label  control-label--important">
-              Имя:
-            </label>
-            <div class="col-xs-8">
-              <input type="text" class="form-control" id="inputName">
-            </div>
-          </div>
-          <div class="form-group  form-group--contacts">
-            <div class="row">
-              <label for="inputPhone" class="col-xs-4 control-label">
-                Контактный телефон:
-              </label>
-              <div class="col-xs-4 form-main__tel">
-                <span>+7</span>
-                <input type="tel" class="form-control  form-control--tel1" id="inputPhone" value="1234">
-                <input type="tel" class="form-control  form-control--tel2" id="inputPhone2">
+
+  <div class="main-content">
+    <div class="container">
+      <main class="contentarea">
+        <h1 class="pg-title">
+          Форма обратной связи
+        </h1>
+        <div class="row">
+          <div class="col-xs-6">
+            <form class="form-horizontal  form-main" action="" method="get">
+              <div class="form-group">
+                <label for="select1" class="col-xs-4 control-label">Регион:</label>
+                <div class="col-xs-8">
+                  <select class="form-control  select-custom" id="select1" name="region">
+                    <option value="spb">Санкт-Петербург</option>
+                    <option value="msk">Москва</option>
+                  </select>
+                </div>
               </div>
-              <div class="col-xs-4">
-                <div class="form-group  form-group--email  row">
-                  <label for="inputEmail" class="col-xs-5 control-label"> или E-mail:</label>
-                  <div class="col-xs-7">
-                    <input type="email" class="form-control" id="inputEmail">
+              <div class="form-group">
+                <label for="inputName" class="col-xs-4 control-label  control-label--important">
+                  Имя:
+                </label>
+                <div class="col-xs-8">
+                  <input type="text" class="form-control" id="inputName">
+                </div>
+              </div>
+              <div class="form-group  form-group--contacts">
+                <div class="row">
+                  <label for="inputPhone" class="col-xs-4 control-label">
+                    Контактный телефон:
+                  </label>
+                  <div class="col-xs-4 form-main__tel">
+                    <span>+7</span>
+                    <input type="tel" class="form-control  form-control--tel1" id="inputPhone" value="1234">
+                    <input type="tel" class="form-control  form-control--tel2" id="inputPhone2">
+                  </div>
+                  <div class="col-xs-4">
+                    <div class="form-group  form-group--email  row">
+                      <label for="inputEmail" class="col-xs-5 control-label"> или E-mail:</label>
+                      <div class="col-xs-7">
+                        <input type="email" class="form-control" id="inputEmail">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <p class="col-xs-offset-4 col-xs-8">
+                    <small><span class="form-main__star">* </span>Обязательно укажите либо контактый телефон, либо E-mail</small>
+                  </p>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inputLogin3" class="col-xs-4 control-label  control-label--important">
+                  Сообщение:
+                </label>
+                <div class="col-xs-8">
+                  <textarea type="text" class="form-control" id="inputLogin3"></textarea>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-xs-4 col-xs-offset-4">
+                  <div class="form-main__captcha">
+
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="row">
-              <p class="col-xs-offset-4 col-xs-8">
-                <small><span class="form-main__star">* </span>Обязательно укажите либо контактый телефон, либо E-mail</small>
-              </p>
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="inputLogin3" class="col-xs-4 control-label  control-label--important">
-              Сообщение:
-            </label>
-            <div class="col-xs-8">
-              <textarea type="text" class="form-control" id="inputLogin3"></textarea>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-xs-4 col-xs-offset-4">
-              <div class="form-main__captcha">
-
+              <div class="form-group  form-group--captcha  row">
+                <label for="inputCaptcha" class="col-xs-4 control-label  control-label--important
+                control-label--long">
+                  Введите слово на картинке:
+                </label>
+                <div class="col-xs-8">
+                  <input type="text" class="form-control" id="inputCaptcha">
+                </div>
               </div>
-            </div>
+              <p class="col-xs-offset-4 col-xs-8">
+                <small><span class="form-main__star">* </span>- поля, обязательные для заполнения</small>
+              </p>
+              <div class="form-group">
+                <div class="col-xs-offset-4 col-xs-5">
+                  <button type="submit" class="btn btn-custom">Отправить</button>
+                </div>
+              </div>
+            </form>
           </div>
-          <div class="form-group  form-group--captcha  row">
-            <label for="inputCaptcha" class="col-xs-4 control-label  control-label--important
-            control-label--long">
-              Введите слово на картинке:
-            </label>
-            <div class="col-xs-8">
-              <input type="text" class="form-control" id="inputCaptcha">
-            </div>
-          </div>
-          <p class="col-xs-offset-4 col-xs-8">
-            <small><span class="form-main__star">* </span>- поля, обязательные для заполнения</small>
-          </p>
-          <div class="form-group">
-            <div class="col-xs-offset-4 col-xs-5">
-              <button type="submit" class="btn btn-custom">Отправить</button>
-            </div>
-          </div>
-        </form>
-      </div>
+        </div>
+      </main>
     </div>
-  </main>
-  <div class="pg-footer">
+  </div>
+
+  <footer class="pg-footer">
     <div class="container">
       <div class="row">
         <div class="col-xs-3">
@@ -303,7 +311,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </footer>
 
   <script src="js/jquery-2.2.3.min.js"></script>
   <script src="js/bootstrap.min.js"></script>

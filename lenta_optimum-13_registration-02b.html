@@ -20,6 +20,7 @@
 </head>
 
 <body>
+
   <header class="pg-header">
     <div class="container">
       <div class="row user">
@@ -84,6 +85,7 @@
       </div>
     </div>
   </header>
+
   <div class="main-search-block">
     <div class="container">
       <div class="row">
@@ -129,129 +131,135 @@
       </div>
     </div>
   </div>
-  <main class="container">
-    <h1 class="pg-title">
-      Оставить заявку на регистрацию
-    </h1>
-    <p class="p-normal">Оставьте заявку на регистрацию на сайте, заполнив поля ниже. С вами свяжется менеджер для уточнения деталей. После подписания договора вам будет выслан доступ на сайт.</p>
-    <p class="p-normal">Для получения детальной информации перейдите, пожалуйста, по ссылке «<a href="" class="link-custom">Как сделать заказ</a>».</p>
-    <div class="row">
-      <div class="col-xs-6">
-        <form class="form-horizontal  form-main  form-main--reg" action="#" method="get">
-          <div class="form-group row">
-            <label for="select1" class="col-xs-4 control-label">Ваш регион:</label>
-            <div class="col-xs-4">
-              <select class="form-control  select-custom" id="select1" name="region">
-                <option value="spb">Санкт-Петербург</option>
-                <option value="msk">Москва</option>
-              </select>
-            </div>
-          </div>
-          <div class="form-group row">
-            <label for="inputName" class="col-xs-4 control-label  control-label--important">
-              Имя:
-            </label>
-            <div class="col-xs-8">
-              <input type="text" class="form-control" id="inputName">
-            </div>
-          </div>
-          <div class="form-group row">
-            <label for="inputName2" class="col-xs-4 control-label  control-label--important">
-              Фамилия:
-            </label>
-            <div class="col-xs-8">
-              <input type="text" class="form-control" id="inputName2">
-            </div>
-          </div>
-          <div class="form-group row">
-            <label for="inputName3" class="col-xs-4 control-label">
-              Отчество:
-            </label>
-            <div class="col-xs-8">
-              <input type="text" class="form-control" id="inputName3">
-            </div>
-          </div>
-          <div class="form-group  form-group--contacts">
-            <div class="row">
-              <label for="inputPhone" class="col-xs-4 control-label">
-                Контактный телефон:
-              </label>
-              <div class="col-xs-4 form-main__tel">
-                <span>+7</span>
-                <input type="tel" class="form-control  form-control--tel1" id="inputPhone" value="1234">
-                <input type="tel" class="form-control  form-control--tel2" id="inputPhone2">
+
+  <div class="main-content">
+    <div class="container">
+      <main class="contentarea">
+        <h1 class="pg-title">
+          Оставить заявку на регистрацию
+        </h1>
+        <p class="p-normal">Оставьте заявку на регистрацию на сайте, заполнив поля ниже. С вами свяжется менеджер для уточнения деталей. После подписания договора вам будет выслан доступ на сайт.</p>
+        <p class="p-normal">Для получения детальной информации перейдите, пожалуйста, по ссылке «<a href="" class="link-custom">Как сделать заказ</a>».</p>
+        <div class="row">
+          <div class="col-xs-6">
+            <form class="form-horizontal  form-main  form-main--reg" action="#" method="get">
+              <div class="form-group row">
+                <label for="select1" class="col-xs-4 control-label">Ваш регион:</label>
+                <div class="col-xs-4">
+                  <select class="form-control  select-custom" id="select1" name="region">
+                    <option value="spb">Санкт-Петербург</option>
+                    <option value="msk">Москва</option>
+                  </select>
+                </div>
               </div>
-              <div class="col-xs-4">
-                <div class="form-group  form-group--email  row">
-                  <label for="inputEmail" class="col-xs-5 control-label"> или E-mail:</label>
-                  <div class="col-xs-7">
-                    <input type="email" class="form-control" id="inputEmail">
+              <div class="form-group row">
+                <label for="inputName" class="col-xs-4 control-label  control-label--important">
+                  Имя:
+                </label>
+                <div class="col-xs-8">
+                  <input type="text" class="form-control" id="inputName">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="inputName2" class="col-xs-4 control-label  control-label--important">
+                  Фамилия:
+                </label>
+                <div class="col-xs-8">
+                  <input type="text" class="form-control" id="inputName2">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="inputName3" class="col-xs-4 control-label">
+                  Отчество:
+                </label>
+                <div class="col-xs-8">
+                  <input type="text" class="form-control" id="inputName3">
+                </div>
+              </div>
+              <div class="form-group  form-group--contacts">
+                <div class="row">
+                  <label for="inputPhone" class="col-xs-4 control-label">
+                    Контактный телефон:
+                  </label>
+                  <div class="col-xs-4 form-main__tel">
+                    <span>+7</span>
+                    <input type="tel" class="form-control  form-control--tel1" id="inputPhone" value="1234">
+                    <input type="tel" class="form-control  form-control--tel2" id="inputPhone2">
+                  </div>
+                  <div class="col-xs-4">
+                    <div class="form-group  form-group--email  row">
+                      <label for="inputEmail" class="col-xs-5 control-label"> или E-mail:</label>
+                      <div class="col-xs-7">
+                        <input type="email" class="form-control" id="inputEmail">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <p class="col-xs-offset-4 col-xs-8">
+                    <small><span class="form-main__star">* </span>Обязательно укажите либо контактый телефон, либо E-mail</small>
+                  </p>
+                </div>
+              </div>
+              <div class="form-group  row">
+                <label for="inputCard" class="col-xs-4 control-label">
+                  Номер карты покупателя:
+                </label>
+                <div class="col-xs-8  form-main__card-input">
+                  <input type="text" class="form-control" id="inputCard">
+                  <span class="form-main__question"><i class="fa fa-question-circle" aria-hidden="true"></i></span>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-xs-4 col-xs-offset-4">
+                  <div class="form-main__captcha">
+
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="row">
-              <p class="col-xs-offset-4 col-xs-8">
-                <small><span class="form-main__star">* </span>Обязательно укажите либо контактый телефон, либо E-mail</small>
-              </p>
-            </div>
-          </div>
-          <div class="form-group  row">
-            <label for="inputCard" class="col-xs-4 control-label">
-              Номер карты покупателя:
-            </label>
-            <div class="col-xs-8  form-main__card-input">
-              <input type="text" class="form-control" id="inputCard">
-              <span class="form-main__question"><i class="fa fa-question-circle" aria-hidden="true"></i></span>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-xs-4 col-xs-offset-4">
-              <div class="form-main__captcha">
-
-              </div>
-            </div>
-          </div>
-          <div class="form-group  form-group--captcha  row">
-            <label for="inputCaptcha" class="col-xs-4 control-label  control-label--important
-            control-label--long">
-              Введите слово на картинке:
-            </label>
-            <div class="col-xs-8">
-              <input type="text" class="form-control" id="inputCaptcha">
-            </div>
-          </div>
-          <div class="row">
-            <p class="col-xs-offset-4 col-xs-8">
-              <small><span class="form-main__star">* </span>- поля, обязательные для заполнения</small>
-            </p>
-          </div>
-          <div class="form-group  row">
-            <div class="col-xs-offset-4 col-xs-8">
-              <div class="">
-                <label class="checkbox-label">
-                  <input type="checkbox" class="checkbox-input" checked>
-                  <span class="checkbox-custom"></span>
-                   <small>
-                     Я даю согласие на обработку своих персональных данных в соответствии с <a href="" class="link-custom">Политикой конфиденциальности</a>
-                   </small>
+              <div class="form-group  form-group--captcha  row">
+                <label for="inputCaptcha" class="col-xs-4 control-label  control-label--important
+                control-label--long">
+                  Введите слово на картинке:
                 </label>
+                <div class="col-xs-8">
+                  <input type="text" class="form-control" id="inputCaptcha">
+                </div>
               </div>
-            </div>
+              <div class="row">
+                <p class="col-xs-offset-4 col-xs-8">
+                  <small><span class="form-main__star">* </span>- поля, обязательные для заполнения</small>
+                </p>
+              </div>
+              <div class="form-group  row">
+                <div class="col-xs-offset-4 col-xs-8">
+                  <div class="">
+                    <label class="checkbox-label">
+                      <input type="checkbox" class="checkbox-input" checked>
+                      <span class="checkbox-custom"></span>
+                       <small>
+                         Я даю согласие на обработку своих персональных данных в соответствии с <a href="" class="link-custom">Политикой конфиденциальности</a>
+                       </small>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group  row">
+                <div class="col-xs-offset-4 col-xs-4">
+                  <button type="submit" class="btn btn-custom">Подать заявку</button>
+                </div>
+                <div class="col-xs-4">
+                  <a href="">Авторизация</a>
+                </div>
+              </div>
+            </form>
           </div>
-          <div class="form-group  row">
-            <div class="col-xs-offset-4 col-xs-4">
-              <button type="submit" class="btn btn-custom">Подать заявку</button>
-            </div>
-            <div class="col-xs-4">
-              <a href="">Авторизация</a>
-            </div>
-          </div>
-        </form>
-      </div>
+        </div>
+      </main>
     </div>
-  </main>
-  <div class="pg-footer">
+  </div>
+
+  <footer class="pg-footer">
     <div class="container">
       <div class="row">
         <div class="col-xs-3">
@@ -340,7 +348,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </footer>
 
   <script src="js/jquery-2.2.3.min.js"></script>
   <script src="js/bootstrap.min.js"></script>

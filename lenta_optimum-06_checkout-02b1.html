@@ -20,6 +20,7 @@
 </head>
 
 <body>
+
   <header class="pg-header">
     <div class="container">
       <div class="row user">
@@ -84,6 +85,7 @@
       </div>
     </div>
   </header>
+
   <div class="main-search-block">
     <div class="container">
       <div class="row">
@@ -130,157 +132,163 @@
       </div>
     </div>
   </div>
-  <main class="container">
-    <h1 class="pg-title">
-      Оформление заказа
-    </h1>
-    <form action="" method="get" class="form-main  form-main--form">
-      <fieldset class="form-main__fieldset">
-        <legend class="form-main__legend">
-          Покупатель
-        </legend>
-        <div class="form-main__orderinner">
+
+  <div class="main-content">
+    <div class="container">
+      <main class="contentarea">
+        <h1 class="pg-title">
+          Оформление заказа
+        </h1>
+        <form action="" method="get" class="form-main  form-main--form">
+          <fieldset class="form-main__fieldset">
+            <legend class="form-main__legend">
+              Покупатель
+            </legend>
+            <div class="form-main__orderinner">
+              <div class="row">
+                <div class="col-xs-6">
+                  <b>Компания:</b> <span class="form-main__company">ООО “Ромашка”</span>
+                </div>
+                <div class="col-xs-6 text-right">
+                  <span class="form-main__info"> Заказ будет оформлен на юридическое лицо</span>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset class="form-main__fieldset  form-main__fieldset--address">
+            <legend class="form-main__legend">
+              Пункт самовывоза
+            </legend>
+            <!-- карта тут -->
+          </fieldset>
+          <fieldset class="form-main__fieldset  form-main__fieldset--date">
+            <legend class="form-main__legend">
+              Дата получения заказа
+            </legend>
+            <div class="form-main__orderinner">
+              <div class="row">
+                <div class="col-xs-2 form-main__label">
+                  Укажите желаемую дату получения заказа:
+                </div>
+                <div class="col-xs-4">
+                  <input type="date" class="form-main__date-label">
+                </div>
+                <div class="col-xs-6 form-main__info">
+                  <span>
+                    Выбранная вами дата является предварительной и может быть изменена после подтверждения заказа менеджером Ленты.
+                  </span>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset class="form-main__fieldset  form-main__fieldset--date">
+            <legend class="form-main__legend">
+              Контактное лицо
+            </legend>
+            <div class="form-main__orderinner">
+              <div class="row">
+                <div class="col-xs-6 form-horizontal">
+                  <div class="form-group">
+                    <label for="inputLogin3" class="col-xs-4 control-label">Имя:</label>
+                    <div class="col-xs-8">
+                      <input type="text" class="form-control" id="inputLogin3">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inputLogin4" class="col-xs-4 control-label">Фамилия: </label>
+                    <div class="col-xs-8">
+                      <input type="text" class="form-control" id="inputLogin4">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inputLogin5" class="col-xs-4 control-label">Контактный телефон:</label>
+                    <div class="col-xs-8">
+                      <input type="tel" class="form-control" id="inputLogin5">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inputPassword3" class="col-xs-4 control-label">E-mail:</label>
+                    <div class="col-xs-8">
+                      <input type="email" class="form-control" id="inputPassword3">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset class="form-main__fieldset  form-main__fieldset--consist">
+            <legend class="form-main__legend">
+              Состав заказа
+            </legend>
+            <div class="form-main__orderinner">
+              <ol class="form-main__consist-list">
+                <li class="form-main__consist-item">
+                  <a href="">Шоколад молочный фигурный на палочке 24 гр.</a>
+                  100 уп. (1000 шт.)
+                </li>
+                <li class="form-main__consist-item">
+                  <a href="">Средство для мытья посуды FAIRY, нежные руки ромашка и витамин Е, 1 л</a>
+                  100 уп. (1000 шт.)
+                </li>
+                <li class="form-main__consist-item">
+                  <a href="">КОНДИЦИОНЕР ДЛЯ БЕЛЬЯ LENOR, скандинавская весна, концентрированный, 2 л</a>
+                  100 уп. (1000 шт.)
+                </li>
+                <li class="form-main__consist-item">
+                  <a href="">ПОРОШОК СТИРАЛЬНЫЙ ARIE, color&style 100% эталон первозданной чистоты, автомат,</a>
+                  100 уп. (1000 шт.)
+                </li>
+                <li class="form-main__consist-item">
+                  <a href="">КОНФЕТЫ АССОРТИ А. КОРКУНОВ, из молочного шоколада с цельным и дробленым лесным орехом, 190 г</a>
+                  100 уп. (1000 шт.)
+                </li>
+                <li class="form-main__consist-item">
+                  <a href="">КОНФЕТЫ АССОРТИ А. КОРКУНОВ, из темного и молочного шоколада с лесным орехом, 190 г</a>
+                  100 уп. (1000 шт.)
+                </li>
+                <li class="form-main__consist-item">
+                  <a href="">Напиток безалкогольный DRIVE ME ORIGINAL, тонизирующий энергетический газированнный, 0,5 л</a>
+                  100 уп. (1000 шт.)
+                </li>
+              </ol>
+              <div  class="form-main__total  form-main__total--normal">
+                <p>
+                  Сумма заказа: <span class="form-main__price">9 999 999,03</span>
+                  <i class="fa fa-rub" aria-hidden="true"></i>
+                </p>
+                <p>
+                  Вес заказа брутто: <span class="form-main__weight">10,34</span> кг.
+                </p>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset class="form-main__fieldset  form-main__fieldset--comment">
+            <legend class="form-main__legend">
+              Дополнительная информация
+            </legend>
+            <div class="form-main__orderinner">
+              <div class="form-group row">
+                <label for="inputLogin7" class="col-xs-2 control-label text-right">Комментарий:</label>
+                <div class="col-xs-10">
+                  <textarea class="form-control" id="inputLogin7"></textarea>
+                </div>
+              </div>
+            </div>
+          </fieldset>
           <div class="row">
             <div class="col-xs-6">
-              <b>Компания:</b> <span class="form-main__company">ООО “Ромашка”</span>
+              <a href="" class="form-main__link">Вернуться к корзине</a>
             </div>
             <div class="col-xs-6 text-right">
-              <span class="form-main__info"> Заказ будет оформлен на юридическое лицо</span>
+              <button class="btn btn-custom" type="submit">Отправить заказ</button>
             </div>
           </div>
-        </div>
-      </fieldset>
-      <fieldset class="form-main__fieldset  form-main__fieldset--address">
-        <legend class="form-main__legend">
-          Пункт самовывоза
-        </legend>
-        <!-- карта тут -->
-      </fieldset>
-      <fieldset class="form-main__fieldset  form-main__fieldset--date">
-        <legend class="form-main__legend">
-          Дата получения заказа
-        </legend>
-        <div class="form-main__orderinner">
-          <div class="row">
-            <div class="col-xs-2 form-main__label">
-              Укажите желаемую дату получения заказа:
-            </div>
-            <div class="col-xs-4">
-              <input type="date" class="form-main__date-label">
-            </div>
-            <div class="col-xs-6 form-main__info">
-              <span>
-                Выбранная вами дата является предварительной и может быть изменена после подтверждения заказа менеджером Ленты.
-              </span>
-            </div>
-          </div>
-        </div>
-      </fieldset>
-      <fieldset class="form-main__fieldset  form-main__fieldset--date">
-        <legend class="form-main__legend">
-          Контактное лицо
-        </legend>
-        <div class="form-main__orderinner">
-          <div class="row">
-            <div class="col-xs-6 form-horizontal">
-              <div class="form-group">
-                <label for="inputLogin3" class="col-xs-4 control-label">Имя:</label>
-                <div class="col-xs-8">
-                  <input type="text" class="form-control" id="inputLogin3">
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="inputLogin4" class="col-xs-4 control-label">Фамилия: </label>
-                <div class="col-xs-8">
-                  <input type="text" class="form-control" id="inputLogin4">
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="inputLogin5" class="col-xs-4 control-label">Контактный телефон:</label>
-                <div class="col-xs-8">
-                  <input type="tel" class="form-control" id="inputLogin5">
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="inputPassword3" class="col-xs-4 control-label">E-mail:</label>
-                <div class="col-xs-8">
-                  <input type="email" class="form-control" id="inputPassword3">
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </fieldset>
-      <fieldset class="form-main__fieldset  form-main__fieldset--consist">
-        <legend class="form-main__legend">
-          Состав заказа
-        </legend>
-        <div class="form-main__orderinner">
-          <ol class="form-main__consist-list">
-            <li class="form-main__consist-item">
-              <a href="">Шоколад молочный фигурный на палочке 24 гр.</a>
-              100 уп. (1000 шт.)
-            </li>
-            <li class="form-main__consist-item">
-              <a href="">Средство для мытья посуды FAIRY, нежные руки ромашка и витамин Е, 1 л</a>
-              100 уп. (1000 шт.)
-            </li>
-            <li class="form-main__consist-item">
-              <a href="">КОНДИЦИОНЕР ДЛЯ БЕЛЬЯ LENOR, скандинавская весна, концентрированный, 2 л</a>
-              100 уп. (1000 шт.)
-            </li>
-            <li class="form-main__consist-item">
-              <a href="">ПОРОШОК СТИРАЛЬНЫЙ ARIE, color&style 100% эталон первозданной чистоты, автомат,</a>
-              100 уп. (1000 шт.)
-            </li>
-            <li class="form-main__consist-item">
-              <a href="">КОНФЕТЫ АССОРТИ А. КОРКУНОВ, из молочного шоколада с цельным и дробленым лесным орехом, 190 г</a>
-              100 уп. (1000 шт.)
-            </li>
-            <li class="form-main__consist-item">
-              <a href="">КОНФЕТЫ АССОРТИ А. КОРКУНОВ, из темного и молочного шоколада с лесным орехом, 190 г</a>
-              100 уп. (1000 шт.)
-            </li>
-            <li class="form-main__consist-item">
-              <a href="">Напиток безалкогольный DRIVE ME ORIGINAL, тонизирующий энергетический газированнный, 0,5 л</a>
-              100 уп. (1000 шт.)
-            </li>
-          </ol>
-          <div  class="form-main__total  form-main__total--normal">
-            <p>
-              Сумма заказа: <span class="form-main__price">9 999 999,03</span>
-              <i class="fa fa-rub" aria-hidden="true"></i>
-            </p>
-            <p>
-              Вес заказа брутто: <span class="form-main__weight">10,34</span> кг.
-            </p>
-          </div>
-        </div>
-      </fieldset>
-      <fieldset class="form-main__fieldset  form-main__fieldset--comment">
-        <legend class="form-main__legend">
-          Дополнительная информация
-        </legend>
-        <div class="form-main__orderinner">
-          <div class="form-group row">
-            <label for="inputLogin7" class="col-xs-2 control-label text-right">Комментарий:</label>
-            <div class="col-xs-10">
-              <textarea class="form-control" id="inputLogin7"></textarea>
-            </div>
-          </div>
-        </div>
-      </fieldset>
-      <div class="row">
-        <div class="col-xs-6">
-          <a href="" class="form-main__link">Вернуться к корзине</a>
-        </div>
-        <div class="col-xs-6 text-right">
-          <button class="btn btn-custom" type="submit">Отправить заказ</button>
-        </div>
-      </div>
-    </form>
-  </main>
-  <div class="pg-footer">
+        </form>
+      </main>
+    </div>
+  </div>
+
+  <footer class="pg-footer">
     <div class="container">
       <div class="row">
         <div class="col-xs-3">
@@ -369,7 +377,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </footer>
 
   <script src="js/jquery-2.2.3.min.js"></script>
   <script src="js/bootstrap.min.js"></script>

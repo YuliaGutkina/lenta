@@ -20,6 +20,7 @@
 </head>
 
 <body>
+
   <header class="pg-header">
     <div class="container">
       <div class="row user">
@@ -84,6 +85,7 @@
       </div>
     </div>
   </header>
+
   <div class="main-search-block">
     <div class="container">
       <div class="row">
@@ -129,190 +131,196 @@
       </div>
     </div>
   </div>
-  <main class="container">
-    <h1 class="pg-title">
-      Профиль пользователя
-    </h1>
-    <div class="form-main">
-      <table class="form-main__table">
-        <thead>
-          <tr>
-            <th class="form-main__legend">
-              Личные данные
-            </th>
-            <th class="form-main__legend">
-              Данные компании
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td colspan="2" class="row">
-              <form class="form-horizontal  form-main  form-main--profile  row" action="#" method="get">
-                <div class="col-xs-6">
-                  <div class="form-group row">
-                    <label for="select1" class="col-xs-4 control-label">Мой регион:</label>
-                    <div class="col-xs-8">
-                      <select class="form-control  select-custom" id="select1" name="region">
-                        <option value="spb">Санкт-Петербург</option>
-                        <option value="msk">Москва</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div class="form-group row">
-                    <label for="inputName" class="col-xs-4 control-label  control-label--important">
-                      Имя:
-                    </label>
-                    <div class="col-xs-8">
-                      <input type="text" class="form-control" id="inputName">
-                    </div>
-                  </div>
-                  <div class="form-group row">
-                    <label for="inputName2" class="col-xs-4 control-label  control-label--important">
-                      Фамилия:
-                    </label>
-                    <div class="col-xs-8">
-                      <input type="text" class="form-control" id="inputName2">
-                    </div>
-                  </div>
-                  <div class="form-group row">
-                    <label for="inputName3" class="col-xs-4 control-label">
-                      Отчество:
-                    </label>
-                    <div class="col-xs-8">
-                      <input type="text" class="form-control" id="inputName3">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label for="inputPhone" class="col-xs-4 control-label  control-label--important">
-                      Контактный телефон:
-                    </label>
-                    <div class="col-xs-8 row   form-main__tel">
-                      <div class="col-xs-3 form-main__telcode">
-                        <span>+7</span>
-                        <input type="tel" class="form-control  form-control--tel1" id="inputPhone" value="721">
+
+  <div class="main-content">
+    <div class="container">
+      <main class="contentarea">
+        <h1 class="pg-title">
+          Профиль пользователя
+        </h1>
+        <div class="form-main">
+          <table class="form-main__table">
+            <thead>
+              <tr>
+                <th class="form-main__legend">
+                  Личные данные
+                </th>
+                <th class="form-main__legend">
+                  Данные компании
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td colspan="2" class="row">
+                  <form class="form-horizontal  form-main  form-main--profile  row" action="#" method="get">
+                    <div class="col-xs-6">
+                      <div class="form-group row">
+                        <label for="select1" class="col-xs-4 control-label">Мой регион:</label>
+                        <div class="col-xs-8">
+                          <select class="form-control  select-custom" id="select1" name="region">
+                            <option value="spb">Санкт-Петербург</option>
+                            <option value="msk">Москва</option>
+                          </select>
+                        </div>
                       </div>
-                      <div class="col-xs-9 form-main__telnum">
-                        <input type="tel" class="form-control  form-control" id="inputPhone2" value="4672233">
+                      <div class="form-group row">
+                        <label for="inputName" class="col-xs-4 control-label  control-label--important">
+                          Имя:
+                        </label>
+                        <div class="col-xs-8">
+                          <input type="text" class="form-control" id="inputName">
+                        </div>
                       </div>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label for="inputEmail" class="col-xs-4 control-label  control-label--important"> E-mail:</label>
-                    <div class="col-xs-8">
-                      <input type="email" class="form-control" id="inputEmail">
-                    </div>
-                  </div>
-                  <div class="row">
-                    <p class="col-xs-offset-4 col-xs-8">
-                      <small><span class="form-main__star">* </span>- поля, обязательные для заполнения</small>
-                    </p>
-                  </div>
-                  <div class="form-group  row">
-                    <div class="col-xs-offset-4 col-xs-8">
-                      <button type="submit" class="btn btn-custom">Сохранить изменения</button>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-xs-6">
-                  <div class="form-group row">
-                    <label for="inputCompany" class="col-xs-4 control-label">
-                      Название компании:
-                    </label>
-                    <div class="col-xs-8">
-                      <input type="text" class="form-control" id="inputCompany">
-                    </div>
-                  </div>
-                  <div class="form-group row">
-                    <label for="inputINN" class="col-xs-4 control-label">
-                      ИНН:
-                    </label>
-                    <div class="col-xs-8">
-                      <input type="text" class="form-control" id="inputINN">
-                    </div>
-                  </div>
-                  <div class="form-group row">
-                    <label for="inputKPP" class="col-xs-4 control-label">
-                    КПП:
-                    </label>
-                    <div class="col-xs-8">
-                      <input type="text" class="form-control" id="inputKPP">
-                    </div>
-                  </div>
-                  <div class="row">
-                    <p class="col-xs-offset-4 col-xs-8">
-                      <small>Данные компании будут изменены после предоставления соответствующих документов</small>
-                    </p>
-                  </div>
-                </div>
-              </form>
-            </td>
-            </td>
-          </tr>
-        </tbody>
-        <thead>
-          <tr>
-            <th colspan="2" class="form-main__legend">
-              Авторизационные данные
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td colspan="2">
-              <form class="form-horizontal  form-main  form-main--profile" action="#" method="get">
-                <div class="row">
-                  <div class="col-xs-6">
-                    <div class="form-group row">
-                      <label for="inputLogin" class="col-xs-3 control-label">Логин:</label>
-                      <div class="col-xs-9">
-                        <input type="text" class="form-control" id="inputLogin" value="XXXX XXXX XXXX">
+                      <div class="form-group row">
+                        <label for="inputName2" class="col-xs-4 control-label  control-label--important">
+                          Фамилия:
+                        </label>
+                        <div class="col-xs-8">
+                          <input type="text" class="form-control" id="inputName2">
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="inputName3" class="col-xs-4 control-label">
+                          Отчество:
+                        </label>
+                        <div class="col-xs-8">
+                          <input type="text" class="form-control" id="inputName3">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="inputPhone" class="col-xs-4 control-label  control-label--important">
+                          Контактный телефон:
+                        </label>
+                        <div class="col-xs-8 row   form-main__tel">
+                          <div class="col-xs-3 form-main__telcode">
+                            <span>+7</span>
+                            <input type="tel" class="form-control  form-control--tel1" id="inputPhone" value="721">
+                          </div>
+                          <div class="col-xs-9 form-main__telnum">
+                            <input type="tel" class="form-control  form-control" id="inputPhone2" value="4672233">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="inputEmail" class="col-xs-4 control-label  control-label--important"> E-mail:</label>
+                        <div class="col-xs-8">
+                          <input type="email" class="form-control" id="inputEmail">
+                        </div>
+                      </div>
+                      <div class="row">
+                        <p class="col-xs-offset-4 col-xs-8">
+                          <small><span class="form-main__star">* </span>- поля, обязательные для заполнения</small>
+                        </p>
+                      </div>
+                      <div class="form-group  row">
+                        <div class="col-xs-offset-4 col-xs-8">
+                          <button type="submit" class="btn btn-custom">Сохранить изменения</button>
+                        </div>
                       </div>
                     </div>
-                    <div class="form-group  form-group--change-login row">
-                      <div class="col-xs-6 col-xs-offset-3">
-                        <a href="" class="btn btn-custom">
-                          Изменить Логин
-                        </a>
+                    <div class="col-xs-6">
+                      <div class="form-group row">
+                        <label for="inputCompany" class="col-xs-4 control-label">
+                          Название компании:
+                        </label>
+                        <div class="col-xs-8">
+                          <input type="text" class="form-control" id="inputCompany">
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="inputINN" class="col-xs-4 control-label">
+                          ИНН:
+                        </label>
+                        <div class="col-xs-8">
+                          <input type="text" class="form-control" id="inputINN">
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="inputKPP" class="col-xs-4 control-label">
+                        КПП:
+                        </label>
+                        <div class="col-xs-8">
+                          <input type="text" class="form-control" id="inputKPP">
+                        </div>
+                      </div>
+                      <div class="row">
+                        <p class="col-xs-offset-4 col-xs-8">
+                          <small>Данные компании будут изменены после предоставления соответствующих документов</small>
+                        </p>
                       </div>
                     </div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-xs-6">
-                    <div class="form-group row">
-                      <label for="inputLogin3" class="col-xs-3 control-label">Новый пароль:</label>
-                      <div class="col-xs-9">
-                        <input type="password" class="form-control" id="inputLogin3">
+                  </form>
+                </td>
+                </td>
+              </tr>
+            </tbody>
+            <thead>
+              <tr>
+                <th colspan="2" class="form-main__legend">
+                  Авторизационные данные
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td colspan="2">
+                  <form class="form-horizontal  form-main  form-main--profile" action="#" method="get">
+                    <div class="row">
+                      <div class="col-xs-6">
+                        <div class="form-group row">
+                          <label for="inputLogin" class="col-xs-3 control-label">Логин:</label>
+                          <div class="col-xs-9">
+                            <input type="text" class="form-control" id="inputLogin" value="XXXX XXXX XXXX">
+                          </div>
+                        </div>
+                        <div class="form-group  form-group--change-login row">
+                          <div class="col-xs-6 col-xs-offset-3">
+                            <a href="" class="btn btn-custom">
+                              Изменить Логин
+                            </a>
+                          </div>
+                        </div>
                       </div>
                     </div>
-                    <div class="form-group row">
-                      <label for="inputLogin3" class="col-xs-3 control-label  control-label--long">Подтверждение
-                        пароля:</label>
-                      <div class="col-xs-9">
-                        <input type="password" class="form-control" id="inputLogin4">
+                    <div class="row">
+                      <div class="col-xs-6">
+                        <div class="form-group row">
+                          <label for="inputLogin3" class="col-xs-3 control-label">Новый пароль:</label>
+                          <div class="col-xs-9">
+                            <input type="password" class="form-control" id="inputLogin3">
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label for="inputLogin3" class="col-xs-3 control-label  control-label--long">Подтверждение
+                            пароля:</label>
+                          <div class="col-xs-9">
+                            <input type="password" class="form-control" id="inputLogin4">
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <div class="col-xs-offset-3 col-xs-5">
+                            <button type="submit" class="btn btn-custom">     Изменить пароль</button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xs-6">
+                        <p class="form-main__info">
+                          Введите пароль не менее 6 символов длиной, используя заглавные и строчные буквы латинского алфавита (A-Z, a-z), цифры (0-9), знаки пунктуации<br> (,.<>/?;:'"[]{}|`~!@#$%^&*()-_+=).
+                        </p>
                       </div>
                     </div>
-                    <div class="form-group row">
-                      <div class="col-xs-offset-3 col-xs-5">
-                        <button type="submit" class="btn btn-custom">     Изменить пароль</button>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-xs-6">
-                    <p class="form-main__info">
-                      Введите пароль не менее 6 символов длиной, используя заглавные и строчные буквы латинского алфавита (A-Z, a-z), цифры (0-9), знаки пунктуации<br> (,.<>/?;:'"[]{}|`~!@#$%^&*()-_+=).
-                    </p>
-                  </div>
-                </div>
-              </form>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+                  </form>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </main>
     </div>
-  </main>
-  <div class="pg-footer">
+  </div>
+
+  <footer class="pg-footer">
     <div class="container">
       <div class="row">
         <div class="col-xs-3">
@@ -401,7 +409,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </footer>
 
   <script src="js/jquery-2.2.3.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
