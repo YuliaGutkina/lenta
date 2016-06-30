@@ -133,9 +133,9 @@ input[type="radio"]:active {
   padding-top: 10px;
 }
 .sidebar {
-  width: 30%;
-  padding-left: 15px;
+  width: 320px;
   padding-right: 15px;
+  margin-right: 53px;
   float: left;
 }
 .sidebar__content {
@@ -231,33 +231,34 @@ input[type="radio"]:active {
 .social__link:hover {
   color: #afb5e8;
 }
-.main-content {
-  padding-left: 0;
+.contentarea {
+  padding-left: 2px;
+  overflow: hidden;
 }
-.main-content--product-page {
+.contentarea--product-page {
   margin-bottom: 30px;
   padding-right: 120px;
   font-size: 15.999998px;
 }
-.main-content--product-page .table {
+.contentarea--product-page .table {
   width: 65%;
 }
-.main-content--product-page .table td,
-.main-content--product-page .table th {
+.contentarea--product-page .table td,
+.contentarea--product-page .table th {
   border-top: 0;
   padding-top: 2px;
   padding-bottom: 2px;
 }
-.main-content--product-page .table tbody {
+.contentarea--product-page .table tbody {
   border-top: 0;
 }
-.main-content--product-page .price {
+.contentarea--product-page .price {
   margin-top: 30px;
 }
-.main-content--product-page .price__old {
+.contentarea--product-page .price__old {
   font-weight: 700;
 }
-.main-content .input-group {
+.contentarea .input-group {
   margin-bottom: 30px;
 }
 .banner--sidebar {
@@ -265,7 +266,7 @@ input[type="radio"]:active {
   text-align: center;
 }
 .filter {
-  padding: 30px;
+  padding: 25px;
   background: #f9f9f9;
 }
 .filter__block + .filter__block {
@@ -319,7 +320,7 @@ input[type="radio"]:active {
 }
 .filter__btn-group {
   margin-top: 15px;
-  margin-left: -30px;
+  margin-left: -25px;
 }
 .pg-title {
   margin-top: 0;
@@ -941,7 +942,7 @@ input[type="radio"]:active {
   content: "\f158";
 }
 .catlist {
-  width: 30%;
+  width: 335px;
   padding-left: 15px;
   padding-right: 15px;
   float: left;
@@ -1072,6 +1073,7 @@ input[type="radio"]:active {
   line-height: 32px;
   text-align: right;
   padding: 0 20px;
+  border: 0;
 }
 .btn-custom::after {
   display: block;
@@ -1102,7 +1104,7 @@ input[type="radio"]:active {
   margin-left: 0;
 }
 .btn-custom--wide {
-  width: 175px;
+  width: 165px;
 }
 .btn-custom--gray {
   background-color: #cccccc;
@@ -1824,7 +1826,7 @@ input[type="radio"]:active {
   vertical-align: middle;
   width: 50%;
   font-size: 14px;
-  padding-right: 15px;
+  padding-right: 10px;
 }
 .range__input {
   width: 65px;

@@ -128,8 +128,9 @@
         </div>
       </div>
     </div>
-    <div class="container">
-      <div class="row">
+
+    <div class="main-content">
+      <div class="container">
         <div class="sidebar">
           <form class="filter" action="" method="get">
             <div class="filter__block">
@@ -206,7 +207,8 @@
             </div>
           </form>
         </div>
-        <main class="main-content col-xs-8 pull-right">
+
+        <main class="contentarea">
           <div class="row">
             <div class="col-xs-8">
               <h1 class="pg-title">Бытовая химия, хозяйственные товары </h1>
@@ -237,18 +239,18 @@
             </div>
             <div class="col-xs-6 pull-right text-right sorter">
               <select name="sort-price" id="sort-price" class="select-custom">
-								<option value="value1">Дешевле <i class="fa fa-long-arrow-right" aria-hidden="true"></i> дороже</option>
-								<option value="value2"></option>
-								<option value="value3"></option>
-								<option value="value4"></option>
-							</select>
-              <label for="">Показывать  по:  </label>
+                <option value="value1">Дешевле &rarr; дороже</option>
+                <option value="value2">Быстрее &rarr; медленнее</option>
+                <option value="value3">Выше &rarr; сильнее</option>
+                <option value="value4">Артем</option>
+              </select>
+              <label for="sort-num">Показывать по: </label>
               <select name="sort-num" id="sort-num" class="select-custom">
-								<option value="value1">12</option>
-								<option value="value2"></option>
-								<option value="value3"></option>
-								<option value="value4"></option>
-							</select>
+                <option value="value1">12</option>
+                <option value="value2">24</option>
+                <option value="value3">36</option>
+                <option value="value4">48</option>
+              </select>
             </div>
           </div>
 
@@ -929,7 +931,6 @@
               </div>
             </div>
           </section>
-
           <div class="row">
             <div class="col-xs-6">
               <ul class="paginator  paginator--bottom list-inline">
@@ -949,8 +950,8 @@
           </div>
         </main>
       </div>
-
     </div>
+
     <div class="pg-footer">
       <div class="container">
         <div class="row">
@@ -1057,6 +1058,25 @@
             <button type="button" class="btn btn-custom" data-guess="yes">Да</button>
             <button type="button" class="btn btn-custom  btn-custom--gray" data-guess="no">Нет</button>
           </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal modal-custom" id="modal-town" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          <button type="button" class="btn btn-default modal-custom__close close" data-dismiss="modal" aria-label="Close">
+            <i class="fa fa-times" aria-hidden="true"></i>
+          </button>
+          <h1 class="pg-title">Выбор региона</h1>
+          <p>От выбранного региона зависит ассортимент товаров, цены и пункты самовывоза</p>
+          <ul class="list-unstyled modal-custom__list" id="town-list">
+            <li><a href="">Санкт-Петербург</a></li>
+            <li><a href="">Москва</a></li>
+            <li><a href="">Новосибирск</a></li>
+            <li class="active"><a href="">Петрозаводск</a></li>
+            <li><a href="">Ростов-на-Дону</a></li>
+          </ul>
         </div>
       </div>
     </div>
