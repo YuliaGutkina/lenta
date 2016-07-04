@@ -148,4 +148,12 @@ $(function() {
       }
     });
     $('input[name="price-from"]').val($('#price-range').slider('values', 0 ))
+
+    /*===================== ORDER =====================*/
+    $('#order-map-btn').click(function(e){
+      e.preventDefault();
+      var newText = ($(this).text() == 'Показать карту') ? 'Скрыть карту' : 'Показать карту';
+      $(this).text(newText);
+      $('#order-map-wrap').slideToggle();
+    });
 });
