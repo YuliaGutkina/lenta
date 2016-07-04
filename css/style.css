@@ -1625,6 +1625,10 @@ input[type="radio"]:active {
   top: 0;
   right: 15px;
 }
+.form-main__question + .tooltip .tooltip-inner {
+  width: 250px;
+  border-color: #44a146;
+}
 .form-main__card-input {
   padding-right: 45px;
 }
@@ -1672,7 +1676,7 @@ input[type="radio"]:active {
   display: inline-block;
 }
 .form-main--reg .checkbox-label {
-  padding-left: 20px;
+  padding-left: 18px;
   position: relative;
   line-height: 17.999996px;
 }
@@ -1694,6 +1698,7 @@ input[type="radio"]:active {
 }
 .form-main .form-group--email {
   margin-right: 0;
+  margin-left: -60px;
 }
 .form-main .form-group--change-login {
   margin-bottom: 30px;

@@ -325,6 +325,10 @@
     text-align: center;
     top: 0;
     right: @pad;
+    & + .tooltip .tooltip-inner{
+        width: 250px;
+        border-color: @color-green;
+      }
   }
 
   &__card-input {
@@ -402,7 +406,7 @@
     }
 
     .checkbox-label {
-      padding-left: 20px;
+      padding-left: 18px;
       position: relative;
       line-height: @fs-large;
 
@@ -434,6 +438,7 @@
 
     &--email {
       margin-right: 0;
+      margin-left: -@pad*4;
     }
 
     &--change-login {

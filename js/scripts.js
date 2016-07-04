@@ -3,7 +3,7 @@ $(function() {
 
   $('.fancy').fancybox();
 
-  $('.goods-list__box, .goods-list__scales').tooltip({
+  $('.goods-list__box, .goods-list__scales, .form-main__question').tooltip({
     'placement': 'bottom'
   });
 
