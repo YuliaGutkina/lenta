@@ -235,6 +235,13 @@ input[type="radio"]:active {
   padding-left: 2px;
   overflow: hidden;
 }
+.contentarea h3 {
+  color: #1a2791;
+  font-family: "DINCondensed", "Arial Narrow", Arial, sans-serif;
+  font-size: 19.999994px;
+  margin: 10px 0 15px;
+  text-transform: uppercase;
+}
 .contentarea--product-page {
   margin-bottom: 30px;
   padding-right: 120px;
