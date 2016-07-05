@@ -1,0 +1,82 @@
+// main: ../style.less
+
+.ui{
+  &-datepicker{
+    border-radius: 0;
+    border-color: #ccc;
+
+    &-prev,
+    &-next{
+      border-radius: 0;
+      background-color: @color-primary;
+      color: @color-inverse;
+      text-align: center;
+      cursor: pointer;
+      &:hover,
+      &:focus{
+        background-color: @color-info;
+      }
+      & span{
+        background: none;
+        &::before{
+          font-family: @ff-icon;
+          position: absolute;
+          top: 0;
+          color: @color-inverse;
+          text-indent: 0;
+        }
+      }
+    }
+    &-next span::before{content: "\f054";left: 3px;}
+    &-prev span::before{content: "\f053";right: 3px;}
+    &-prev.ui-state-disabled{
+      display: none;
+    }
+
+    & &-prev-hover{
+      left: 2px;
+      top: 2px;
+    }
+    & &-next-hover{
+      right: 2px;
+      top: 2px;
+    }
+    & th{
+      font-size: @fs*1.125;
+      font-weight: 600;
+      color: #c2c2c2;
+    }
+    & td a{
+      font-size: @fs*1.125;
+      &:hover{
+        color: @color-info;
+      }
+    }
+    & .ui-state{
+      &-default{
+        color: @color-primary;
+        border: 0;
+        background: none;
+      }
+      &-active{
+        background-color: @color-info;
+      }
+    }
+    &-unselectable.ui-state-disabled{
+      opacity: 1;
+
+      & .ui-state-default{
+       font-size: @fs*1.125;
+       color: #c2c2c2;
+     }
+    }
+  }
+  &-widget{
+    font-family: @ff;
+    &-header{
+      border: 0;
+      background: none;
+      font-weight: 600;
+    }
+  }
+}
