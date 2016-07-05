@@ -55,7 +55,7 @@
             </div>
             <div class="col-xs-7">
               <ul class="pg-header__nav-list">
-                <li>
+                <li class="active">
                   <a href="#">О lenta trade</a>
                 </li>
                 <li>
@@ -110,7 +110,7 @@
           </div>
           <div class="main-search col-xs-8 pull-right">
             <div class="input-group">
-              <input type="search" class="form-control" placeholder="Поиск по товарам">
+              <input type="search" class="form-control" placeholder="Поиск по товарам" value="Колбаса">
               <span class="input-group-btn">
                 <button class="btn" type="button">
                   <i class="fa fa-search" aria-hidden="true"></i>
@@ -123,7 +123,8 @@
           <div class="col-xs-12">
             <ol class="breadcrumb">
               <li><a href="#"><i class="fa fa-home" aria-hidden="true"></i></a></li>
-              <li class="active">Пункты самовывоза</li>
+              <li><a href="catalog.html">Каталог товаров</a></li>
+              <li class="active">Результаты поиска</li>
             </ol>
           </div>
         </div>
@@ -133,37 +134,86 @@
     <div class="main-content">
       <div class="container">
         <div class="sidebar">
-          <div class="sidebar__content">
-            <p class="sidebar__title">Регионы</p>
-            <ul class="list-unstyled  reglist">
-              <li class="reglist__item  reglist__item--active">
-                Санкт-Петербург
-                <span class="reglist__num">(10)</span>
-              </li>
-              <li class="reglist__item">
-                <a href="">Москва</a>
-                <span class="reglist__num">(17)</span>
-              </li>
-              <li class="reglist__item">
-                <a href="">Воронеж</a>
-                <span class="reglist__num">(4)</span>
-              </li>
-              <li class="reglist__item">
-                <a href="">Краснодар</a>
-                <span class="reglist__num">(6)</span>
-              </li>
-              <li class="reglist__item">
-                <a href="">Ростов-на-Дону</a>
-                <span class="reglist__num">(8)</span>
-              </li>
-            </ul>
-          </div>
+          <form class="filter" action="" method="get">
+            <div class="filter__block">
+              <a href="#" class="filter__dropdown-toggle">Бренд</a>
+              <div class="filter__dropdown-block">
+                <label class="filter__checkbox">
+                  <input type="checkbox" class="filter__checkbox-input" name="moscow-coffee" id="moscow-coffee" value="">
+                  <span class="filter__checkbox-title">Московская кофейня на паяхъ</span>
+                  <span class="filter__counter">(10)</span>
+                </label>
+                <label class="filter__checkbox">
+                  <input type="checkbox" class="filter__checkbox-input" name="jokey" id="jokey" checked value="">
+                  <span class="filter__checkbox-title">Жокей</span>
+                  <span class="filter__counter">(4)</span>
+                </label>
+                <label class="filter__checkbox">
+                  <input type="checkbox" class="filter__checkbox-input" name="petr-sloboda" id="petr-sloboda" value="">
+                  <span class="filter__checkbox-title">Петровская слобода</span>
+                  <span class="filter__counter">(7)</span>
+                </label>
+              </div>
+            </div>
+            <div class="filter__block">
+              <a href="#" class="filter__dropdown-toggle">Вес (кг)</a>
+              <div class="filter__dropdown-block">
+                <label class="filter__checkbox">
+                  <input type="checkbox" class="filter__checkbox-input" name="kg1" id="kg1" value="">
+                  <span class="filter__checkbox-title">1 кг</span>
+                  <span class="filter__counter">(10)</span>
+                </label>
+                <label class="filter__checkbox">
+                  <input type="checkbox" class="filter__checkbox-input" name="kg5" id="kg5" checked value="">
+                  <span class="filter__checkbox-title">5 кг</span>
+                  <span class="filter__counter">(4)</span>
+                </label>
+                <label class="filter__checkbox">
+                  <input type="checkbox" class="filter__checkbox-input" name="kg10" id="kg10" value="">
+                  <span class="filter__checkbox-title">10 кг</span>
+                  <span class="filter__counter">(7)</span>
+                </label>
+              </div>
+            </div>
+            <div class="filter__block active">
+              <a class="filter__dropdown-toggle" href="#">Цена</a>
+              <div class="filter__dropdown-block">
+                <div class="filter__range range">
+
+                  <div class="range__controls">
+                    <div id="price-range" class="range__slider">
+                        <span class="range__step range__step--0">0</span>
+                        <span class="range__step range__step--1">750</span>
+                        <span class="range__step range__step--2">1500</span>
+                        <span class="range__step range__step--3">2250</span>
+                        <span class="range__step range__step--4">2999</span>
+                    </div>
+                  </div>
+
+                  <div class="range__price-inputs">
+                    <label class="range__label">
+                      От:
+                      <input class="range__input" type="text" value="2499" name="price-from">
+                    </label>
+                    <label class="range__label">
+                      До:
+                      <input class="range__input" type="text" value="2874" name="price-to">
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="filter__btn-group btn-group">
+              <button type="submit" class="btn btn-custom  btn-custom--wide">Применить</button>
+              <button type="reset" class="btn btn-custom  btn-custom--gray">Сбросить</button>
+            </div>
+          </form>
         </div>
         <main class="contentarea">
-          <h1 class="pg-title">Адреса пунктов самовывоза в регионе Санкт-Петербург</h1>
-
-          <div class="store-map" id="store-map"></div>
-          <ul id="store-map__list" class="row"></ul>
+          <h1 class="pg-title">Результаты поиска по запросу “Колбаса”</h1>
+          <p>
+            Сожалеем, но по вашему запросу “колбаса” ничего не найдено.
+          </p>
         </main>
       </div>
     </div>
@@ -263,120 +313,6 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
     <script src="js/jquery.fancybox.pack.js"></script>
-    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
-    <script>
-      $(function(){
-        // I advise to add initiate stores object to a separate js-file
-        var stores = [{
-          name: "Фэйковый элемент для двухколоночности",
-          items: [{}]
-        }, {
-          name: "Гипермаркеты",
-          items: [{
-            center: [59.85166575830763, 30.093589000000005],
-            name: "Лента на Петергофском",
-            description: "Петергофское ш., д. 98<br>+7 (812) 336-39-63<br>Время выдачи заказа: 09:00-21:00"
-          }, {
-            center: [59.98454825761945, 30.22672849999993],
-            name: "Лента на Савушкина",
-            description: "ул. Савушкина, д. 112<br>+7 (812) 336-39-63<br>Время выдачи заказа: 09:00-21:00"
-          }, {
-            center: [60.02243575744825, 30.293311499999977],
-            name: "Лента на Вербной",
-            description: "ул. Вербная, д. 21а<br>+7 (812) 336-39-63<br>Время выдачи заказа: 09:00-21:00"
-          }, {
-            center: [60.02209286950443, 30.606006389557912],
-            name: "Лента во Всеволожске",
-            description: "ЛО, г. Всеволожск, 7-й км Дороги Жизни<br>+7 (812) 336-39-63<br>Время выдачи заказа: 09:00-21:00"
-          }, {
-            center: [59.84091225838383,30.483978500000006],
-            name: "Лента в Рыбацком",
-            description: "Санкт-Петербург, пр. Обуховской Обороны, д. 305<br>+7 (812) 336-39-63<br>Время выдачи заказа: 09:00-21:00"
-          }, {
-            center: [59.730116258985596,30.615186500000018],
-            name: "Лента в Колпино",
-            description: "ЛО, Тосненский р-н, пос. Тельмана, 2б<br>+7 (812) 336-39-63<br>Время выдачи заказа: 09:00-21:00"
-          }, {
-            center: [59.85967283324197,30.467758246032727],
-            name: "Лента на Бабушкина",
-            description: "Санкт-Петербург, ул. Бабушкина, д. 125<br>+7 (812) 336-39-63<br>Время выдачи заказа: 09:00-21:00"
-          }]
-        }];
-
-        ymaps.ready(init);
-
-        function init() {
-
-          var myMap = new ymaps.Map('store-map', {
-              center: [59.91815363876071, 30.30557799999997], // SPb center
-              controls: ['zoomControl'],
-              zoom: 10
-            }, {
-              searchControlProvider: 'yandex#search'
-            }),
-            // menu container
-            menu = $('#store-map__list');
-
-          for (var i = 0, l = stores.length; i < l; i++) {
-            createMenuGroup(stores[i]);
-          }
-
-          function createMenuGroup(group) {
-            // Пункт меню.
-            var menuItem = $('<li class="col-xs-6"/>'),
-              collection = new ymaps.GeoObjectCollection(null, {
-                preset: group.style
-              }),
-              submenu = $('<ul class="store-map__ul row"/>');
-
-            myMap.geoObjects.add(collection);
-
-            menuItem.append(submenu);
-            menuItem.appendTo(menu);
-
-            for (var j = 0, m = group.items.length; j < m; j++) {
-              createSubMenu(j, group.items[j], collection);
-            }
-          }
-
-          function createSubMenu(step, item, collection) {
-            if (item.name != undefined) {
-              var submenuItem = $('<li class="store-map__li"><a href="#">' + item.name + '</a><p class="store-map__info">' + item.description + '</p></li>'),
-
-                placemark = new ymaps.Placemark(item.center, {
-                  balloonContent: '<strong>' + item.name + '</strong><br><br>' + item.description
-                }, {
-                  iconLayout: 'default#image',
-                  iconImageHref: 'img/map_marker.png',
-                  iconImageSize: [55, 67],
-                  iconImageOffset: [-27, -67]
-                });
-
-              // Добавляем метку в коллекцию.
-              collection.add(placemark);
-
-              if (step % 2 == 1) {
-                $('#store-map__list li:first-child > ul').append(submenuItem);
-              } else {
-                $('#store-map__list li:last-child > ul').append(submenuItem);
-              }
-
-              submenuItem
-                .find('a')
-                .click(function(e) {
-                  e.preventDefault();
-                  $('.store-map__li').removeClass('active');
-                  $(this).parent().addClass('active');
-                  placemark.balloon.open();
-                });
-            }
-          }
-
-          myMap.setBounds(myMap.geoObjects.getBounds());
-        }
-      });
-    </script>
-
 		<script src="js/scripts.js"></script>
   </body>
 </html>

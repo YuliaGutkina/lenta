@@ -1,0 +1,56 @@
+// main: ../style.less
+
+@pHeight: 445px;
+.pickup{
+  position: relative;
+  height: @pHeight + 2;
+  border: 1px solid #ccc;
+
+  &__map{
+    width: 100%;
+    height: @pHeight;
+  }
+  &__list{
+    width: 250px;
+    height: @pHeight;
+    border-left: 1px solid #ccc;
+    background-color: @color-inverse;
+    position: absolute;
+    right: 0;
+    top: 0;
+    overflow: auto;
+  }
+  &__item{
+    font-size: @fs-small;
+    margin-left: 1px;
+    margin-right: 1px;
+    padding-top: @pad/3;
+    padding-left: @pad;
+    border: 1px solid transparent;
+    cursor: pointer;
+
+    & + &{
+      margin-top: @pad/3;
+    }
+
+    &:hover,
+    &--active{
+      border-color: @color-primary;
+    }
+    & p{
+      margin-bottom: @pad/3;
+    }
+    & .btn{
+      display: none;
+    }
+    &--active .btn{
+      display: inline-block;
+    }
+  }
+  &__title{
+    display: inline-block;
+  }
+  &__btn{
+    margin-bottom: @pad/5;
+  }
+}
