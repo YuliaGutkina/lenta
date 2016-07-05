@@ -1881,3 +1881,86 @@ input[type="radio"]:active {
 .tooltip-arrow {
   display: none;
 }
+.ui-datepicker {
+  border-radius: 0;
+  border-color: #ccc;
+}
+.ui-datepicker-prev,
+.ui-datepicker-next {
+  border-radius: 0;
+  background-color: #1a2791;
+  color: #ffffff;
+  text-align: center;
+  cursor: pointer;
+}
+.ui-datepicker-prev:hover,
+.ui-datepicker-next:hover,
+.ui-datepicker-prev:focus,
+.ui-datepicker-next:focus {
+  background-color: #afb5e8;
+}
+.ui-datepicker-prev span,
+.ui-datepicker-next span {
+  background: none;
+}
+.ui-datepicker-prev span::before,
+.ui-datepicker-next span::before {
+  font-family: "FontAwesome";
+  position: absolute;
+  top: 0;
+  color: #ffffff;
+  text-indent: 0;
+}
+.ui-datepicker-next span::before {
+  content: "\f054";
+  left: 3px;
+}
+.ui-datepicker-prev span::before {
+  content: "\f053";
+  right: 3px;
+}
+.ui-datepicker-prev.ui-state-disabled {
+  display: none;
+}
+.ui-datepicker .ui-datepicker-prev-hover {
+  left: 2px;
+  top: 2px;
+}
+.ui-datepicker .ui-datepicker-next-hover {
+  right: 2px;
+  top: 2px;
+}
+.ui-datepicker th {
+  font-size: 15.75px;
+  font-weight: 600;
+  color: #c2c2c2;
+}
+.ui-datepicker td a {
+  font-size: 15.75px;
+}
+.ui-datepicker td a:hover {
+  color: #afb5e8;
+}
+.ui-datepicker .ui-state-default {
+  color: #1a2791;
+  border: 0;
+  background: none;
+}
+.ui-datepicker .ui-state-active {
+  background-color: #afb5e8;
+}
+.ui-datepicker-unselectable.ui-state-disabled {
+  opacity: 1;
+}
+.ui-datepicker-unselectable.ui-state-disabled .ui-state-default {
+  font-size: 15.75px;
+  color: #c2c2c2;
+}
+.ui-widget {
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+}
+.ui-widget-header {
+  border: 0;
+  background: none;
+  font-weight: 600;
+}
