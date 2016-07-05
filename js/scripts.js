@@ -85,8 +85,8 @@ $(function() {
 
   /*===================== INPUT NUMBERS =====================*/
   var pressTimeout = null,
-      pressInterval = null,
-      controlASC = $('<span/>',{
+    pressInterval = null,
+    controlASC = $('<span/>', {
       'class': 'number__control number__control--asc'
     }),
     controlDESC = $('<span/>', {
@@ -98,16 +98,18 @@ $(function() {
     controlASC.clone().appendTo($(this).parent());
   });
 
-    $('.number__control').on('mouseup mouseout', function(){
-      clearTimeout(pressTimeout);
-      clearInterval(pressInterval);
-    });
-    $('.number__control').mousedown(function(e){
-      numberInputChange(e);
-      pressTimeout = setTimeout(function(){
-          pressInterval = setInterval(function(){ numberInputChange(e); }, 50);
-      }, 200);
-    });
+  $('.number__control').on('mouseup mouseout', function() {
+    clearTimeout(pressTimeout);
+    clearInterval(pressInterval);
+  });
+  $('.number__control').mousedown(function(e) {
+    numberInputChange(e);
+    pressTimeout = setTimeout(function() {
+      pressInterval = setInterval(function() {
+        numberInputChange(e);
+      }, 50);
+    }, 200);
+  });
 
   function numberInputChange(e) {
     var parent = $(e.target).parent(),

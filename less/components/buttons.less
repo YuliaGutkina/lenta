@@ -49,6 +49,18 @@
       border-left-color: @color-info;
     }
   }
+  &.btn-sm{
+    height: 20px;
+    line-height: 20px;
+    font-size: 16px;
+    padding: 0 @pad/2;
+    &::after{
+      border-top-width: 10px;
+      border-bottom-width: 10px;
+      border-left-width: 5px;
+      right: -5px;
+    }
+  }
 
   .btn-group > &{
     &:hover,

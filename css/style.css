@@ -816,6 +816,56 @@ input[type="radio"]:active {
 .err-page__err-text {
   font-size: 32.00001px;
 }
+.pickup {
+  position: relative;
+  height: 447px;
+  border: 1px solid #ccc;
+}
+.pickup__map {
+  width: 100%;
+  height: 445px;
+}
+.pickup__list {
+  width: 250px;
+  height: 445px;
+  border-left: 1px solid #ccc;
+  background-color: #ffffff;
+  position: absolute;
+  right: 0;
+  top: 0;
+  overflow: auto;
+}
+.pickup__item {
+  font-size: 12.000002px;
+  margin-left: 1px;
+  margin-right: 1px;
+  padding-top: 5px;
+  padding-left: 15px;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+.pickup__item + .pickup__item {
+  margin-top: 5px;
+}
+.pickup__item:hover,
+.pickup__item--active {
+  border-color: #1a2791;
+}
+.pickup__item p {
+  margin-bottom: 5px;
+}
+.pickup__item .btn {
+  display: none;
+}
+.pickup__item--active .btn {
+  display: inline-block;
+}
+.pickup__title {
+  display: inline-block;
+}
+.pickup__btn {
+  margin-bottom: 3px;
+}
 .breadcrumb {
   margin-bottom: 0;
   padding-left: 0;
@@ -1100,6 +1150,18 @@ input[type="radio"]:active {
 }
 .btn-custom:hover::after {
   border-left-color: #afb5e8;
+}
+.btn-custom.btn-sm {
+  height: 20px;
+  line-height: 20px;
+  font-size: 16px;
+  padding: 0 7.5px;
+}
+.btn-custom.btn-sm::after {
+  border-top-width: 10px;
+  border-bottom-width: 10px;
+  border-left-width: 5px;
+  right: -5px;
 }
 .btn-group > .btn-custom:hover,
 .btn-group > .btn-custom:focus,
