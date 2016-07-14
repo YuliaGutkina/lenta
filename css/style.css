@@ -76,8 +76,9 @@ input[type="radio"]:active {
   padding: 0;
   margin: 0;
   list-style: none;
-  text-align: right;
+  text-align: left;
   font-size: 0;
+  padding-left: 29px;
 }
 .pg-header__nav-list li {
   display: inline-block;
@@ -1471,6 +1472,9 @@ input[type="radio"]:active {
   padding-left: 30px;
   padding-right: 30px;
 }
+.form-main__table--products {
+  margin-bottom: 30px;
+}
 .form-main__table--products th {
   padding: 10px;
   font-weight: 400;
@@ -1487,9 +1491,9 @@ input[type="radio"]:active {
   font-weight: 600;
   vertical-align: middle;
 }
-.form-main__table--products .form-main__legend,
-.form-main__table--products .form-main__legend td,
-.form-main__table--products .form-main__legend th {
+.form-main__map + .form-main__table--products .form-main__legend,
+.form-main__map + .form-main__table--products .form-main__legend td,
+.form-main__map + .form-main__table--products .form-main__legend th {
   border-top: 0;
 }
 .form-main__table--products .number-custom {
@@ -1656,7 +1660,6 @@ input[type="radio"]:active {
 }
 .form-main__btn-group .btn-custom--light::after {
   border-left-color: #e7ecf4;
-  right: -6px;
 }
 .form-main__login {
   display: block;
