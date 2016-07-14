@@ -1,10 +1,23 @@
 $(function() {
   $("body").append('<div id="arrowUp" class="arrowUp"><a href="#top" title="Наверх" class="scrollTo hidden-xs"><span class="fa fa-chevron-up"></span></a></div>');
 
-  $('.fancy').fancybox();
-
   $('.goods-list__box, .goods-list__scales, .form-main__question').tooltip({
     'placement': 'bottom'
+  });
+
+  /*===================== PRODUCT PHOTO =====================*/
+  $('.product-photo__item').click(function(e){
+    e.preventDefault();
+    if ($(this).attr('href') != undefined) {
+      var oldImg = $('.product-photo__item--big img').attr('src'),
+          newImg = $(this).attr('href');
+
+      if (oldImg != newImg) {
+        $('.product-photo__item--big img').attr('src', newImg);
+        $('.product-photo__item').removeClass('product-photo__item--active');
+        $(this).addClass('product-photo__item--active');
+      }
+    }
   });
 
   /*===================== REGION POPUP =====================*/
@@ -134,6 +147,7 @@ $(function() {
       }
     }
   }
+
   /*===================== FILTER FUNCTIONS =====================*/
   $('.filter__dropdown-toggle').click(function(e) {
     e.preventDefault();

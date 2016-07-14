@@ -17,4 +17,22 @@
   &-arrow{
     display: none;
   }
+  &.bottom{
+    margin-top: -10px;
+    &::before {
+      display: block;
+      content: "";
+      width: 10px;
+      height: 10px;
+      background-color: @color-inverse;
+      border-left: 1px solid @color-green;
+      border-top: 1px solid @color-green;
+      transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+      position: absolute;
+      left: 50%;
+      top: 0;
+      margin-left: -5px;
+    }
+  }
 }
