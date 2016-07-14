@@ -1980,9 +1980,6 @@ input[type="radio"]:active {
 .tooltip-arrow {
   display: none;
 }
-.tooltip.bottom {
-  margin-top: -10px;
-}
 .tooltip.bottom::before {
   display: block;
   content: "";
