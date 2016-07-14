@@ -1972,7 +1972,7 @@ input[type="radio"]:active {
 .tooltip-inner {
   border: 0;
   background-color: #ffffff;
-  border: 1px solid #767676;
+  border: 1px solid #44a146;
   border-radius: 0;
   color: #767676;
   padding: 5px;
@@ -1980,7 +1980,7 @@ input[type="radio"]:active {
 .tooltip-arrow {
   display: none;
 }
-.tooltip.bottom::before {
+.tooltip::before {
   display: block;
   content: "";
   width: 10px;
@@ -1988,12 +1988,35 @@ input[type="radio"]:active {
   background-color: #ffffff;
   border-left: 1px solid #44a146;
   border-top: 1px solid #44a146;
-  transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
   position: absolute;
+}
+.tooltip.top::before {
+  left: 50%;
+  bottom: 0;
+  margin-left: -5px;
+  transform: rotate(225deg);
+  -webkit-transform: rotate(225deg);
+}
+.tooltip.bottom::before {
   left: 50%;
   top: 0;
   margin-left: -5px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+.tooltip.left::before {
+  right: 0;
+  top: 50%;
+  margin-top: -5px;
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+.tooltip.right::before {
+  left: 0;
+  top: 50%;
+  margin-top: -5px;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
 }
 .ui-datepicker {
   border-radius: 0;

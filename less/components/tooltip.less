@@ -9,7 +9,7 @@
   &-inner{
     border: 0;
     background-color: @color-inverse;
-    border: 1px solid #767676;
+    border: 1px solid @color-green;
     border-radius: 0;
     color: #767676;
     padding: @pad/3;
@@ -17,21 +17,42 @@
   &-arrow{
     display: none;
   }
-  &.bottom{
-    &::before {
-      display: block;
-      content: "";
-      width: 10px;
-      height: 10px;
-      background-color: @color-inverse;
-      border-left: 1px solid @color-green;
-      border-top: 1px solid @color-green;
-      transform: rotate(45deg);
-      -webkit-transform: rotate(45deg);
-      position: absolute;
-      left: 50%;
-      top: 0;
-      margin-left: -5px;
-    }
+  &::before {
+    display: block;
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: @color-inverse;
+    border-left: 1px solid @color-green;
+    border-top: 1px solid @color-green;
+    position: absolute;
+  }
+  &.top::before{
+    left: 50%;
+    bottom: 0;
+    margin-left: -5px;
+    transform: rotate(225deg);
+    -webkit-transform: rotate(225deg);
+  }
+  &.bottom::before{
+    left: 50%;
+    top: 0;
+    margin-left: -5px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+  }
+  &.left::before{
+    right: 0;
+    top: 50%;
+    margin-top: -5px;
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+  }
+  &.right::before{
+    left: 0;
+    top: 50%;
+    margin-top: -5px;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
   }
 }
