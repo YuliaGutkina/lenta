@@ -1272,6 +1272,7 @@ input[type="radio"]:active {
 .select-custom:hover,
 .select-custom:focus {
   background-position: right 0;
+  outline-offset: 0;
 }
 .number-custom {
   display: inline-block;

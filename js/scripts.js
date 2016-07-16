@@ -1,11 +1,14 @@
 $(function() {
   $("body").append('<div id="arrowUp" class="arrowUp"><a href="#top" title="Наверх" class="scrollTo hidden-xs"><span class="fa fa-chevron-up"></span></a></div>');
 
-  $('.goods__scales-img, .goods-list__box, .goods-list__scales, .form-main__question').tooltip({
+  $('.goods-list__box, .goods-list__scales, .form-main__question').tooltip({
     'placement': 'bottom'
   });
   $('.goods__box-img').tooltip({
     'placement': 'right'
+  });
+  $('.goods__scales-img').tooltip({
+    'placement': 'left'
   });
   /*===================== PRODUCT PHOTO =====================*/
   $('.product-photo__item').click(function(e){
