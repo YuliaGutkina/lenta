@@ -53,6 +53,7 @@
     }
 
     &--products {
+      margin-bottom: @pad*2;
 
       th {
         padding: 10px;
@@ -76,7 +77,9 @@
       & .form-main__legend,
       & .form-main__legend td,
       & .form-main__legend th{
-        border-top: 0;
+        .form-main__map + &{
+          border-top: 0;
+        }
       }
 
       .number-custom {
@@ -279,7 +282,6 @@
 
         &::after {
           border-left-color: #e7ecf4;
-          right: -6px;
         }
       }
     }
@@ -387,6 +389,10 @@
       width: 60px;
       display: inline-block;
     }
+    &--tel2 {
+      width: 70px;
+      display: inline-block;
+    }
   }
 
   &--reg {
@@ -399,10 +405,6 @@
         width: 45px;
       }
 
-      &--tel2 {
-        width: 70px;
-        display: inline-block;
-      }
     }
 
     .checkbox-label {

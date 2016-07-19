@@ -1,7 +1,7 @@
 // main: ../style.less
 
 .catlist{
-  width: 335px;
+  width: 340px;
   padding-left: @pad;
   padding-right: @pad;
   float: left;
@@ -26,6 +26,10 @@
     &.open > a,
     &.open > a:visited {
       color: @color-info;
+    }
+    &--no-dropdown.open > a,
+    &--no-dropdown.open > a:visited{
+      color: @color-primary;
     }
 
     &::after{
@@ -54,8 +58,7 @@
       padding-left: 20px;
       padding-right: 40px;
     }
-    & .dropdown-menu,
-    & .no-dropdown-menu {
+    & .dropdown-menu {
       border: 0;
       border-radius: 0;
       margin: 0;
@@ -65,8 +68,8 @@
       width: 100%;
       padding-bottom: @pad;
       & > li {
-        padding-top: 3px;
-        padding-bottom: 3px;
+        padding-top: 1px;
+        padding-bottom: 1px;
       }
       & > li > a{
         display: block;
@@ -88,8 +91,8 @@
         content: "";
         width: 0;
         height: 0;
-        border-left: 160px solid transparent;
-        border-right: 160px solid transparent;
+        border-left: 155px solid transparent;
+        border-right: 155px solid transparent;
         border-top: 55px solid #e7ecf4;
 
         position: absolute;
@@ -97,18 +100,12 @@
         bottom: -55px;
       }
     }
-
-    .no-dropdown-menu {
-      border-top: 0;
-    }
-
     &--no-dropdown{
-
-      &.dropdown {
-
-        &:after {
-          content: "";
-        }
+      &:after {
+        content: "";
+      }
+      & > .dropdown-menu{
+        display: block !important;
       }
     }
   }

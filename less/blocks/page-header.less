@@ -23,8 +23,9 @@
   }
   &__nav-list {
     .ul-inline();
-    text-align: right;
+    text-align: left;
     font-size: 0;
+    padding-left: @pad*3;
     & > li {
       font-family: @ff-extra;
       font-size: @fs-large;
@@ -41,8 +42,7 @@
         &:hover{
           background-color: @color-decor;
           margin-left: -2px;
-          padding-left: 17px;
-          padding-right: 17px;
+          padding-left: 18px;
         }
 
         &::after {
